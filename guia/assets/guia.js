@@ -138,6 +138,6 @@
     });
     var r=document.getElementById('ring');if(r)r.innerHTML='<b>'+n+'/'+MODS.length+'</b><span>módulos concluídos<br>(salvo neste navegador)</span>';
   }
-  /* equipe ao vivo (cursores que montam a página) */
-  var cs=document.createElement('script');cs.src='assets/crew.js';document.body.appendChild(cs);
+  /* efeitos audiovisuais (flash, grading, render, luz) */
+  var cs=document.createElement('script');cs.src='assets/fx.js';document.body.appendChild(cs);
 })();
