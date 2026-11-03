@@ -68,10 +68,8 @@
     '<div class="slot"><h3>🎲 Sorteador de nicho</h3><p>Sem ideia do que gravar? Sorteie um nicho e receba três ideias de vídeo prontas para adaptar.</p>'+
      '<div class="slot-win"><div class="slot-name">padaria de bairro</div></div>'+
      '<button class="slot-btn">🎲 Sortear outro nicho</button></div>'+
-    '<div class="ideas"><h3>Ideias para <span class="id-n">padaria de bairro</span></h3><div class="who">Toque em qualquer nicho do mural para ver ideias dele.</div><ol></ol><a href="guia/05-roteiro.html">→ Transforme a ideia em roteiro (Módulo 5)</a></div>'+
+    '<div class="ideas"><h3>Ideias para <span class="id-n">padaria de bairro</span></h3><div class="who">Clique em “Sortear” para descobrir um nicho e três ideias de vídeo.</div><ol></ol><a href="guia/05-roteiro.html">→ Transforme a ideia em roteiro (Módulo 5)</a></div>'+
    '</div>'+
-   '<div class="wall-head"><h3>Mural de nichos: escolha o seu</h3><input type="search" placeholder="Buscar nicho… (ex.: café, moto, crochê)" aria-label="Buscar nicho"></div>'+
-   '<div class="chips"></div><div class="wall"></div><div class="wall-count"></div>'+
    '<div class="nx-end"><blockquote>Não existe nicho pequeno demais. Existe <span>público que ainda não te encontrou</span>.</blockquote>'+
     '<p>Comece pelo que você conhece e gosta de verdade. Constância e o público certo fazem mais diferença do que câmera cara.</p>'+
     '<a class="btn" href="guia/index.html" style="background:#8612d5;color:#fff">Aprender a produzir no guia gratuito →</a></div>'+
@@ -130,24 +128,8 @@
     if(spinning)return;spinning=true;var k=0,steps=18+Math.floor(Math.random()*8),pick;
     (function roll(){pick=N[Math.floor(Math.random()*N.length)];nameEl.textContent=pick[0]+' '+pick[1];
       nameEl.style.transform='translateY('+(k%2?-6:6)+'px)';k++;
-      if(k<steps)setTimeout(roll,40+k*k*0.9);else{nameEl.style.transform='none';spinning=false;ideas(pick);selectNiche(pick[1])}})();
+      if(k<steps)setTimeout(roll,40+k*k*0.9);else{nameEl.style.transform='none';spinning=false;ideas(pick)}})();
   };
 
-  /* ---------- mural ---------- */
-  var chips=root.querySelector('.chips'), wall=root.querySelector('.wall'), q=root.querySelector('.wall-head input'), cur='todos';
-  chips.innerHTML='<button class="on" data-c="todos">✨ Todos</button>'+Object.keys(CATS).map(function(c){return '<button data-c="'+c+'">'+CATS[c]+'</button>'}).join('');
-  function norm(s){return s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase()}
-  function render(){
-    var term=norm(q.value.trim());
-    var list=N.filter(function(n){return (cur==='todos'||n[2]===cur)&&(!term||norm(n[1]).indexOf(term)>-1)});
-    wall.innerHTML=list.map(function(n,i){return '<button class="niche" data-n="'+n[1]+'" style="animation-delay:'+Math.min(i*12,600)+'ms">'+n[0]+' '+n[1]+'</button>'}).join('')||'<p style="color:#6f6880">Nenhum nicho com esse nome… mas ele pode ser o seu! Todo assunto tem público.</p>';
-    root.querySelector('.wall-count').textContent=list.length+' de '+N.length+' nichos · e existem muitos outros';
-  }
-  function selectNiche(name){[].forEach.call(wall.querySelectorAll('.niche'),function(b){b.classList.toggle('sel',b.dataset.n===name)})}
-  chips.onclick=function(e){var b=e.target.closest('button');if(!b)return;cur=b.dataset.c;[].forEach.call(chips.children,function(x){x.classList.toggle('on',x===b)});render()};
-  q.oninput=render;
-  wall.onclick=function(e){var b=e.target.closest('.niche');if(!b)return;var n=N.filter(function(x){return x[1]===b.dataset.n})[0];
-    nameEl.textContent=n[0]+' '+n[1];ideas(n);selectNiche(n[1]);
-    if(innerWidth<900)root.querySelector('.ideas').scrollIntoView({behavior:'smooth',block:'center'})};
-  render();ideas(N[0]);
+  ideas(N[0]);
 })();
