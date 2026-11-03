@@ -3,26 +3,26 @@
   var root=document.getElementById('especial'); if(!root) return;
   var B='assets/especial/';
   var TOTAL=60;
-  /* tempos reais do vídeo renderizado no Remotion (123 BPM) */
+  /* tempos reais do vídeo renderizado no Remotion (120 BPM) */
   var CUTS=[
-    ['241',4.87,2.93,'Briefing com o cliente'],['4953',7.8,2.93,'Ideia, gancho e mensagem'],['41271',10.73,2.9,'Roteiro e lista de cenas'],
-    ['44076',13.63,2.93,'Bateria, cartão e lente limpa'],['46353',16.57,1.93,''],['41282',18.5,2.93,'Configurações certas antes do REC'],
-    ['41289',21.43,1.97,'Microfone perto da boca'],['44069',23.4,1.93,''],['44062',25.33,1.97,'Luz de frente'],['46352',27.3,2.9,'Movimento estável'],['49645',30.2,1.97,''],['8784',32.17,1.93,'Vertical para Reels'],
-    ['41273',34.1,1.97,'Cortes no ritmo'],['44054',36.07,1.93,''],['47208',38.0,3.9,'Correção de cor'],['44074',41.9,1.97,''],['44075',43.87,2.9,'Legendas, trilha e motion'],
-    ['4919',46.77,2.93,'Exportado no formato certo'],['41174',49.7,1.93,'Aprovado pelo cliente'],['41272',51.63,2.93,'No ar!']
+    ['241',4,3,'Briefing com o cliente'],['4953',7,3,'Ideia, gancho e mensagem'],['41271',10,3,'Roteiro e lista de cenas'],
+    ['44076',13,3,'Bateria, cartão e lente limpa'],['46353',16,2,''],['41282',18,3,'Configurações certas antes do REC'],
+    ['41289',21,2,'Microfone perto da boca'],['44069',23,2,''],['44062',25,2,'Luz de frente'],['46352',27,3,'Movimento estável'],['49645',30,2,''],['8784',32,2,'Vertical para Reels'],
+    ['41273',34,2,'Cortes no ritmo'],['44054',36,2,''],['47208',38,4,'Correção de cor'],['44074',42,2,''],['44075',44,3,'Legendas, trilha e motion'],
+    ['4919',47,3,'Exportado no formato certo'],['41174',50,2,'Aprovado pelo cliente'],['41272',52,3,'No ar!']
   ];
-  var MOTION=[['Abertura',0,4.87],['01 Roteiro',4.87,1.95],['02 Pré',13.63,1.95],['03 Captação',21.43,1.95],['04 Edição',34.1,1.95],['05 Entrega',46.77,1.95],['Tela final',54.57,5.43]];
+  var MOTION=[['Abertura',0,4],['01 Roteiro',4,2],['02 Pré',13,2],['03 Captação',21,2],['04 Edição',34,2],['05 Entrega',47,2],['Tela final',55,5]];
   var STAGES=[
     {t:'Roteiro',n:'01',p:'Antes de ligar a câmera, o videomaker conversa com o cliente e escreve o roteiro: objetivo, público, gancho e a lista de cenas.',li:['Briefing com o cliente','Objetivo e público definidos','Gancho dos 3 primeiros segundos','Lista de cenas pronta'],m:['05-roteiro','Módulo 5: Roteiro']},
     {t:'Pré-produção',n:'02',p:'Checklist de equipamento e configurações. É aqui que se evita 90% dos problemas da gravação.',li:['Bateria e cartão de memória','Lente limpa','1080p · 30 fps · obturador 1/60','Áudio e luz testados'],m:['10-equipamentos','Módulo 10: Equipamentos']},
     {t:'Captação',n:'03',p:'Gravação com luz de frente, microfone perto e planos variados: abertos, médios e detalhes. Cada clipe vai para a mídia do projeto.',li:['20 clipes gravados','Luz de frente para o rosto','Microfone perto da boca','Planos abertos, médios e detalhes'],m:['04-linguagem','Módulo 4: Linguagem visual']},
-    {t:'Montagem',n:'04',p:'Os clipes vão para a timeline. A trilha tem 123 BPM e cada corte cai exatamente na batida. Repare na imagem ainda “lavada”: é o bruto, sem cor.',li:['Trilha de 123 BPM na timeline','Clipes na ordem do roteiro','Cortes na batida da música','60 segundos cravados'],m:['06-edicao','Módulo 6: Edição']},
+    {t:'Montagem',n:'04',p:'Os clipes vão para a timeline. A trilha tem 120 BPM e cada corte cai exatamente na batida. Repare na imagem ainda “lavada”: é o bruto, sem cor.',li:['Trilha de 120 BPM na timeline','Clipes na ordem do roteiro','Cortes na batida da música','60 segundos cravados'],m:['06-edicao','Módulo 6: Edição']},
     {t:'Correção de cor',n:'05',p:'Contraste, saturação, balanço de branco e um look final. Arraste os olhos pela divisória: à direita o antes, à esquerda o depois.',li:['Balanço de branco','Contraste e exposição','Saturação controlada','Look final consistente'],m:['06-edicao','Módulo 6: Edição']},
     {t:'Legendas e motion',n:'06',p:'Títulos dos capítulos, legendas animadas palavra por palavra, barra de progresso e tela final com chamada para ação.',li:['Títulos dos capítulos','Legendas animadas','Barra das etapas','Tela final com chamada'],m:['11-titulos-capas','Módulo 11: Títulos e capas']},
     {t:'Exportação e entrega',n:'07',p:'Exportação no formato certo para a plataforma, revisão final e envio para o cliente aprovar.',li:['H.264 · 1920×1080','30 fps · ~8 Mbps','Revisão final','Aprovado pelo cliente'],m:['09-monetizacao','Módulo 9: Ganhar dinheiro']},
     {t:'Publicação',n:'08',p:'Capa, título, descrição com capítulos e palavras-chave: tudo o que o guia ensina, aplicado no vídeo publicado logo abaixo.',li:['Título com palavra-chave','Capa com rosto e contraste','Descrição com capítulos','Poucas hashtags relevantes'],m:['08-youtube','Módulo 8: YouTube']}
   ];
-  var SCRIPT='ROTEIRO · “Do bruto à entrega” (60 s)\nObjetivo: mostrar o processo real de um videomaker\nPúblico: quem quer começar no audiovisual\nTrilha: 123 BPM · cortes na batida\n\n00:00  GANCHO · título animado\n00:05  01 Roteiro e briefing\n00:13  02 Pré-produção\n00:21  03 Captação\n00:34  04 Edição e cor\n00:46  05 Entrega\n00:54  CHAMADA · guia gratuito';
+  var SCRIPT='ROTEIRO · “Do bruto à entrega” (60 s)\nObjetivo: mostrar o processo real de um videomaker\nPúblico: quem quer começar no audiovisual\nTrilha: 120 BPM · cortes na batida\n\n00:00  GANCHO · título animado\n00:05  01 Roteiro e briefing\n00:13  02 Pré-produção\n00:21  03 Captação\n00:34  04 Edição e cor\n00:46  05 Entrega\n00:54  CHAMADA · guia gratuito';
   var GEAR=[['🔋','Bateria 100%'],['💾','128 GB livres'],['🧽','Lente limpa'],['⚙️','1080p · 30 fps'],['🎙️','Áudio testado'],['💡','Luz posicionada']];
 
   /* ---------- markup ---------- */
@@ -63,8 +63,8 @@
   /* waveform + beat markers */
   var w='<svg class="wave" viewBox="0 0 1200 28" preserveAspectRatio="none">',seed=7;
   function rnd(){seed=(seed*9301+49297)%233280;return seed/233280}
-  for(var x=0;x<1200;x+=3){var e=x<100?0.25+x/400:x>1150?(1200-x)/120:0.55+0.35*Math.abs(Math.sin(x/9.76*Math.PI));var h=(4+rnd()*10)*e*1.4;w+='<rect x="'+x+'" y="'+(14-h)+'" width="2" height="'+(h*2)+'" fill="#3fa96b"/>'}
-  for(var b=0;b<=123;b++){var bx=b*(60/123)/TOTAL*1200;w+='<line x1="'+bx+'" x2="'+bx+'" y1="0" y2="'+(b%4?5:9)+'" stroke="#ffb020" stroke-width="1.2"/>'}
+  for(var x=0;x<1200;x+=3){var e=x<100?0.25+x/400:x>1150?(1200-x)/120:0.55+0.35*Math.abs(Math.sin(x/10*Math.PI));var h=(4+rnd()*10)*e*1.4;w+='<rect x="'+x+'" y="'+(14-h)+'" width="2" height="'+(h*2)+'" fill="#3fa96b"/>'}
+  for(var b=0;b<=120;b++){var bx=b*0.5/TOTAL*1200;w+='<line x1="'+bx+'" x2="'+bx+'" y1="0" y2="'+(b%4?5:9)+'" stroke="#ffb020" stroke-width="1.2"/>'}
   $('.ln-a').innerHTML=w+'</svg>';
 
   var vRaw=$('.vw-raw video'), vG=$('.vw-cmp .g'), vR=$('.vw-cmp .r'), vF=$('.vw-final video');
@@ -98,24 +98,24 @@
       for(var k=0;k<=SCRIPT.length;k+=2){d.innerHTML=SCRIPT.slice(0,k).replace(/</g,'&lt;')+'<span class="cur"></span>';if(k%60===0)tick(Math.min(3,Math.floor(k/SCRIPT.length*4)));await sleep(16,id)}
       tick(3);await sleep(900,id)}
     if(i===1){show('vw-gear');var g=$$('.gear');for(var k=0;k<g.length;k++){g[k].classList.add('ok');if(k%2)tick((k-1)/2|0);await sleep(520,id)}tick(3);await sleep(700,id)}
-    if(i===2){show('vw-raw');vRaw.currentTime=21.43;vRaw.playbackRate=1.5;vRaw.play().catch(function(){});
+    if(i===2){show('vw-raw');vRaw.currentTime=21;vRaw.playbackRate=1.5;vRaw.play().catch(function(){});
       var ims=$$('.bin img');for(var k=0;k<ims.length;k++){ims[k].classList.add('in');$('.bin-n').textContent=(k+1)+' clipes';
         $('.tc').textContent='REC 00:00:'+String(k*2).padStart(2,'0');if(k%5===4)tick(k/5|0);await sleep(330,id)}
       tick(3);await sleep(500,id)}
     if(i===3){show('vw-raw');$('.rec').style.display='none';$('.frame-guides').style.display='none';
       $('.wave').classList.add('in');tick(0);await sleep(700,id);
-      vRaw.currentTime=4.87;vRaw.playbackRate=2.5;vRaw.play().catch(function(){});
+      vRaw.currentTime=4;vRaw.playbackRate=2.5;vRaw.play().catch(function(){});
       var bl=$$('.ln-v .blk'), ims2=$$('.bin img');
       for(var k=0;k<bl.length;k++){bl[k].classList.add('in');ims2[k].classList.add('used');setPH(CUTS[k][1]+CUTS[k][2]);if(k===6)tick(1);if(k===13)tick(2);await sleep(260,id)}
       var t0=vRaw.currentTime;for(var q=0;q<40;q++){setPH(vRaw.currentTime);await sleep(50,id)}tick(3);await sleep(400,id)}
-    if(i===4){show('vw-cmp');[vG,vR].forEach(function(v){v.currentTime=27.3;v.playbackRate=1;v.play().catch(function(){})});
+    if(i===4){show('vw-cmp');[vG,vR].forEach(function(v){v.currentTime=27;v.playbackRate=1;v.play().catch(function(){})});
       var sp=$('.vw-split');
       for(var k=0;k<=100;k++){var x=50+40*Math.sin(k/100*Math.PI*2);vR.style.clipPath='inset(0 0 0 '+x+'%)';sp.style.left=x+'%';
         if(Math.abs(vG.currentTime-vR.currentTime)>.15)vR.currentTime=vG.currentTime;setPH(vG.currentTime);
         if(k%25===0)tick(k/25);
         $$('.ln-v .blk').forEach(function(b,j){if(j<=Math.floor(k/5))b.classList.remove('flat')});await sleep(55,id)}
       tick(3);await sleep(300,id)}
-    if(i===5){show('vw-final');vF.currentTime=4.6;vF.playbackRate=1;vF.play().catch(function(){});
+    if(i===5){show('vw-final');vF.currentTime=4;vF.playbackRate=1;vF.play().catch(function(){});
       var mb=$$('.ln-m .blk'), tb=$$('.ln-t .blk');
       for(var k=0;k<Math.max(mb.length,tb.length);k++){if(mb[k])mb[k].classList.add('in');if(tb[k])tb[k].classList.add('in');if(k===2)tick(0);if(k===6)tick(1);await sleep(200,id)}
       for(var q=0;q<55;q++){setPH(vF.currentTime);if(q===20)tick(2);await sleep(100,id)}tick(3)}

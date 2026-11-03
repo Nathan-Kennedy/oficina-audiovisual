@@ -1,0 +1,53 @@
+/* ===== Cena animada: crianças produzindo um vídeo ===== */
+.cena{margin:40px 0 10px;border-radius:22px;overflow:hidden;background:#1d1828;box-shadow:0 20px 60px rgba(0,0,0,.45);position:relative}
+.cena svg{display:block;width:100%;height:auto}
+.cena-cap{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;padding:14px 16px 18px;background:#17131f}
+.cena-cap span{font:600 13.5px Poppins,sans-serif;color:#cfc6de;background:#251f31;border:1px solid #352d44;padding:6px 12px;border-radius:999px;transition:all .4s}
+.cena-cap span.on{background:#70cf97;color:#10251a;border-color:#70cf97}
+
+.cena .kid,.cena .eye,.cena .mouth,.cena .armA,.cena .armB,.cena .armC,.cena .headB,.cena .softhead,.cena .vf-kid,.cena .spark{transform-box:fill-box}
+/* respiração geral */
+.kid{animation:breath 3.2s ease-in-out infinite}
+.kid.b{animation-delay:-1s}.kid.c{animation-delay:-2s}
+@keyframes breath{50%{transform:translateY(-2px)}}
+/* piscar */
+.eye{transform-origin:center;animation:blink 4.5s infinite}
+.kid.b .eye{animation-delay:-1.3s}.kid.c .eye{animation-delay:-2.7s}
+@keyframes blink{0%,94%,100%{transform:scaleY(1)}96%{transform:scaleY(.1)}}
+/* falando */
+.mouth{transform-origin:center top;animation:talk .32s ease-in-out infinite alternate}
+@keyframes talk{from{transform:scaleY(.25)}to{transform:scaleY(1.15)}}
+.talkpause .mouth{animation-play-state:paused}
+/* gesto da mão de quem fala */
+.armB{transform-origin:12% 8%;animation:gesture 2.6s ease-in-out infinite}
+@keyframes gesture{0%,100%{transform:rotate(0)}25%{transform:rotate(-28deg)}50%{transform:rotate(-12deg)}70%{transform:rotate(-34deg)}}
+/* cabeça de quem fala */
+.headB{transform-origin:50% 90%;animation:nod 2.6s ease-in-out infinite}
+@keyframes nod{0%,100%{transform:rotate(0)}30%{transform:rotate(-4deg)}65%{transform:rotate(3deg)}}
+/* quem ajusta a luz */
+.armC{transform-origin:15% 10%;animation:adjust 5s ease-in-out infinite}
+@keyframes adjust{0%,100%{transform:rotate(0)}20%{transform:rotate(-18deg)}40%{transform:rotate(-6deg)}60%{transform:rotate(-20deg)}}
+.softhead{transform-origin:30% 50%;animation:tilt 5s ease-in-out infinite}
+@keyframes tilt{0%,100%{transform:rotate(0)}20%{transform:rotate(-7deg)}40%{transform:rotate(-2deg)}60%{transform:rotate(-8deg)}}
+.beam{animation:beam 5s ease-in-out infinite}
+@keyframes beam{0%,100%{opacity:.18}25%,70%{opacity:.42}}
+.facelight{animation:facelight 5s ease-in-out infinite}
+@keyframes facelight{0%,100%{opacity:0}25%,70%{opacity:.35}}
+/* operador de câmera */
+.armA{transform-origin:85% 15%;animation:fine 4s ease-in-out infinite}
+@keyframes fine{50%{transform:rotate(3deg)}}
+.rec{animation:rec 1s steps(1) infinite}
+@keyframes rec{50%{opacity:.15}}
+/* tela do celular (visor ampliado) */
+.vf-kid{animation:breath 3.2s ease-in-out infinite -1s}
+.vf-light{animation:facelight 5s ease-in-out infinite}
+.sub{opacity:0}
+.sub.on{opacity:1;transition:opacity .3s}
+/* etiquetas */
+.tag{opacity:0;transform:translateY(8px);transition:opacity .5s,transform .5s}
+.tag.on{opacity:1;transform:none}
+/* partículas de luz */
+.spark{animation:spark 3s ease-in-out infinite}
+.spark:nth-child(2){animation-delay:-1s}.spark:nth-child(3){animation-delay:-2s}
+@keyframes spark{0%,100%{opacity:0;transform:translate(0,0)}50%{opacity:.9;transform:translate(-14px,6px)}}
+@media (prefers-reduced-motion: reduce){.cena *{animation:none!important}}
