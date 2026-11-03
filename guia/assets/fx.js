@@ -49,6 +49,7 @@
   .fx-toggle{position:fixed;left:14px;bottom:14px;z-index:95;border:0;border-radius:999px;padding:8px 13px;font:700 12px Inter,sans-serif;cursor:pointer;background:rgba(22,18,29,.88);color:#fff;box-shadow:0 6px 20px rgba(0,0,0,.25);opacity:.75;transition:opacity .2s}
   .fx-toggle:hover{opacity:1}
   .fx-toggle.off{background:rgba(120,120,120,.8)}
+  @media(max-width:700px){.fx-toggle{left:auto;right:10px;bottom:10px;padding:7px 10px;font-size:11px;opacity:.6}}
   `;
   var st=document.createElement('style');st.textContent=css;document.head.appendChild(st);
 

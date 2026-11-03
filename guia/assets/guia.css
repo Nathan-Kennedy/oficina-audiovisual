@@ -216,3 +216,7 @@ footer.foot{border-top:1px solid var(--line);padding:36px 6%;text-align:center;f
 footer.foot img{width:min(480px,90%);margin:0 auto 12px;display:block;background:#fff;border-radius:12px;padding:10px}
 
 @media print{.topbar,.sidebar,.pager,.done-box,.quiz,.progress-bar{display:none!important}.layout{display:block}article{max-width:none}}
+
+/* links e palavras longas não estouram a tela no celular */
+article a,article code,article td{overflow-wrap:anywhere}
+@media(max-width:700px){article{padding:28px 5% 0}.mod-hero{padding:40px 5% 34px}.mod-hero::after{font-size:150px;bottom:-30px}article h2{font-size:23px}article h2 .num{width:32px;height:32px;font-size:15px;margin-right:8px}.lead{font-size:17.5px}.callout{padding:16px 16px 14px 52px}.callout::before{left:14px;font-size:24px}.quiz{padding:20px 16px}.tool{padding:18px 16px}figure{padding:14px}}

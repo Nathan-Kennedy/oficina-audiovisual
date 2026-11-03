@@ -116,6 +116,34 @@ nav a:hover{opacity:1;color:var(--verde)}
 .membro .papel{display:inline-block;font-size:13px;font-weight:700;color:var(--roxo);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
 .membro p{color:var(--muted);font-size:16px}
 @media(max-width:760px){.equipe{grid-template-columns:1fr}}
+/* ===== celular ===== */
+@media(max-width:700px){
+  body{font-size:16px}
+  section{padding:56px 0}
+  h2{font-size:26px}
+  .lead{font-size:16.5px}
+  .hero{padding:64px 0 84px}
+  .hero h1{font-size:33px;margin:14px 0}
+  .hero .hero-sub{font-size:17px}
+  .hero p{font-size:15.5px}
+  .badge{font-size:12px;padding:7px 12px}
+  .hero-pills span{font-size:13px;padding:6px 11px}
+  .hero .btns{gap:10px}
+  .hero .btns .btn{width:100%;justify-content:center;padding:13px 18px;font-size:15px}
+  .stat{padding:18px 12px}.stat b{font-size:30px}
+  .poster{border-radius:14px}
+  .quote{font-size:16px}
+  .cta-guia{grid-template-columns:1fr!important;padding:30px 22px!important;gap:18px!important}
+  .cta-guia h2{font-size:24px}
+  .equipe{gap:16px}
+  .membro{min-width:0;padding:22px 20px}
+  .membro h3{font-size:21px}
+  .redes a{font-size:14px;padding:10px 14px;max-width:100%;overflow-wrap:anywhere}
+  .stories img{width:160px}
+  footer{padding:32px 0}
+  footer img{width:min(340px,86%)}
+  footer p{font-size:13px;padding:0 16px}
+}
 footer{background:#fff;padding:46px 0;text-align:center;font-size:14px;color:var(--muted)}
 footer img{margin:0 auto 16px;width:min(560px,90%)}
 </style>
@@ -332,7 +360,7 @@ Projeto contemplado no Edital 001/2023 (Audiovisual) da Lei Paulo Gustavo, Ariqu
 
 <section style="padding:0 0 88px">
   <div class="wrap">
-    <a href="guia/index.html" style="display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;text-decoration:none;background:linear-gradient(120deg,#5a0b91,#8612d5 60%,#3fa96b);color:#fff;border-radius:24px;padding:44px 48px">
+    <a href="guia/index.html" class="cta-guia" style="display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;text-decoration:none;background:linear-gradient(120deg,#5a0b91,#8612d5 60%,#3fa96b);color:#fff;border-radius:24px;padding:44px 48px">
       <div>
         <span class="kicker" style="color:#70cf97">Novo · 100% gratuito</span>
         <h2 style="color:#fff">Guia completo de audiovisual com pouco recurso</h2>

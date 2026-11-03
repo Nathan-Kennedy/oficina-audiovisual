@@ -29,7 +29,7 @@
 .nx-chart.in .bar-val{opacity:1}
 .bar-row:hover .bar{filter:brightness(1.08)}
 .ref-line{position:absolute;top:-6px;bottom:-6px;border-left:2px dashed #b8afc8}
-.ref-tag{position:absolute;top:-24px;transform:translateX(-50%);font-size:11.5px;font-weight:700;color:#6f6880;white-space:nowrap}
+.ref-tag{position:absolute;top:-24px;transform:translateX(-100%);padding-right:4px;font-size:11.5px;font-weight:700;color:#6f6880;white-space:nowrap}
 .nx-tip{position:fixed;z-index:80;pointer-events:none;background:#16121d;color:#fff;font-size:13px;line-height:1.45;padding:9px 12px;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.25);max-width:260px;opacity:0;transition:opacity .15s}
 .nx-tip b{color:#70cf97}
 .nx-src{font-size:12px;color:#9b94a8;margin-top:14px;line-height:1.5}
@@ -97,3 +97,16 @@
 .nx-end blockquote{font:800 clamp(24px,3.4vw,38px)/1.25 Poppins,sans-serif;color:#16121d;max-width:860px;margin:0 auto 14px}
 .nx-end blockquote span{color:#8612d5}
 .nx-end p{color:#6f6880;max-width:640px;margin:0 auto 20px}
+
+@media(max-width:700px){
+  .nx{padding:60px 0 64px}
+  .nx-nums{gap:12px;margin-top:28px}
+  .nx-num{padding:18px 14px}.nx-num span{font-size:13.5px}
+  .nx-chart{padding:20px 16px 16px}
+  .bar-row{grid-template-columns:92px 1fr;gap:8px}.bar-row .lb{font-size:13px}
+  .marquee{margin:44px -6vw 6px}
+  .mq-row span{font-size:13.5px;padding:7px 13px}
+  .slot{padding:22px}.slot-win{height:78px}
+  .ideas{padding:20px 18px}.ideas li{font-size:14.5px}
+  .nx-end{margin-top:40px}.nx-end blockquote{font-size:23px}
+}

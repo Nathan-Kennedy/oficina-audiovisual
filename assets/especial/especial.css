@@ -130,3 +130,23 @@
 .yt-rel .th small{position:absolute;right:5px;bottom:5px;background:rgba(0,0,0,.8);font-size:11px;padding:1px 5px;border-radius:4px;font-weight:600}
 .yt-rel b{font-size:14px;line-height:1.35;display:block;margin-bottom:4px}
 .yt-rel span{font-size:12.5px;color:#aaa}
+
+@media(max-width:700px){
+  .esp{padding:56px 0 64px}
+  .st-chips,.st-ctrl .hint{display:none}
+  .st-top{padding:9px 12px}
+  .st-viewer{padding:8px}
+  .st-panel{padding:14px}
+  .st-panel h3{font-size:17px}
+  .track > b{width:58px;flex-basis:58px;font-size:9.5px}
+  .tl-ruler{margin-left:58px}
+  .st-ctrl{gap:8px;padding:10px}
+  .st-ctrl button{flex:1;padding:9px 8px;font-size:12.5px}
+  .yt{margin-top:30px}
+  .yt-top{padding:10px 12px;gap:10px}.yt-search{display:none}
+  .yt-body{padding:12px;gap:18px}
+  .yt-title{font-size:16.5px}
+  .yt-acts{margin-left:0;width:100%}
+  .yt-desc{font-size:13.5px}
+  .yt-rel{grid-template-columns:130px 1fr}
+}
