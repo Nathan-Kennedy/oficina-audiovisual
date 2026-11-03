@@ -99,7 +99,7 @@
 
   /* footer */
   document.body.appendChild(el('<footer class="foot"><img src="../assets/img/selos.png" alt="Lei Paulo Gustavo, Ministério da Cultura, Governo Federal, FUNCET, Prefeitura de Ariquemes">'+
-    '<p>Conteúdo gratuito da oficina <b>Como produzir com pouco recurso no audiovisual</b>, por Nathan Kennedy, com participação de <a href="https://www.instagram.com/lucasrikeh/" target="_blank" rel="noopener">Lucas Rikelmy</a> (fotógrafo e filmmaker).<br>Este projeto foi contemplado no Edital 001/2023 (Audiovisual) da Lei Paulo Gustavo do município de Ariquemes.</p></footer>'));
+    '<p>Conteúdo gratuito da oficina <b>Como produzir com pouco recurso no audiovisual</b>, por Nathan Kennedy (<a href="https://www.facebook.com/share/192dd6MgjS/" target="_blank" rel="noopener">Facebook</a> · <a href="mailto:nathankennedyoficial@gmail.com">e-mail</a>), com participação de <a href="https://www.instagram.com/lucasrikeh/" target="_blank" rel="noopener">Lucas Rikelmy</a> (fotógrafo e filmmaker).<br>Este projeto foi contemplado no Edital 001/2023 (Audiovisual) da Lei Paulo Gustavo do município de Ariquemes.<br>Site e guia desenvolvidos por Nathan Kennedy.</p></footer>'));
 
   /* quiz: <div class="quiz"><script type="application/json">[{"q":"","o":["",""],"a":0,"e":""}]</script></div> */
   [].forEach.call(document.querySelectorAll('.quiz'),function(qz){
