@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Módulo 01: Câmera e configurações | Guia Audiovisual com Pouco Recurso</title>
+<meta name="description" content="Entenda como a câmera do celular funciona e quais ajustes usar: resolução, fps, obturador, ISO, foco, codecs e modo Pro.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/guia.css">
+</head>
+<body data-page="01-camera">
+<main class="content">
+  <header class="mod-hero" data-num="01">
+    <div class="crumb"><a href="index.html">Guia</a> › Módulo 01</div>
+    <h1>Câmera e configurações</h1>
+    <p>O que acontece dentro do seu celular quando você aperta o botão vermelho e quais ajustes transformam um vídeo “ok” em um vídeo com cara de profissional.</p>
+    <div class="meta"><span>⏱️ 30 min de leitura</span><span>🎯 Nível: iniciante</span><span>📱 Só precisa do celular</span></div>
+  </header>
+
+  <article>
+    <p class="lead">Seu celular tem, dentro dele, uma câmera menor do que uma unha que consegue gravar em 4K, fazer câmera lenta e desfocar o fundo. Ela é uma pequena maravilha da engenharia, mas tem limites, e quem conhece esses limites grava melhor do que quem tem o aparelho mais caro e deixa tudo no automático. Bora abrir essa caixinha preta?</p>
+
+    <div class="objetivos">
+      <h3>Neste módulo você vai aprender</h3>
+      <ul>
+        <li>Como sensor e lente funcionam, e por que o celular sofre no escuro;</li>
+        <li>A diferença entre zoom óptico e digital, e quando usar cada lente do aparelho;</li>
+        <li>Quando vale gravar em 4K e quando o Full HD dá conta (e economiza espaço);</li>
+        <li>O que são fps, velocidade do obturador e a famosa regra dos 180°;</li>
+        <li>ISO, abertura, balanço de branco e o triângulo de exposição na versão celular;</li>
+        <li>Como travar foco e exposição, e evitar as armadilhas do HDR e dos codecs;</li>
+        <li>Modo Pro, apps gratuitos e a preparação do aparelho antes de gravar;</li>
+        <li>Receitas prontas de configuração para Reels, YouTube e pouca luz.</li>
+      </ul>
+    </div>
+
+    <h2 id="como-funciona"><span class="num">1</span>Como a câmera do celular enxerga</h2>
+    <p>Toda câmera, da mais cara de cinema à do seu celular de entrada, faz basicamente a mesma coisa: <strong>junta luz com uma lente e transforma essa luz em números com um sensor</strong>. O resto (cores bonitas, desfoque de fundo, estabilização) é consequência de como essas duas peças trabalham e do quanto o processador “maquia” o resultado.</p>
+
+    <h3>O sensor: um campo de baldinhos na chuva</h3>
+    <p>Imagine um campo cheio de baldinhos debaixo de uma chuva. Cada baldinho é um <strong>pixel</strong> do sensor, e a chuva são as partículas de luz (os fótons). Quando a chuva é forte, como num dia de sol, todos os baldes enchem rápido e fica fácil medir quanto caiu em cada um. Quando é garoa, como num quarto à noite, cada balde pega só umas gotinhas, e qualquer respingo aleatório atrapalha a medição. Esse “respingo aleatório” é o que você vê como <strong>ruído</strong>: aqueles chuviscos e manchas coloridas em vídeos escuros.</p>
+    <p>Agora vem o problema do celular: o sensor dele é minúsculo. Para caber 50 milhões de pixels num chip de poucos milímetros, cada baldinho precisa ser estreitíssimo, geralmente perto de 1 micrômetro (um milésimo de milímetro). Numa câmera profissional full frame, cada pixel pode ser quatro a seis vezes mais largo. Balde pequeno junta pouca água; pixel pequeno junta pouca luz.</p>
+
+    <figure>
+      <svg viewBox="0 0 640 300" role="img" aria-label="Comparação em escala do tamanho de sensores: celular intermediário, celular topo de linha e câmera full frame">
+        <rect width="640" height="300" rx="14" fill="#faf8fd"/>
+        <text x="320" y="32" text-anchor="middle" font-family="Poppins" font-size="18" font-weight="700" fill="#16121d">Tamanho dos sensores em escala</text>
+        <rect x="330" y="60" width="288" height="192" rx="6" fill="#e8f8ef" stroke="#70cf97" stroke-width="3"/>
+        <text x="474" y="150" text-anchor="middle" font-family="Poppins" font-size="16" font-weight="700" fill="#2f9a5c">Full frame</text>
+        <text x="474" y="172" text-anchor="middle" font-family="Inter" font-size="13" fill="#16121d">36 × 24 mm</text>
+        <rect x="180" y="193" width="78" height="59" rx="4" fill="#f3e9fc" stroke="#8612d5" stroke-width="3"/>
+        <text x="219" y="182" text-anchor="middle" font-family="Inter" font-size="12" font-weight="600" fill="#5a0b91">Celular topo</text>
+        <text x="219" y="227" text-anchor="middle" font-family="Inter" font-size="11" fill="#16121d">~9,8 × 7,4</text>
+        <rect x="80" y="218" width="45" height="34" rx="3" fill="#fff4dc" stroke="#ffb020" stroke-width="3"/>
+        <text x="102" y="207" text-anchor="middle" font-family="Inter" font-size="12" font-weight="600" fill="#9a6400">Celular comum</text>
+        <text x="102" y="272" text-anchor="middle" font-family="Inter" font-size="11" fill="#16121d">~5,6 × 4,2 mm</text>
+        <line x1="30" y1="252" x2="620" y2="252" stroke="#16121d" stroke-width="1" stroke-dasharray="4 4" opacity=".4"/>
+        <text x="30" y="80" font-family="Inter" font-size="13" fill="#6f6880">Mais área = mais luz</text>
+        <text x="30" y="98" font-family="Inter" font-size="13" fill="#6f6880">captada = menos ruído</text>
+      </svg>
+      <figcaption>Os retângulos estão na mesma escala. O sensor de um celular comum tem uma área cerca de 35 vezes menor que o de uma câmera full frame. Medidas aproximadas.</figcaption>
+    </figure>
+
+    <p>Por isso os fabricantes apelam para truques de software: juntam quatro pixels vizinhos num “superpixel” (o tal <em>pixel binning</em>, que faz um sensor de 48 ou 50 MP entregar fotos de 12 MP), empilham vários quadros para limpar o ruído e aplicam redução de ruído agressiva. Na foto isso funciona muito bem. No vídeo, que precisa de 30 imagens por segundo, sobra bem menos tempo para essa mágica, e é por isso que <strong>o vídeo noturno do celular costuma ser bem pior que a foto noturna</strong> do mesmo aparelho.</p>
+
+    <div class="callout nerd"><strong>Curiosidade nerd</strong><p>O avô do sensor do seu celular é o <strong>CCD</strong>, inventado em 1969 por Willard Boyle e George Smith nos Laboratórios Bell, nos Estados Unidos. A invenção rendeu aos dois o Prêmio Nobel de Física de 2009. Hoje os celulares usam sensores <strong>CMOS</strong>, que gastam menos bateria e são mais baratos de fabricar, mas a ideia básica de transformar fótons em carga elétrica continua lá.</p></div>
+
+    <h3>A lente e as várias câmeras do celular</h3>
+    <p>Repare que muitos celulares têm duas, três ou quatro “bolinhas” atrás. Na maioria dos casos são <strong>câmeras diferentes</strong>, cada uma com sua lente e seu sensor. A diferença entre elas está na <strong>distância focal</strong>, que define o quanto da cena cabe no quadro. Como os números reais são minúsculos (uns 6 mm na principal), os fabricantes usam a <strong>focal equivalente</strong>, ou seja, o número que essa lente teria numa câmera full frame:</p>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>Câmera</th><th>Focal equivalente</th><th>No app aparece como</th><th>Boa para</th></tr></thead>
+      <tbody>
+        <tr><td>Ultra-angular</td><td>13 a 16 mm</td><td>0,5x ou 0,6x</td><td>Ambientes pequenos, paisagem, tomadas de impacto. Distorce rostos perto da borda.</td></tr>
+        <tr><td>Principal (grande-angular)</td><td>23 a 26 mm</td><td>1x</td><td>Quase tudo. É a de maior sensor e melhor qualidade, principalmente no escuro.</td></tr>
+        <tr><td>Teleobjetiva</td><td>50 a 120 mm (ou mais)</td><td>2x, 3x, 5x</td><td>Retratos com rosto mais natural, detalhes, “comprimir” o fundo.</td></tr>
+        <tr><td>Frontal (selfie)</td><td>cerca de 22 a 26 mm</td><td>botão de virar</td><td>Falar para a câmera vendo o enquadramento. Costuma ter qualidade menor que a principal.</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="callout warn"><strong>Erro comum</strong><p>Achar que todas as lentes têm a mesma qualidade. A câmera principal quase sempre tem o maior sensor e a lente mais luminosa. A ultra-angular e a tele costumam ter sensores bem menores: de dia ficam ótimas, mas no escuro fazem ruído rapidinho. Em ambiente interno ou à noite, prefira a <strong>1x</strong>.</p></div>
+
+    <h3>Zoom óptico x zoom digital</h3>
+    <p><strong>Zoom óptico</strong> é quando a lente realmente aproxima a imagem, como a tele 3x: o sensor recebe uma imagem já ampliada, com todos os pixels trabalhando. <strong>Zoom digital</strong> é recorte: o celular pega o meio da imagem e estica. É como dar zoom num print de tela: aproxima, mas perde detalhe. Quando você arrasta o dedo para 1,7x, por exemplo, o aparelho normalmente está cortando a imagem da câmera principal até chegar na próxima lente “de verdade”.</p>
+    <p>A regra prática: use os botões de zoom que aparecem fixos no app (0,5x, 1x, 2x, 3x...) porque eles costumam corresponder às lentes ópticas ou a recortes de alta qualidade do sensor principal. Evite valores quebrados e, principalmente, zoom alto no escuro. Se dá para andar até o objeto, ande. O <strong>“zoom com os pés”</strong> é o único que não custa qualidade.</p>
+
+    <div class="callout tip"><strong>Dica de ouro</strong><p>Para gravar alguém falando, afaste-se um pouco e use a lente 2x (se o seu celular tiver). Lentes mais fechadas deixam o rosto com proporções mais naturais, sem aquele nariz aumentado típico da selfie de perto, e ainda desfocam um pouco mais o fundo.</p></div>
+
+    <h2 id="resolucao"><span class="num">2</span>Resolução: HD, Full HD e 4K</h2>
+    <p>Resolução é o <strong>número de pixels de cada quadro</strong>, escrito como largura × altura. Quanto mais pixels, mais detalhe a imagem consegue guardar, e mais pesado fica o arquivo.</p>
+
+    <figure>
+      <svg viewBox="0 0 640 380" role="img" aria-label="Comparação de tamanho entre as resoluções HD, Full HD e 4K, desenhadas em escala uma dentro da outra">
+        <rect width="640" height="380" rx="14" fill="#faf8fd"/>
+        <rect x="40" y="40" width="560" height="315" rx="6" fill="#f3e9fc" stroke="#8612d5" stroke-width="3"/>
+        <rect x="40" y="40" width="280" height="157.5" rx="4" fill="#e8f8ef" stroke="#2f9a5c" stroke-width="3"/>
+        <rect x="40" y="40" width="186.7" height="105" rx="3" fill="#fff4dc" stroke="#ffb020" stroke-width="3"/>
+        <text x="133" y="88" text-anchor="middle" font-family="Poppins" font-size="15" font-weight="700" fill="#9a6400">HD</text>
+        <text x="133" y="108" text-anchor="middle" font-family="Inter" font-size="12" fill="#16121d">1280 × 720</text>
+        <text x="273" y="160" text-anchor="middle" font-family="Poppins" font-size="15" font-weight="700" fill="#2f9a5c">Full HD</text>
+        <text x="273" y="180" text-anchor="middle" font-family="Inter" font-size="12" fill="#16121d">1920 × 1080</text>
+        <text x="460" y="290" text-anchor="middle" font-family="Poppins" font-size="22" font-weight="700" fill="#5a0b91">4K UHD</text>
+        <text x="460" y="314" text-anchor="middle" font-family="Inter" font-size="14" fill="#16121d">3840 × 2160</text>
+        <text x="460" y="334" text-anchor="middle" font-family="Inter" font-size="12" fill="#6f6880">4 vezes os pixels do Full HD</text>
+        <text x="320" y="28" text-anchor="middle" font-family="Poppins" font-size="15" font-weight="700" fill="#16121d">Mesma escala: cada retângulo é um quadro de vídeo</text>
+      </svg>
+      <figcaption>O 4K tem exatamente o dobro da largura e o dobro da altura do Full HD, ou seja, quatro vezes mais pixels por quadro.</figcaption>
+    </figure>
+
+    <h3>Quando o 4K vale a pena</h3>
+    <ul>
+      <li><strong>Quando você vai recortar na edição.</strong> Gravou um plano aberto em 4K e quer um close? Dá para dar zoom de até 2x numa timeline Full HD sem perder nitidez. É como ter duas câmeras numa só.</li>
+      <li><strong>Quando o vídeo vai para o YouTube.</strong> A plataforma dá mais bitrate (mais qualidade) para vídeos enviados em 4K, então até quem assiste em 1080p vê uma imagem um pouco mais limpa.</li>
+      <li><strong>Quando há bastante luz.</strong> De dia, ao ar livre, o 4K do celular brilha. No escuro, mais pixels não salvam a falta de luz.</li>
+      <li><strong>Quando precisa estabilizar muito na edição</strong>, já que a estabilização também recorta as bordas.</li>
+    </ul>
+
+    <h3>Quando o Full HD é a escolha esperta</h3>
+    <ul>
+      <li>Para <strong>Reels, TikTok e Stories</strong>: as redes recomprimem tudo e exibem em resolução próxima de 1080 × 1920. A diferença some na tela do celular.</li>
+      <li>Quando o <strong>armazenamento está apertado</strong> ou o celular é intermediário e esquenta em 4K.</li>
+      <li>Quando o computador ou celular de edição é fraco: 4K trava a timeline.</li>
+      <li>Em <strong>pouca luz</strong>: alguns aparelhos aplicam processamento melhor em 1080p.</li>
+    </ul>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>Configuração</th><th>HEVC (H.265)</th><th>H.264 (“mais compatível”)</th></tr></thead>
+      <tbody>
+        <tr><td>1080p a 30 fps</td><td>~60 MB por minuto</td><td>~130 MB por minuto</td></tr>
+        <tr><td>1080p a 60 fps</td><td>~90 MB por minuto</td><td>~175 MB por minuto</td></tr>
+        <tr><td>4K a 24 fps</td><td>~135 MB por minuto</td><td>~270 MB por minuto</td></tr>
+        <tr><td>4K a 30 fps</td><td>~170 MB por minuto</td><td>~350 MB por minuto</td></tr>
+        <tr><td>4K a 60 fps</td><td>~400 MB por minuto</td><td>~440 MB por minuto</td></tr>
+      </tbody>
+    </table></div>
+    <p style="font-size:15px;color:var(--muted)">Valores aproximados, usando como referência os números que o iPhone mostra nos ajustes. Em Android variam conforme o aparelho, mas a ordem de grandeza é parecida. Faça a conta: 10 minutos de 4K a 60 fps passam fácil de 4 GB.</p>
+
+    <div class="callout warn"><strong>Erro comum</strong><p>Gravar tudo em 4K 60 fps “porque é o melhor” e descobrir no meio da gravação que o celular encheu, esquentou ou que a bateria derreteu. Mais nem sempre é melhor: escolha a resolução pelo destino do vídeo.</p></div>
+
+    <h2 id="fps"><span class="num">3</span>Taxa de quadros (fps) e câmera lenta</h2>
+    <p>Vídeo é uma ilusão. Não existe movimento de verdade na tela: são fotos paradas trocadas tão rápido que o cérebro preenche os buracos. Cada foto é um <strong>quadro</strong> (<em>frame</em>), e a quantidade de quadros por segundo é o <strong>fps</strong>.</p>
+
+    <div class="cards">
+      <div class="card"><div class="ic">🎞️</div><h4>24 fps</h4><p>O padrão do cinema. Movimento com um leve borrão que a gente associa a “filme”. Ótimo para conteúdo narrativo e com clima.</p></div>
+      <div class="card"><div class="ic">📺</div><h4>30 fps</h4><p>O padrão da TV e da internet nas Américas. Um pouco mais fluido. É a escolha segura para quase tudo nas redes sociais.</p></div>
+      <div class="card"><div class="ic">⚡</div><h4>60 fps</h4><p>Muito fluido. Bom para esporte, jogos, ação rápida e para desacelerar 2x na edição. Pode parecer “novela” em cenas de diálogo.</p></div>
+      <div class="card"><div class="ic">🐢</div><h4>120 / 240 fps</h4><p>Câmera lenta. Gravando a 120 e exibindo a 30, o tempo fica 4x mais lento. A 240, 8x. Precisa de MUITA luz.</p></div>
+    </div>
+
+    <div class="callout nerd"><strong>Curiosidade nerd</strong><p>Por que justamente 24? No cinema mudo, a velocidade variava (muitas vezes 16 a 20 quadros por segundo, girando a manivela à mão). Quando o som chegou ao cinema, no fim dos anos 1920, o áudio passou a ser gravado numa trilha na própria película e precisava de velocidade constante. Os 24 quadros foram um meio-termo entre qualidade de som aceitável e economia de filme, que era caro. Um acordo técnico de quase cem anos atrás que até hoje define o que nosso cérebro entende como “cara de cinema”.</p></div>
+
+    <h3>Como funciona a câmera lenta</h3>
+    <p>Câmera lenta de verdade não é “esticar” o vídeo. É <strong>gravar mais quadros do que serão exibidos</strong>. Se você grava 1 segundo a 120 fps, tem 120 imagens. Exibindo a 30 por segundo, aquelas 120 imagens levam 4 segundos para passar. O movimento fica suave porque existe uma imagem real para cada instante.</p>
+    <p>Se você grava a 30 fps e desacelera 4x na edição, o programa precisa repetir ou inventar quadros, e o resultado fica engasgado. Por isso: <strong>se vai querer câmera lenta, decida antes de gravar</strong>.</p>
+
+    <div class="callout tip"><strong>Dica de ouro</strong><p>Câmera lenta exige luz forte, porque cada quadro fica pouquíssimo tempo exposto (veja a próxima seção). De dia, ao sol, o 120 ou 240 fps do celular fica lindo. Dentro de casa, à noite, sai escuro e granulado. Para slow motion em ambiente interno, encoste perto de uma janela bem iluminada.</p></div>
+
+    <div class="callout nerd"><strong>Curiosidade nerd</strong><p>Em 2012, o filme <em>O Hobbit: Uma Jornada Inesperada</em> foi exibido em algumas salas a 48 quadros por segundo, o dobro do normal. Muita gente reclamou que parecia “novela” ou “vídeo caseiro”. A imagem era objetivamente mais nítida e fluida, mas o cérebro, treinado por décadas de cinema em 24 fps, estranhou. Fluidez não é sinônimo de beleza: é escolha de linguagem.</p></div>
+
+    <h2 id="obturador"><span class="num">4</span>Velocidade do obturador e a regra dos 180°</h2>
+    <p>O fps diz <em>quantos</em> quadros são gravados por segundo. A <strong>velocidade do obturador</strong> (<em>shutter speed</em>) diz <em>por quanto tempo</em> cada quadro fica captando luz. Ela é escrita como fração de segundo: 1/50, 1/60, 1/1000...</p>
+    <p>Esse tempo tem dois efeitos ao mesmo tempo:</p>
+    <ul>
+      <li><strong>Brilho:</strong> quanto mais tempo exposto, mais luz entra, e mais clara fica a imagem.</li>
+      <li><strong>Borrão de movimento</strong> (<em>motion blur</em>): quanto mais tempo exposto, mais as coisas que se mexem “riscam” o quadro.</li>
+    </ul>
+
+    <h3>A regra dos 180°</h3>
+    <p>Lá nas câmeras de cinema com película, o obturador era um disco giratório com um recorte em forma de meia-lua. Quando o lado aberto passava na frente do filme, a luz entrava; quando passava o lado fechado, o filme avançava para o próximo quadro. Com o recorte aberto em 180° (meio disco), cada quadro ficava exposto <strong>metade do tempo</strong> disponível. Esse borrão de movimento virou o “normal” para nossos olhos.</p>
+    <p>A regra traduzida para o mundo digital é simples:</p>
+    <div class="callout info"><strong>Regra dos 180°</strong><p><strong>Velocidade do obturador ≈ 1 ÷ (2 × fps)</strong>. Ou seja, o denominador é o dobro do fps.</p></div>
+
+    <h3>Exemplo resolvido</h3>
+    <ol class="steps">
+      <li><strong>Escolha o fps</strong>Você vai gravar a 30 fps para um Reels.</li>
+      <li><strong>Dobre o número</strong>2 × 30 = 60.</li>
+      <li><strong>Vire fração</strong>Obturador ideal: 1/60 de segundo. Cada quadro dura 1/30 s e fica exposto metade disso.</li>
+      <li><strong>Faça o mesmo para outros fps</strong>24 fps → 1/48 (use 1/50 ou 1/60, que existem no app). 60 fps → 1/120 (ou 1/125). 120 fps → 1/240 (ou 1/250).</li>
+      <li><strong>Ajuste o brilho por outro caminho</strong>Se a imagem ficou clara ou escura demais, não mexa no obturador: ajuste o ISO, a luz da cena ou use um filtro ND (veja mais adiante).</li>
+    </ol>
+
+    <figure>
+      <svg viewBox="0 0 680 330" role="img" aria-label="Linha do tempo de seis quadros mostrando quanto tempo cada quadro fica exposto com obturador de 1/30, 1/60 e 1/1000 a 30 fps">
+        <rect width="680" height="330" rx="14" fill="#faf8fd"/>
+        <text x="340" y="30" text-anchor="middle" font-family="Poppins" font-size="16" font-weight="700" fill="#16121d">6 quadros a 30 fps (cada quadro = 1/30 s)</text>
+        <g font-family="Inter" font-size="13" fill="#16121d">
+          <text x="20" y="85" font-weight="700">1/30</text><text x="20" y="102" fill="#6f6880" font-size="11">360°</text>
+          <text x="20" y="175" font-weight="700">1/60</text><text x="20" y="192" fill="#6f6880" font-size="11">180° ✓</text>
+          <text x="20" y="265" font-weight="700">1/1000</text><text x="20" y="282" fill="#6f6880" font-size="11">~11°</text>
+        </g>
+        <g stroke="#16121d" stroke-width="1.5" fill="#fff">
+          <rect x="90" y="65" width="80" height="45"/><rect x="170" y="65" width="80" height="45"/><rect x="250" y="65" width="80" height="45"/><rect x="330" y="65" width="80" height="45"/><rect x="410" y="65" width="80" height="45"/><rect x="490" y="65" width="80" height="45"/>
+          <rect x="90" y="155" width="80" height="45"/><rect x="170" y="155" width="80" height="45"/><rect x="250" y="155" width="80" height="45"/><rect x="330" y="155" width="80" height="45"/><rect x="410" y="155" width="80" height="45"/><rect x="490" y="155" width="80" height="45"/>
+          <rect x="90" y="245" width="80" height="45"/><rect x="170" y="245" width="80" height="45"/><rect x="250" y="245" width="80" height="45"/><rect x="330" y="245" width="80" height="45"/><rect x="410" y="245" width="80" height="45"/><rect x="490" y="245" width="80" height="45"/>
+        </g>
+        <g fill="#ffb020" opacity=".85">
+          <rect x="91" y="66" width="78" height="43"/><rect x="171" y="66" width="78" height="43"/><rect x="251" y="66" width="78" height="43"/><rect x="331" y="66" width="78" height="43"/><rect x="411" y="66" width="78" height="43"/><rect x="491" y="66" width="78" height="43"/>
+        </g>
+        <g fill="#70cf97">
+          <rect x="91" y="156" width="40" height="43"/><rect x="171" y="156" width="40" height="43"/><rect x="251" y="156" width="40" height="43"/><rect x="331" y="156" width="40" height="43"/><rect x="411" y="156" width="40" height="43"/><rect x="491" y="156" width="40" height="43"/>
+        </g>
+        <g fill="#8612d5">
+          <rect x="91" y="246" width="3" height="43"/><rect x="171" y="246" width="3" height="43"/><rect x="251" y="246" width="3" height="43"/><rect x="331" y="246" width="3" height="43"/><rect x="411" y="246" width="3" height="43"/><rect x="491" y="246" width="3" height="43"/>
+        </g>
+        <g font-family="Inter" font-size="12" fill="#16121d">
+          <text x="582" y="85">Borrado,</text><text x="582" y="101">“arrastado”</text>
+          <text x="582" y="175">Natural,</text><text x="582" y="191">cinema</text>
+          <text x="582" y="265">Picotado,</text><text x="582" y="281">“robótico”</text>
+        </g>
+        <text x="340" y="318" text-anchor="middle" font-family="Inter" font-size="12" fill="#6f6880">Parte colorida = tempo em que o sensor está captando luz dentro de cada quadro</text>
+      </svg>
+      <figcaption>Com 1/60 a 30 fps, cada quadro fica exposto metade do tempo: é a regra dos 180°. Obturador muito rápido deixa o movimento “picotado”; muito lento deixa tudo arrastado.</figcaption>
+    </figure>
+
+    <h3>E se eu não seguir a regra?</h3>
+    <p>Ela é uma referência, não uma lei. Obturador muito rápido (1/500, 1/2000) congela gotas d'água e deixa cenas de ação com aquele visual tenso e picotado, usado de propósito em filmes de guerra. Obturador lento demais (igual ao tempo do quadro, 1/30 a 30 fps) cria rastros de sonho, bons para clipes noturnos. O problema é quando isso acontece <strong>sem você querer</strong>, e é exatamente o que o modo automático faz: em dia de sol, ele sobe o obturador para 1/2000 para não estourar a imagem, e o vídeo fica com movimento “de videogame barato”.</p>
+
+    <h3>Bônus brasileiro: a luz que pisca</h3>
+    <p>A rede elétrica no Brasil funciona a <strong>60 Hz</strong>. Muitas lâmpadas (principalmente LEDs baratos e fluorescentes) piscam 120 vezes por segundo, rápido demais para o olho, mas não para a câmera. Se o obturador não “combina” com essa piscada, aparecem <strong>faixas escuras rolando</strong> na imagem ou um tremor no brilho (o famoso <em>flicker</em>).</p>
+    <p>A solução: em ambiente com lâmpada, use obturadores múltiplos de 1/60 (1/60, 1/120). Por isso, aqui, gravar a 24 fps com 1/50 (o padrão europeu, onde a rede é de 50 Hz) pode dar flicker. Use 1/60 mesmo a 24 fps: a diferença no borrão é imperceptível.</p>
+
+    <div class="callout pratica"><strong>Na prática</strong><p>Abra o modo Pro (ou um app manual) e aponte para uma lâmpada LED da sua casa. Coloque o obturador em 1/60 e depois em 1/1000 ou 1/2000. Observe a tela: em velocidades altas, as faixas escuras costumam aparecer. Você acabou de ver a rede elétrica a olho nu.</p></div>
+
+    <h2 id="iso-abertura"><span class="num">5</span>ISO, abertura e profundidade de campo</h2>
+
+    <h3>ISO: o volume da imagem</h3>
+    <p>O <strong>ISO</strong> é a amplificação do sinal do sensor. Pense nele como o volume de um rádio com chiado: se a música está baixa, você aumenta o volume, mas o chiado aumenta junto. ISO alto clareia a imagem amplificando tudo, inclusive o ruído. O sensor não passa a captar mais luz; ele só grita mais alto o pouco que captou.</p>
+    <ul>
+      <li><strong>ISO baixo (50 a 200):</strong> imagem limpa. Exige bastante luz.</li>
+      <li><strong>ISO médio (400 a 800):</strong> aceitável na maioria dos celulares, já com algum ruído.</li>
+      <li><strong>ISO alto (1600 em diante):</strong> granulado, cores lavadas, e o celular aplica redução de ruído que deixa a pele com aparência de “massinha”.</li>
+    </ul>
+    <p>A grande lição: <strong>no celular, a melhor redução de ruído é colocar mais luz na cena</strong>. Uma luminária a mais vale mais que qualquer configuração (o módulo de <a href="02-iluminacao.html">Iluminação</a> está aí para isso).</p>
+
+    <h3>Abertura: o tamanho da janela</h3>
+    <p>A <strong>abertura</strong> é o tamanho do buraco por onde a luz entra na lente, indicada pelo número <strong>f</strong>: f/1.8, f/2.8, f/8... A lógica é invertida: <strong>quanto menor o número, maior a abertura</strong>, porque o número f é uma divisão (distância focal ÷ diâmetro da abertura). Uma lente f/1.8 deixa entrar bem mais luz que uma f/4.</p>
+    <p>Aqui vem uma revelação: <strong>a maioria dos celulares tem abertura fixa</strong>. Você não consegue mudar. A câmera principal costuma ficar entre f/1.5 e f/1.9, o que é bem aberto. Alguns poucos modelos tiveram ou têm abertura variável, mas é exceção.</p>
+
+    <div class="callout nerd"><strong>Curiosidade nerd</strong><p>Seu olho também tem abertura variável: a pupila. Ela vai de cerca de 2 mm no sol forte até uns 7 ou 8 mm no escuro. É o mesmo princípio de uma lente: no escuro, abre para deixar entrar mais luz. A pupila reage em poucos segundos quando você entra num lugar escuro, enquanto a adaptação completa da visão noturna leva bem mais, uns 20 a 30 minutos.</p></div>
+
+    <h3>Profundidade de campo e modo retrato</h3>
+    <p><strong>Profundidade de campo</strong> é a faixa da cena que fica nítida. Aquele fundo bem desfocado das câmeras profissionais (o <em>bokeh</em>) vem da combinação de sensor grande, abertura grande e lente mais fechada. Como o sensor do celular é minúsculo, a focal real é curtíssima e quase tudo fica em foco ao mesmo tempo. Ótimo para não errar o foco, ruim para quem quer aquele visual “de cinema”.</p>
+    <p>Como conseguir mais desfoque de verdade no celular:</p>
+    <ul>
+      <li><strong>Aproxime a câmera do assunto</strong> (quanto mais perto o foco, mais o fundo desfoca);</li>
+      <li><strong>Afaste o assunto do fundo</strong>: tire a pessoa da parede, coloque 2 ou 3 metros de espaço atrás;</li>
+      <li><strong>Use a lente tele</strong> (2x, 3x), que desfoca mais que a ultra-angular.</li>
+    </ul>
+    <p>Já o <strong>modo retrato/cinematográfico</strong> faz o desfoque por software: o celular estima a profundidade e borra o fundo. Funciona bem em pessoas paradas e com bastante luz. Falha em cabelos soltos, óculos, copos transparentes e movimento rápido, criando bordas “recortadas”. Use com moderação e sempre confira o resultado.</p>
+
+    <div class="callout tip"><strong>Dica de ouro</strong><p>Antes de ligar o modo retrato, tente o desfoque “de graça”: aproxime a câmera, afaste a pessoa da parede e coloque algumas luzinhas ou objetos lá no fundo. Fica mais natural e não tem bordas recortadas.</p></div>
+
+    <h2 id="triangulo"><span class="num">6</span>Triângulo de exposição e balanço de branco</h2>
+    <p><strong>Exposição</strong> é o quanto de luz chega na imagem final: pouca e fica escuro (subexposto), demais e fica estourado (superexposto, aquelas áreas brancas sem detalhe nenhum). Nas câmeras tradicionais, ela é controlada pelo <strong>triângulo de exposição</strong>: abertura, obturador e ISO. Mexeu num, precisa compensar em outro.</p>
+
+    <figure>
+      <svg viewBox="0 0 640 380" role="img" aria-label="Triângulo de exposição adaptado ao celular: obturador, ISO e abertura fixa, com o filtro ND e a luz da cena como alternativas">
+        <rect width="640" height="380" rx="14" fill="#faf8fd"/>
+        <polygon points="320,60 120,320 520,320" fill="#f3e9fc" stroke="#8612d5" stroke-width="4" stroke-linejoin="round"/>
+        <circle cx="320" cy="60" r="44" fill="#8612d5"/>
+        <text x="320" y="56" text-anchor="middle" font-family="Poppins" font-size="14" font-weight="700" fill="#fff">Obturador</text>
+        <text x="320" y="74" text-anchor="middle" font-family="Inter" font-size="11" fill="#fff">brilho + borrão</text>
+        <circle cx="120" cy="320" r="44" fill="#70cf97"/>
+        <text x="120" y="316" text-anchor="middle" font-family="Poppins" font-size="14" font-weight="700" fill="#16121d">ISO</text>
+        <text x="120" y="334" text-anchor="middle" font-family="Inter" font-size="11" fill="#16121d">brilho + ruído</text>
+        <circle cx="520" cy="320" r="44" fill="#e8e2f0" stroke="#6f6880" stroke-width="2" stroke-dasharray="6 4"/>
+        <text x="520" y="316" text-anchor="middle" font-family="Poppins" font-size="14" font-weight="700" fill="#6f6880">Abertura</text>
+        <text x="520" y="334" text-anchor="middle" font-family="Inter" font-size="11" fill="#6f6880">fixa no celular</text>
+        <text x="320" y="225" text-anchor="middle" font-family="Poppins" font-size="18" font-weight="700" fill="#5a0b91">EXPOSIÇÃO</text>
+        <rect x="430" y="120" width="190" height="62" rx="10" fill="#fff4dc" stroke="#ffb020" stroke-width="2"/>
+        <text x="525" y="145" text-anchor="middle" font-family="Poppins" font-size="13" font-weight="700" fill="#9a6400">Substitutos no celular</text>
+        <text x="525" y="166" text-anchor="middle" font-family="Inter" font-size="12" fill="#16121d">Filtro ND + luz da cena</text>
+        <line x1="520" y1="182" x2="520" y2="270" stroke="#ffb020" stroke-width="2" stroke-dasharray="5 4"/>
+      </svg>
+      <figcaption>No celular, a abertura costuma ser fixa. O “terceiro lado” do triângulo vira o filtro ND (para tirar luz) e a iluminação da cena (para colocar luz).</figcaption>
+    </figure>
+
+    <h3>A versão celular do triângulo</h3>
+    <p>Como a abertura é fixa, sobram dois controles: obturador e ISO. E o obturador já está “preso” pela regra dos 180°. Resultado: o único ajuste livre é o ISO. Isso cria dois cenários típicos:</p>
+    <ul>
+      <li><strong>Pouca luz:</strong> obturador em 1/60, ISO sobe, ruído aparece. Solução: mais luz na cena.</li>
+      <li><strong>Luz demais (sol do meio-dia):</strong> ISO já está no mínimo e, mesmo assim, com 1/60 a imagem estoura. Solução: um <strong>filtro ND</strong> (densidade neutra), que é basicamente “óculos escuros para a lente”. Existem modelos de clipe para celular por cerca de R$ 40 a R$ 120 (valores aproximados em 2026). Um ND variável permite girar e escolher quanto escurecer.</li>
+    </ul>
+    <p>Sem ND? Tudo bem. Para a maioria dos vídeos de redes sociais, deixar o automático subir o obturador no sol não é o fim do mundo. A regra dos 180° faz mais diferença em cenas com movimento: gente andando, mãos gesticulando, carros passando.</p>
+
+    <h3>Balanço de branco: o “branco de referência”</h3>
+    <p>Luz tem cor. A de uma lâmpada amarela é alaranjada, a de um dia nublado é azulada. Nosso cérebro corrige isso sem a gente perceber (uma folha de papel parece branca em qualquer lugar), mas a câmera precisa ser avisada. O <strong>balanço de branco</strong> (<em>white balance</em>, WB) é esse aviso, medido em <strong>Kelvin (K)</strong>: valores baixos (~3200 K) compensam luz amarelada, valores altos (~5600 K ou mais) compensam luz de dia.</p>
+    <p>O problema do automático é que ele <strong>muda no meio da gravação</strong>. Você vira a câmera de uma parede branca para uma parede verde e a pele da pessoa muda de cor no meio da cena. Na edição isso é um pesadelo de corrigir. Em modo Pro, <strong>fixe o WB</strong>: 5600 K para luz do dia, 3200 K para lâmpadas amarelas, ou ajuste até a pele parecer natural. O módulo de iluminação aprofunda temperatura de cor.</p>
+
+    <h2 id="foco-exposicao"><span class="num">7</span>Travando foco e exposição</h2>
+    <p>No automático, o celular reavalia foco e brilho o tempo todo. Uma pessoa passa na frente, ele foca nela; a nuvem sai da frente do sol, a imagem “respira”, escurece e clareia. Esses pulos denunciam o vídeo amador na hora. A solução existe em praticamente todo celular e quase ninguém usa.</p>
+
+    <h3>Trava AE/AF (toque e segure)</h3>
+    <ol class="steps">
+      <li><strong>Enquadre a cena</strong>Posicione o celular no tripé ou apoio e componha a imagem.</li>
+      <li><strong>Toque e segure no assunto</strong>Mantenha o dedo por um ou dois segundos no rosto da pessoa ou no objeto principal.</li>
+      <li><strong>Confirme a trava</strong>Vai aparecer um aviso como “Trava AE/AF” (iPhone) ou um cadeado/ícone de travado (Android, varia conforme a marca). AE = exposição automática; AF = foco automático. Agora os dois estão congelados.</li>
+      <li><strong>Ajuste o brilho</strong>Arraste o ícone de sol (ou a barrinha ao lado do quadrado de foco) para cima ou para baixo até o brilho ficar do jeito certo.</li>
+      <li><strong>Grave sem medo</strong>O celular não vai mais “caçar” foco nem mudar a luz sozinho. Se mudar de cena ou de luz, refaça a trava.</li>
+    </ol>
+
+    <h3>Compensação de exposição</h3>
+    <p>Aquele ícone de sol é a <strong>compensação de exposição</strong>, normalmente indicada em “EV” (+0,3, -0,7 etc.). Ele não muda o modo de medir; só diz ao celular “quero mais claro” ou “quero mais escuro” que o que ele acha certo.</p>
+    <p>A dica que vale ouro: <strong>em vídeo, é melhor errar um pouco para o escuro do que para o claro</strong>. Áreas estouradas (brancas puras) não têm informação nenhuma, e nenhuma edição recupera. Áreas um pouco escuras ainda guardam detalhe que pode ser clareado. Se o céu ou a pele estão quase estourando, baixe a compensação um pouco (-0,3 a -0,7).</p>
+
+    <div class="callout tip"><strong>Dica de ouro</strong><p>Alguns celulares mostram as <strong>zebras</strong> no modo Pro: listras diagonais sobre as áreas que vão estourar. Se seu app tiver, ative. Se a zebra aparecer na testa da pessoa, baixe a exposição até ela sumir ou ficar só nos reflexos.</p></div>
+
+    <div class="callout warn"><strong>Erro comum</strong><p>Gravar alguém na frente de uma janela clara sem travar a exposição. O celular mede a janela, escurece tudo e a pessoa vira uma silhueta. Toque e segure no rosto dela, ou melhor ainda: vire a pessoa para a janela, para que a luz bata no rosto e não atrás dele.</p></div>
+
+    <h2 id="formatos"><span class="num">8</span>HDR, codecs e bitrate: o que tem dentro do arquivo</h2>
+
+    <h3>HDR em vídeo: lindo no seu celular, estranho no dos outros</h3>
+    <p>Vários celulares gravam vídeo em <strong>HDR</strong> (alto alcance dinâmico, às vezes com nomes como Dolby Vision ou HDR10+). Na tela do próprio aparelho fica deslumbrante: brilhos intensos, céu com detalhe. O problema aparece depois:</p>
+    <ul>
+      <li>Ao mandar para quem tem tela comum, ou ao editar num app que não entende HDR, a imagem pode ficar <strong>lavada, cinza ou com cores esquisitas</strong>;</li>
+      <li>No Instagram e outras redes, vídeos HDR às vezes aparecem estourados ao lado de conteúdo normal, ou são convertidos de forma imprevisível;</li>
+      <li>Misturar clipes HDR e não HDR na mesma edição dá diferenças de brilho chatas de corrigir.</li>
+    </ul>
+    <p>Para iniciantes, a recomendação é simples: <strong>desligue o vídeo HDR</strong> (no iPhone fica em Ajustes › Câmera › Gravar Vídeo › Vídeo HDR; em Android costuma estar nas configurações da câmera com nomes como “Vídeo HDR10+”). Grave em SDR, que é o padrão que todo mundo entende. Quando você dominar edição e cor, aí pode experimentar.</p>
+
+    <div class="callout warn"><strong>Erro comum</strong><p>Confundir o HDR da <em>foto</em> com o HDR do <em>vídeo</em>. Na foto, o HDR automático é ótimo e pode ficar ligado. O que dá dor de cabeça é o formato de vídeo HDR.</p></div>
+
+    <h3>Codec: o jeito de “compactar” o vídeo</h3>
+    <p>Um minuto de vídeo 4K sem compressão nenhuma passaria de vários gigabytes. Para caber no celular, o vídeo é compactado por um <strong>codec</strong>, um algoritmo que joga fora informações que o olho não percebe e guarda só o que muda de um quadro para o outro. Os dois que você vai encontrar:</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Codec</th><th>Vantagem</th><th>Desvantagem</th><th>Nome nos ajustes</th></tr></thead>
+      <tbody>
+        <tr><td><strong>H.264 (AVC)</strong></td><td>Abre em praticamente qualquer computador, app e TV. Edição mais leve em máquinas antigas.</td><td>Arquivo cerca de duas vezes maior para a mesma qualidade.</td><td>iPhone: “Mais Compatível”. Android: H.264 ou padrão.</td></tr>
+        <tr><td><strong>HEVC (H.265)</strong></td><td>Metade do tamanho com qualidade parecida. Necessário para 4K 60 e alguns modos.</td><td>Alguns computadores antigos e programas não abrem ou travam na edição.</td><td>iPhone: “Alta Eficiência”. Android: HEVC ou “vídeo de alta eficiência”.</td></tr>
+      </tbody>
+    </table></div>
+    <p>Qual escolher? Se você edita <strong>no próprio celular</strong> ou num computador recente, HEVC economiza muito espaço. Se edita num <strong>notebook antigo</strong> ou precisa mandar o arquivo para alguém que vai abrir no Windows sem saber quais programas tem, H.264 evita surpresas. No iPhone, a opção “Mais Compatível” fica em Ajustes › Câmera › Formatos.</p>
+
+    <h3>Bitrate: a “quantidade de dados por segundo”</h3>
+    <p><strong>Bitrate</strong> é quanta informação o vídeo usa por segundo, medida em megabits por segundo (Mbps). Com a mesma resolução, mais bitrate significa menos blocos e borrões em cenas com muito movimento, como folhas balançando, água, confete ou chuva. Pense na resolução como o tamanho do quadro e no bitrate como a quantidade de tinta disponível para pintá-lo.</p>
+    <p>O app padrão escolhe o bitrate sozinho. Apps de modo manual (veja a próxima seção) deixam você aumentar. Como referência, o YouTube recomenda, para envio, cerca de 8 Mbps em 1080p a 30 fps e de 35 a 45 Mbps em 4K a 30 fps. O celular grava bem acima disso, o que é ótimo: assim sobra qualidade para a edição e para a recompressão das redes.</p>
+
+    <div class="callout nerd"><strong>Curiosidade nerd</strong><p>Os codecs modernos raramente guardam cada quadro inteiro. Eles salvam um quadro “chave” completo de tempos em tempos e, nos intermediários, anotam só as diferenças: “este bloco andou dois pixels para a direita”. É por isso que vídeos muito compactados, quando dão erro, mostram aquele efeito de pixels “derretendo” e arrastando: o quadro chave se perdeu e o decodificador continua aplicando movimentos sobre a imagem errada.</p></div>
+
+    <h2 id="modo-pro"><span class="num">9</span>Modo Pro e apps gratuitos</h2>
+    <p>Muitos Android (Samsung, Xiaomi, Motorola e outros) têm um <strong>modo Pro</strong> ou <strong>Manual</strong> também para vídeo, às vezes chamado de “Vídeo Pro”. Ele libera ISO, obturador, balanço de branco, foco manual e, em alguns casos, bitrate e perfil de cor. Os nomes e menus mudam de marca para marca, então explore o seu: procure em “Mais” ou deslize os modos da câmera.</p>
+    <p>No iPhone, o app nativo não tem modo manual completo para vídeo, mas permite trava AE/AF e compensação. Para controle total, a saída são apps.</p>
+
+    <h3>Apps de câmera manual gratuitos</h3>
+    <p>O destaque é o <strong>Blackmagic Camera</strong>, da Blackmagic Design, fabricante de câmeras de cinema. Ele é <strong>gratuito no iPhone e no Android</strong> e coloca no celular controles parecidos com os de uma câmera profissional: obturador em graus ou fração, ISO, balanço de branco, foco manual, zebras, histograma, escolha de codec e mais. Detalhe importante: no Android ele funciona só em uma lista de aparelhos compatíveis (geralmente modelos intermediários-premium e topo de linha de algumas marcas, com Android recente). Confira na Play Store se o seu aparece como compatível. Página oficial: <a href="https://www.blackmagicdesign.com/products/blackmagiccamera" target="_blank" rel="noopener">blackmagicdesign.com/products/blackmagiccamera</a>.</p>
+    <p>Se o seu aparelho não for compatível, procure na loja por apps de “câmera manual” ou “câmera pro” com boas avaliações. Muitos têm versão gratuita com recursos básicos. E lembre: o modo Pro nativo do seu Android costuma ser suficiente.</p>
+
+    <h3>Uma receita de modo Pro para começar</h3>
+    <ol class="steps">
+      <li><strong>Defina resolução e fps</strong>1080p ou 4K a 30 fps (ou 24, se quiser visual de cinema).</li>
+      <li><strong>Obturador pela regra dos 180°</strong>1/60 para 30 fps. Para 24 fps no Brasil, também 1/60 (evita flicker).</li>
+      <li><strong>Balanço de branco fixo</strong>Comece em 5600 K perto de janela ou ao ar livre, 3200 K com lâmpada amarela. Ajuste até a pele parecer natural.</li>
+      <li><strong>ISO o mais baixo possível</strong>Comece no mínimo e suba só até a imagem ficar clara o suficiente. Se passar de 800 e ainda estiver escuro, o problema é falta de luz.</li>
+      <li><strong>Foco</strong>Toque para focar e trave, ou use foco manual com o assistente de foco (<em>focus peaking</em>), que pinta de cor as bordas em foco.</li>
+      <li><strong>Teste de 10 segundos</strong>Grave, assista na tela com brilho no máximo e depois com brilho médio. Só então comece a gravação de verdade.</li>
+    </ol>
+
+    <div class="callout info"><strong>Importante</strong><p>Modo Pro não é obrigatório. Muitos conteúdos excelentes são feitos no automático com trava de foco e exposição. O modo Pro é uma ferramenta para quando o automático atrapalha: luz que muda, flicker, cor da pele variando, movimento picotado no sol.</p></div>
+
+    <h3>Estabilização</h3>
+    <p>Celulares estabilizam o vídeo de dois jeitos: <strong>óptico</strong> (OIS, a lente ou o sensor “flutuam” para compensar tremores) e <strong>eletrônico</strong> (EIS, o software recorta as bordas e reposiciona a imagem). Modos “ação” ou “super estável” recortam ainda mais e podem perder qualidade no escuro. Para câmera parada, um apoio ou tripé vale mais que qualquer estabilização. Para caminhadas, ative a estabilização e ande dobrando levemente os joelhos, com o celular perto do corpo.</p>
+
+    <h2 id="preparacao"><span class="num">10</span>Preparação, receitas prontas e vertical x horizontal</h2>
+
+    <h3>Limpe a lente (sério)</h3>
+    <p>O celular vive no bolso, na mão, na mesa da lanchonete. A lente acumula gordura dos dedos, e o resultado é uma imagem “leitosa”, sem contraste, com halos borrados em volta de luzes. Muita gente acha que a câmera estragou, quando era só sujeira. Limpe com um <strong>pano de microfibra</strong> (o de limpar óculos serve) antes de cada gravação. Evite a barra da camiseta, que pode ter poeira que risca, e nada de álcool direto na lente.</p>
+
+    <div class="callout pratica"><strong>Na prática</strong><p>Aponte a câmera para uma lâmpada acesa ou um poste à noite, sem limpar a lente. Repare nos halos e no “brilho de névoa” ao redor. Agora limpe com microfibra e aponte de novo. A diferença costuma ser chocante.</p></div>
+
+    <h3>Armazenamento, bateria e notificações</h3>
+    <ul>
+      <li><strong>Espaço:</strong> mantenha pelo menos 10 a 20 GB livres antes de uma gravação importante. Celular quase cheio pode travar ou parar de gravar.</li>
+      <li><strong>Bateria:</strong> gravar vídeo, principalmente 4K, gasta muito e esquenta. Saia com 100% e, se possível, leve um carregador portátil (powerbank). Opções de 10.000 mAh custam cerca de R$ 60 a R$ 150 (valores aproximados em 2026).</li>
+      <li><strong>Calor:</strong> sol direto no celular + 4K 60 fps = aviso de superaquecimento e gravação interrompida. Faça pausas, tire a capinha grossa e proteja o aparelho do sol entre as tomadas.</li>
+      <li><strong>Modo avião ou não perturbe:</strong> uma ligação no meio da gravação interrompe o vídeo em muitos aparelhos, e notificações podem atrapalhar a captação de som. Ative o modo avião (ou o “não perturbe”) antes de gravar. Lembre de desativar depois!</li>
+    </ul>
+
+    <h3>Checklist antes de apertar o REC</h3>
+    <ul class="checklist">
+      <li>Lente limpa com microfibra</li>
+      <li>Pelo menos 10 GB livres no celular</li>
+      <li>Bateria carregada (e powerbank, se for gravação longa)</li>
+      <li>Modo avião ou não perturbe ativado</li>
+      <li>Resolução e fps escolhidos de acordo com o destino do vídeo</li>
+      <li>Vídeo HDR desligado (a não ser que você saiba o que está fazendo)</li>
+      <li>Câmera principal (1x) escolhida em ambiente com pouca luz</li>
+      <li>Foco e exposição travados no assunto</li>
+      <li>Orientação certa: vertical ou horizontal, conforme a plataforma</li>
+      <li>Gravação de teste de 10 segundos assistida antes de começar</li>
+    </ul>
+
+    <h3>Receitas prontas</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Situação</th><th>Resolução / fps</th><th>Obturador</th><th>Outros ajustes</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Reels, TikTok, Shorts</strong></td><td>1080p a 30 fps, vertical</td><td>1/60</td><td>HDR desligado, trava AE/AF no rosto, câmera principal ou traseira.</td></tr>
+        <tr><td><strong>YouTube (falando para a câmera)</strong></td><td>4K a 30 fps (ou 1080p se faltar espaço), horizontal</td><td>1/60</td><td>WB fixo, ISO baixo, lente 1x ou 2x com a câmera um pouco afastada.</td></tr>
+        <tr><td><strong>Visual “de cinema”</strong></td><td>4K ou 1080p a 24 fps</td><td>1/60 (Brasil) ou 1/50 sem lâmpadas</td><td>Filtro ND no sol, modo Pro ou app manual.</td></tr>
+        <tr><td><strong>Ação, esporte, jogo</strong></td><td>1080p ou 4K a 60 fps</td><td>1/120</td><td>Bastante luz, estabilização ligada.</td></tr>
+        <tr><td><strong>Câmera lenta</strong></td><td>1080p a 120 ou 240 fps</td><td>1/250 ou 1/500</td><td>Só com sol ou luz muito forte.</td></tr>
+        <tr><td><strong>Pouca luz / noite</strong></td><td>1080p a 24 ou 30 fps</td><td>1/50 ou 1/60</td><td>Câmera principal (1x), nada de zoom, ISO até ~800, adicione luz sempre que puder.</td></tr>
+        <tr><td><strong>Produto na mesa</strong></td><td>4K a 30 fps</td><td>1/60</td><td>Celular no tripé, foco travado, WB fixo, luz suave de lado.</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>Vertical ou horizontal?</h3>
+    <p>Não existe orientação “certa”, existe orientação <strong>para cada tela</strong>.</p>
+    <ul>
+      <li><strong>Vertical (9:16):</strong> Reels, TikTok, Shorts, Stories, status do WhatsApp. É como as pessoas seguram o celular, e o vídeo ocupa a tela toda.</li>
+      <li><strong>Horizontal (16:9):</strong> YouTube tradicional, TV, telão, projetor, videoclipe, documentário, eventos.</li>
+    </ul>
+    <p>E se precisar dos dois? Grave na horizontal em 4K com o assunto centralizado e deixando espaço sobrando: dá para recortar uma versão vertical (em resolução um pouco menor). Ou, se o foco é rede social, grave em vertical e aceite que ele não vai ficar bom no YouTube tradicional. O que não dá é girar o celular <strong>no meio</strong> da gravação.</p>
+
+    <div class="compare">
+      <div class="bad"><h4>Evite</h4><ul>
+        <li>Deixar tudo no automático com a luz mudando o tempo todo</li>
+        <li>Zoom digital alto, principalmente no escuro</li>
+        <li>4K 60 fps “porque é o melhor”, sem espaço nem bateria</li>
+        <li>Vídeo HDR sem saber onde ele vai ser exibido</li>
+        <li>Lente engordurada do bolso</li>
+        <li>Obturador em 1/2000 no sol sem querer (movimento picotado)</li>
+      </ul></div>
+      <div class="good"><h4>Faça</h4><ul>
+        <li>Trave foco e exposição com toque e segure</li>
+        <li>Ande até o assunto ou use as lentes ópticas do aparelho</li>
+        <li>Escolha resolução e fps pelo destino do vídeo</li>
+        <li>Grave em SDR e com WB fixo quando puder</li>
+        <li>Limpe a lente com microfibra antes de gravar</li>
+        <li>Use a regra dos 180° (e um ND no sol, se tiver)</li>
+      </ul></div>
+    </div>
+
+    <h3>Perguntas frequentes</h3>
+    <details><summary>Meu celular é simples e não tem modo Pro. Consigo fazer vídeo bom?</summary><p>Consegue, sim. O que mais pesa na qualidade é luz, som, enquadramento e estabilidade, e nada disso depende do modo Pro. Use a trava de foco e exposição, grave em 1080p a 30 fps, coloque a pessoa de frente para uma janela e apoie o celular. Isso já coloca seu vídeo acima da média.</p></details>
+    <details><summary>Megapixels altos (50, 108, 200 MP) significam vídeo melhor?</summary><p>Não necessariamente. Vídeo 4K usa só cerca de 8 megapixels por quadro. O que melhora o vídeo é tamanho do sensor, qualidade da lente, estabilização e processamento. Um celular de 12 MP com sensor grande pode gravar vídeos bem melhores que um de 108 MP com sensor pequeno.</p></details>
+    <details><summary>A câmera frontal serve para gravar conteúdo?</summary><p>Serve, e muita gente grava assim porque consegue ver o enquadramento. Mas a traseira principal quase sempre tem mais qualidade, principalmente com pouca luz. Um truque: grave com a traseira usando o reflexo de um espelho atrás da câmera, ou faça um teste rápido e compare as duas no seu aparelho.</p></details>
+    <details><summary>Por que meu vídeo fica com faixas escuras passando?</summary><p>É flicker: a lâmpada está piscando na frequência da rede elétrica (60 Hz no Brasil) e o obturador não está combinando com ela. Coloque o obturador em 1/60 ou 1/120 no modo Pro. Se não tiver modo Pro, tente outra lâmpada (LEDs de melhor qualidade piscam menos) ou use luz natural.</p></details>
+    <details><summary>Preciso de um celular novo para começar?</summary><p>Não. Antes de pensar em trocar de aparelho, invista em luz e em áudio, que custam pouco e fazem mais diferença. O módulo de <a href="10-equipamentos.html">Equipamentos</a> mostra kits por orçamento.</p></details>
+
+    <div class="resumo"><h3>📌 Resumo do módulo</h3><ul>
+      <li>O sensor do celular é minúsculo: com pouca luz aparece ruído. A melhor correção é adicionar luz.</li>
+      <li>A câmera principal (1x) é a melhor. Prefira zoom óptico ou “zoom com os pés”.</li>
+      <li>4K serve para recortar, para o YouTube e para dias claros. Para Reels, 1080p resolve.</li>
+      <li>24 fps tem cara de cinema, 30 é o padrão da internet, 60 é fluido, 120/240 é câmera lenta.</li>
+      <li>Regra dos 180°: obturador = 1 ÷ (2 × fps). No Brasil, use múltiplos de 1/60 com lâmpadas para evitar flicker.</li>
+      <li>ISO amplifica o sinal e o ruído junto. Abertura no celular é quase sempre fixa.</li>
+      <li>Trave foco e exposição (toque e segure) e prefira errar para o escuro do que estourar.</li>
+      <li>Desligue o vídeo HDR no começo. HEVC economiza espaço; H.264 é mais compatível.</li>
+      <li>Limpe a lente, libere espaço, carregue a bateria e ative o modo avião antes de gravar.</li>
+    </ul></div>
+
+    <div class="callout pratica"><strong>Exercício do módulo</strong><p>Escolha um objeto ou uma pessoa e grave <strong>quatro clipes de 10 segundos</strong> do mesmo enquadramento: (1) tudo no automático, sem limpar a lente; (2) lente limpa e trava AE/AF no assunto; (3) o mesmo, agora com a compensação de exposição um pouco mais baixa; (4) se tiver modo Pro, com obturador 1/60, WB fixo e ISO baixo. Durante cada clipe, passe a mão na frente da câmera e mova a câmera devagar para uma área mais clara. Assista aos quatro em sequência e anote: em qual o foco “caçou”? Em qual o brilho pulou? Qual ficou mais nítido? Esse comparativo vai treinar seu olho mais do que qualquer teoria.</p></div>
+
+    <div class="quiz"><script type="application/json">[
+      {"q":"Por que o vídeo do celular costuma ficar com muito ruído em ambientes escuros?","o":["Porque o celular grava em resolução baixa à noite","Porque o sensor e os pixels são minúsculos e captam pouca luz","Porque a lente fecha automaticamente no escuro","Porque o codec HEVC não funciona à noite"],"a":1,"e":"Pixels pequenos funcionam como baldinhos estreitos na chuva: juntam pouca luz. Para clarear, o celular amplifica o sinal (ISO), e o ruído aumenta junto."},
+      {"q":"Você arrastou o zoom para 1,7x e a imagem ficou menos nítida. O que provavelmente aconteceu?","o":["Zoom óptico com uma lente nova","Zoom digital, que recorta e estica a imagem","O celular trocou para câmera lenta","O balanço de branco mudou"],"a":1,"e":"Valores intermediários geralmente são recorte digital da câmera principal. Prefira os botões fixos (1x, 2x, 3x) ou o “zoom com os pés”."},
+      {"q":"Pela regra dos 180°, qual obturador usar ao gravar a 60 fps?","o":["1/60","1/30","1/120","1/1000"],"a":2,"e":"Obturador = 1 ÷ (2 × fps). Com 60 fps, fica 1/120 (ou o valor mais próximo, como 1/125)."},
+      {"q":"Você gravou a 24 fps com obturador 1/50 em casa, com lâmpadas acesas, e apareceram faixas escuras. Qual a melhor correção no Brasil?","o":["Subir o ISO para 3200","Usar obturador 1/60, compatível com a rede de 60 Hz","Ligar o vídeo HDR","Trocar para a lente ultra-angular"],"a":1,"e":"A rede elétrica brasileira é de 60 Hz e muitas lâmpadas piscam 120 vezes por segundo. Obturadores múltiplos de 1/60 evitam o flicker."},
+      {"q":"Para fazer uma câmera lenta suave de 4x numa timeline de 30 fps, você deve gravar a:","o":["30 fps e desacelerar na edição","60 fps","120 fps","24 fps"],"a":2,"e":"120 quadros gravados por segundo, exibidos a 30 por segundo, dão uma câmera lenta de 4x com um quadro real para cada instante."},
+      {"q":"Qual é a função da trava AE/AF?","o":["Aumentar a resolução","Congelar foco e exposição para o celular não ficar mudando sozinho","Ativar a câmera lenta","Desligar o microfone"],"a":1,"e":"Tocar e segurar no assunto trava foco (AF) e exposição (AE). Assim o vídeo não “respira” nem perde o foco quando algo passa na frente."},
+      {"q":"No iPhone, a opção “Mais Compatível” nos formatos da câmera grava em:","o":["HEVC (H.265)","H.264","RAW","HDR Dolby Vision"],"a":1,"e":"“Mais Compatível” usa H.264, que abre em praticamente qualquer lugar, mas gera arquivos maiores. “Alta Eficiência” usa HEVC."},
+      {"q":"No sol do meio-dia, com ISO no mínimo e obturador em 1/60, a imagem continua estourada. O que resolve sem quebrar a regra dos 180°?","o":["Um filtro ND, que funciona como óculos escuros para a lente","Subir o ISO","Gravar em 4K","Usar o zoom digital"],"a":0,"e":"Como a abertura do celular é fixa, o filtro de densidade neutra (ND) é o jeito de tirar luz sem mexer no obturador."}
+    ]</script></div>
+  </article>
+</main>
+<script src="assets/guia.js"></script>
+</body>
+</html>

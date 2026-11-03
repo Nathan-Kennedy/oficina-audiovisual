@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recursos gratuitos | Guia Audiovisual com Pouco Recurso</title>
+<meta name="description" content="Diretório de recursos gratuitos para audiovisual: banco de vídeos, músicas, efeitos, fontes, design, edição, áudio e cursos, com notas de licença.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/guia.css">
+<style>
+  .busca{position:sticky;top:76px;z-index:5}
+  .busca input{font-size:17px}
+  .busca .out{margin-top:10px;padding:0;background:none;font-size:14.5px;color:var(--muted)}
+  .card h4 a{text-decoration:none}
+  .card h4 a:hover{text-decoration:underline}
+  .card .tags{margin-top:10px}
+  .card[hidden],section.grupo[hidden]{display:none}
+  .vazio{display:none;text-align:center;color:var(--muted);padding:30px 0}
+</style>
+</head>
+<body data-page="recursos">
+<!-- O guia.js injeta topbar, sidebar, sumário (a partir dos h2 com id), pager e rodapé. NÃO escreva isso à mão. -->
+<main class="content">
+  <header class="mod-hero" data-num="🎁">
+    <div class="crumb"><a href="index.html">Guia</a> › Extras</div>
+    <h1>Recursos gratuitos</h1>
+    <p>Bancos de imagem, músicas, efeitos sonoros, fontes, programas e cursos que não custam nada, com o que cada licença permite.</p>
+    <div class="meta"><span>🎁 Tudo com versão grátis</span><span>⚖️ Notas de licença</span><span>🔎 Busca instantânea</span></div>
+  </header>
+
+  <article>
+    <p class="lead">A internet está cheia de material gratuito de ótima qualidade, mas “grátis para baixar” não é a mesma coisa que “livre para usar em qualquer lugar”. Aqui você encontra uma seleção organizada de recursos e, para cada um, uma nota rápida sobre o que a licença deixa fazer.</p>
+
+    <div class="tool busca" role="search">
+      <label for="filtro">Buscar recurso</label>
+      <input id="filtro" type="search" placeholder="Ex.: música, legenda, edição, uso comercial, Android…" autocomplete="off">
+      <div class="out" id="contagem" aria-live="polite"></div>
+    </div>
+
+    <div class="callout info"><strong>Antes de usar qualquer recurso</strong><p>Termos e planos gratuitos mudam. Esta lista foi conferida em novembro de 2026, mas a regra de ouro é: <strong>leia a licença na página do arquivo no dia em que baixar</strong>. Cada site é responsável pelos próprios termos; este guia só resume.</p></div>
+
+    <h2 id="licencas"><span class="num">⚖️</span>Licenças em 2 minutos</h2>
+    <p>Quase todo recurso gratuito cai numa destas categorias. Entenda-as uma vez e você vai ler qualquer termo de uso com outros olhos.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Licença</th><th>O que significa</th><th>Uso comercial?</th><th>Precisa dar crédito?</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Domínio público</strong></td><td>A obra não tem mais proteção de direito autoral (no Brasil, em geral, 70 anos após a morte do autor) ou foi liberada.</td><td>Sim</td><td>Não (mas é elegante)</td></tr>
+        <tr><td><strong>CC0</strong></td><td>O autor abriu mão de todos os direitos que podia, deixando a obra o mais perto possível do domínio público.</td><td>Sim</td><td>Não</td></tr>
+        <tr><td><strong>CC BY</strong></td><td>Pode usar, modificar e até vender, desde que dê crédito ao autor do jeito pedido.</td><td>Sim</td><td><strong>Sim</strong></td></tr>
+        <tr><td><strong>CC BY-SA</strong></td><td>Como a CC BY, mas a obra derivada deve usar a mesma licença.</td><td>Sim</td><td>Sim</td></tr>
+        <tr><td><strong>CC BY-NC</strong></td><td>Crédito obrigatório e <strong>sem uso comercial</strong>. Vídeo de cliente, anúncio e conteúdo patrocinado ficam de fora.</td><td><strong>Não</strong></td><td>Sim</td></tr>
+        <tr><td><strong>CC BY-ND</strong></td><td>Crédito obrigatório e <strong>sem modificações</strong>. Cortar uma música ou recolorir uma foto já pode ser problema.</td><td>Sim</td><td>Sim</td></tr>
+        <tr><td><strong>Licença própria do site</strong></td><td>Pexels, Pixabay, Unsplash, Mixkit e Coverr têm termos próprios: em geral uso livre e sem crédito, mas proíbem revender o arquivo puro.</td><td>Em geral sim</td><td>Em geral não</td></tr>
+        <tr><td><strong>Royalty-free</strong></td><td>“Livre de royalties” quer dizer que você não paga por cada uso ou visualização. Não quer dizer grátis: muitas vezes você paga uma vez pela licença.</td><td>Depende da licença</td><td>Depende</td></tr>
+      </tbody>
+    </table></div>
+    <p><strong>“Uso comercial”</strong> é qualquer uso que gera dinheiro ou promove um negócio: vídeo para cliente, propaganda de loja, publi, canal monetizado. Na dúvida, trate como comercial.</p>
+
+    <div class="callout warn"><strong>Erro comum: “achei no Google, então é livre”</strong><p>Música famosa, clipe de filme, foto do Instagram de alguém ou meme com trecho de série <strong>têm dono</strong>, mesmo sem aviso de copyright. Colocar “créditos ao autor” na descrição não transforma uso não autorizado em uso autorizado. As consequências vão de vídeo mudo ou bloqueado e reivindicação de monetização até avisos que podem derrubar o canal. Use os bancos desta página e guarde a prova da licença.</p></div>
+
+    <div class="callout tip"><strong>Dica de ouro: mantenha um registro de licenças</strong><p>Crie uma planilha simples (Google Planilhas serve) com as colunas: <em>arquivo</em>, <em>site</em>, <em>link da página</em>, <em>autor</em>, <em>licença</em>, <em>data do download</em> e <em>projeto onde usou</em>. Se possível, salve um print da página de licença. Leva 20 segundos por arquivo e, se um dia aparecer uma reivindicação de direitos autorais, você contesta em minutos, com prova.</p></div>
+
+    <section class="grupo">
+    <h2 id="video-foto"><span class="num">🎥</span>Banco de vídeos e fotos</h2>
+    <div class="cards">
+      <div class="card" data-k="stock imagem b-roll"><div class="ic">📷</div><h4><a href="https://www.pexels.com/pt-br/" target="_blank" rel="noopener">Pexels</a></h4><p>Fotos e vídeos (inclusive verticais e em 4K). Licença própria: uso grátis, inclusive comercial, sem crédito obrigatório. Não pode vender o arquivo sem modificar nem sugerir que pessoas da imagem endossam seu produto.</p><div class="tags"><span class="tag">grátis</span><span class="tag roxo">uso comercial</span><span class="tag amarelo">sem crédito</span></div></div>
+      <div class="card" data-k="stock imagem b-roll ilustração vetor"><div class="ic">🌄</div><h4><a href="https://pixabay.com/pt/" target="_blank" rel="noopener">Pixabay</a></h4><p>Fotos, ilustrações, vetores e vídeos. Licença Pixabay: uso grátis e sem atribuição. Proíbe revender o conteúdo sem alteração e usar marcas ou logos visíveis comercialmente.</p><div class="tags"><span class="tag">grátis</span><span class="tag roxo">uso comercial</span><span class="tag amarelo">sem crédito</span></div></div>
+      <div class="card" data-k="stock imagem foto"><div class="ic">🖼️</div><h4><a href="https://unsplash.com/" target="_blank" rel="noopener">Unsplash</a></h4><p>Fotos de altíssima qualidade. Licença Unsplash: uso comercial liberado e crédito opcional. Atenção: o site mistura imagens do plano pago <em>Unsplash+</em>, marcadas no resultado, que têm outra licença.</p><div class="tags"><span class="tag">grátis</span><span class="tag roxo">uso comercial</span><span class="tag amarelo">cuidado com Unsplash+</span></div></div>
+      <div class="card" data-k="stock video b-roll template"><div class="ic">🎬</div><h4><a href="https://mixkit.co/" target="_blank" rel="noopener">Mixkit</a></h4><p>Vídeos, músicas, efeitos sonoros e templates de edição. A maioria segue a “Mixkit Free License” (uso comercial, sem crédito), mas alguns vídeos têm licença restrita. Confira a licença indicada em cada item.</p><div class="tags"><span class="tag">grátis</span><span class="tag roxo">uso comercial</span><span class="tag amarelo">ver licença do item</span></div></div>
+      <div class="card" data-k="stock video b-roll"><div class="ic">🎞️</div><h4><a href="https://coverr.co/" target="_blank" rel="noopener">Coverr</a></h4><p>Vídeos de banco para fundo de site, abertura e B-roll. Licença própria: uso comercial sem marca d’água nem crédito; não pode redistribuir os clipes como banco de vídeos. Tem recursos pagos de IA à parte.</p><div class="tags"><span class="tag">grátis</span><span class="tag roxo">uso comercial</span></div></div>
+    </div>
+    </section>
+
+    <section class="grupo">
+    <h2 id="musica-efeitos"><span class="num">🎵</span>Músicas e efeitos sonoros</h2>
+    <div class="cards">
+      <div class="card" data-k="música trilha efeito sfx youtube"><div class="ic">▶️</div><h4><a href="https://www.youtube.com/audiolibrary" target="_blank" rel="noopener">Biblioteca de Áudio do YouTube</a></h4><p>Fica dentro do YouTube Studio (precisa de canal). Músicas e efeitos que podem ser usados em vídeos do YouTube, inclusive monetizados. Algumas faixas exigem crédito na descrição: o filtro “atribuição” mostra quais.</p><div class="tags"><span class="tag">grátis</span><span class="tag roxo">monetizável no YouTube</span><span class="tag amarelo">algumas pedem crédito</span></div></div>
+      <div class="card" data-k="música trilha"><div class="ic">🎶</div><h4><a href="https://pixabay.com/pt/music/" target="_blank" rel="noopener">Pixabay Música</a></h4><p>Trilhas de vários gêneros sob a Licença Pixabay, sem crédito obrigatório. Algumas faixas podem gerar reivindicação automática no YouTube; guarde o link e o certificado de licença que o site oferece para contestar.</p><div class="tags"><span class="tag">grátis</span><span class="tag roxo">uso comercial</span></div></div>
+      <div class="card" data-k="efeito sfx som sound effects"><div class="ic">💥</div><h4><a href="https://pixabay.com/pt/sound-effects/" target="_blank" rel="noopener">Pixabay Efeitos Sonoros</a></h4><p>Whooshes, cliques, ambientes, transições. Mesma Licença Pixabay das músicas.</p><div class="tags"><span class="tag">grátis</span><span class="tag roxo">uso comercial</span></div></div>
+      <div class="card" data-k="efeito sfx som creative commons cc0 cc by"><div class="ic">🔊</div><h4><a href="https://freesound.org/" target="_blank" rel="noopener">Freesound</a></h4><p>Enorme acervo colaborativo de sons. Precisa de conta para baixar. Cada som tem a sua licença: <strong>CC0</strong> (livre), <strong>CC BY</strong> (dê crédito) ou <strong>CC BY-NC</strong> (sem uso comercial). Filtre a busca pela licença antes de baixar.</p><div class="tags"><span class="tag">grátis</span><span class="tag amarelo">licença varia (CC)</span></div></div>
+      <div class="card" data-k="música trilha creative commons"><div class="ic">📻</div><h4><a href="https://freemusicarchive.org/" target="_blank" rel="noopener">Free Music Archive</a></h4><p>Músicas de artistas independentes, a maioria sob licenças Creative Commons, cada faixa com a sua. Leia a licença da faixa: muitas são CC BY-NC, que não serve para trabalho comercial.</p><div class="tags"><span class="tag">grátis</span><span class="tag amarelo">licença varia (CC)</span></div></div>
+      <div class="card" data-k="música efeito sfx trilha"><div class="ic">🎧</div><h4><a href="https://mixkit.co/free-sound-effects/" target="_blank" rel="noopener">Mixkit Música e Efeitos</a></h4><p>Efeitos sonoros e trilhas curtas organizados por categoria, sem cadastro. Licença Mixkit: uso comercial e sem crédito para os itens com licença livre.</p><div class="tags"><span class="tag">grátis</span><span class="tag roxo">uso comercial</span></div></div>
+    </div>
+    </section>
+
+    <section class="grupo">
+    <h2 id="fontes-design"><span class="num">🎨</span>Fontes e design</h2>
+    <div class="cards">
+      <div class="card" data-k="fonte tipografia letra legenda"><div class="ic">🔤</div><h4><a href="https://fonts.google.com/" target="_blank" rel="noopener">Google Fonts</a></h4><p>Mais de mil famílias de fontes abertas, quase todas sob a SIL Open Font License: pode usar em vídeos, thumbnails e trabalhos de cliente. Só não pode vender a fonte em si.</p><div class="tags"><span class="tag">grátis</span><span class="tag roxo">uso comercial</span></div></div>
+      <div class="card" data-k="design thumbnail post template arte"><div class="ic">🖌️</div><h4><a href="https://www.canva.com/pt_br/" target="_blank" rel="noopener">Canva (plano gratuito)</a></h4><p>Editor online e app para posts, thumbnails, capas e vídeos simples, com milhares de modelos. Elementos marcados com coroa são do plano pago. Confira os termos de licença do Canva antes de usar elementos em logotipos.</p><div class="tags"><span class="tag">grátis</span><span class="tag amarelo">plano pago opcional</span></div></div>
+      <div class="card" data-k="design editor imagem photoshop thumbnail remover fundo"><div class="ic">🧩</div><h4><a href="https://www.photopea.com/" target="_blank" rel="noopener">Photopea</a></h4><p>Editor de imagem no navegador com camadas e interface parecida com a dos editores profissionais. Abre arquivos PSD. Gratuito com anúncios; sem instalar nada.</p><div class="tags"><span class="tag">grátis</span><span class="tag amarelo">com anúncios</span></div></div>
+      <div class="card" data-k="design interface layout storyboard"><div class="ic">📐</div><h4><a href="https://www.figma.com/" target="_blank" rel="noopener">Figma (plano Starter)</a></h4><p>Ferramenta de design colaborativo. O plano gratuito permite rascunhos ilimitados e é ótimo para montar storyboards, moodboards e layouts de thumbnail.</p><div class="tags"><span class="tag">grátis</span><span class="tag amarelo">plano pago opcional</span></div></div>
+    </div>
+    </section>
+
+    <section class="grupo">
+    <h2 id="edicao"><span class="num">✂️</span>Programas de edição de vídeo</h2>
+    <div class="cards">
+      <div class="card" data-k="edição editor computador windows mac linux cor color grading"><div class="ic">🎛️</div><h4><a href="https://www.blackmagicdesign.com/br/products/davinciresolve" target="_blank" rel="noopener">DaVinci Resolve (gratuito)</a></h4><p>Editor profissional para Windows, macOS e Linux, com edição, correção de cor, áudio e efeitos num só programa. A versão gratuita é muito completa; a Studio é paga. Exige um computador razoável.</p><div class="tags"><span class="tag">grátis</span><span class="tag roxo">computador</span></div></div>
+      <div class="card" data-k="edição editor celular android iphone legenda"><div class="ic">📱</div><h4><a href="https://www.capcut.com/" target="_blank" rel="noopener">CapCut</a></h4><p>Editor para celular, navegador e computador, com legendas automáticas e muitos efeitos. Tem plano Pro pago: alguns recursos e elementos premium podem pedir assinatura ou deixar marca d’água. Verifique antes de exportar.</p><div class="tags"><span class="tag">grátis</span><span class="tag roxo">celular</span><span class="tag amarelo">recursos Pro pagos</span></div></div>
+      <div class="card" data-k="edição editor celular android iphone"><div class="ic">🎬</div><h4><a href="https://www.vlognow.me/" target="_blank" rel="noopener">VN Editor</a></h4><p>Editor de celular com linha do tempo em várias camadas, keyframes e exportação sem marca d’água nos recursos básicos. Tem compras opcionais dentro do app.</p><div class="tags"><span class="tag">grátis</span><span class="tag roxo">celular</span></div></div>
+      <div class="card" data-k="edição editor computador código aberto open source windows linux mac"><div class="ic">🐧</div><h4><a href="https://kdenlive.org/" target="_blank" rel="noopener">Kdenlive</a></h4><p>Editor de código aberto para Windows, Linux e macOS, com várias trilhas, efeitos e proxies. Leve e sem nenhuma cobrança.</p><div class="tags"><span class="tag">grátis</span><span class="tag roxo">código aberto</span><span class="tag roxo">computador</span></div></div>
+      <div class="card" data-k="edição editor computador código aberto open source"><div class="ic">🎞️</div><h4><a href="https://shotcut.org/" target="_blank" rel="noopener">Shotcut</a></h4><p>Editor de código aberto, multiplataforma, que roda bem em computadores modestos e aceita muitos formatos de arquivo.</p><div class="tags"><span class="tag">grátis</span><span class="tag roxo">código aberto</span><span class="tag roxo">computador</span></div></div>
+      <div class="card" data-k="edição editor computador código aberto open source iniciante"><div class="ic">🟠</div><h4><a href="https://www.openshot.org/" target="_blank" rel="noopener">OpenShot</a></h4><p>Editor de código aberto bem simples, bom para dar os primeiros passos no computador.</p><div class="tags"><span class="tag">grátis</span><span class="tag roxo">código aberto</span><span class="tag roxo">computador</span></div></div>
+    </div>
+    </section>
+
+    <section class="grupo">
+    <h2 id="audio"><span class="num">🎙️</span>Áudio, câmera e gravação de tela</h2>
+    <div class="cards">
+      <div class="card" data-k="áudio edição voz ruído podcast código aberto"><div class="ic">🌊</div><h4><a href="https://www.audacityteam.org/" target="_blank" rel="noopener">Audacity</a></h4><p>Editor de áudio de código aberto: corta, normaliza, reduz ruído, aplica compressor e exporta. Ideal para narrações e podcasts.</p><div class="tags"><span class="tag">grátis</span><span class="tag roxo">código aberto</span></div></div>
+      <div class="card" data-k="áudio voz ruído ia limpar eco"><div class="ic">✨</div><h4><a href="https://podcast.adobe.com/enhance" target="_blank" rel="noopener">Adobe Podcast Enhance Speech</a></h4><p>Ferramenta online que limpa ruído e eco de gravações de voz com IA. Precisa de conta gratuita; o plano grátis tem limite diário de uso e de duração por arquivo (o plano pago amplia). Use com moderação: no máximo, a voz pode soar artificial.</p><div class="tags"><span class="tag">grátis</span><span class="tag amarelo">limite diário</span></div></div>
+      <div class="card" data-k="câmera app manual android iphone"><div class="ic">📸</div><h4><a href="https://www.blackmagicdesign.com/products/blackmagiccamera" target="_blank" rel="noopener">Blackmagic Camera</a></h4><p>App de câmera com controles manuais (fps, obturador, ISO, balanço de branco, foco), histograma e zebra. Grátis para iPhone/iPad e para Android, mas no Android funciona só em uma lista de aparelhos compatíveis, geralmente topo de linha.</p><div class="tags"><span class="tag">grátis</span><span class="tag roxo">celular</span><span class="tag amarelo">Android: aparelhos selecionados</span></div></div>
+      <div class="card" data-k="gravação de tela live transmissão streaming tutorial"><div class="ic">🖥️</div><h4><a href="https://obsproject.com/" target="_blank" rel="noopener">OBS Studio</a></h4><p>Programa de código aberto para gravar a tela e fazer transmissões ao vivo, com cenas, webcam e várias fontes de áudio. Perfeito para tutoriais e aulas.</p><div class="tags"><span class="tag">grátis</span><span class="tag roxo">código aberto</span><span class="tag roxo">computador</span></div></div>
+    </div>
+    </section>
+
+    <section class="grupo">
+    <h2 id="cor-thumbnail"><span class="num">🌈</span>Cores e thumbnails</h2>
+    <div class="cards">
+      <div class="card" data-k="cor paleta identidade visual thumbnail"><div class="ic">🎨</div><h4><a href="https://coolors.co/" target="_blank" rel="noopener">Coolors</a></h4><p>Gerador de paletas: aperte a barra de espaço e ele sugere combinações. Útil para definir as cores fixas das suas thumbnails e legendas. O gerador básico é gratuito.</p><div class="tags"><span class="tag">grátis</span><span class="tag amarelo">plano pago opcional</span></div></div>
+      <div class="card" data-k="cor paleta círculo cromático acessibilidade contraste"><div class="ic">⭕</div><h4><a href="https://color.adobe.com/" target="_blank" rel="noopener">Adobe Color</a></h4><p>Roda de cores com regras de harmonia (complementar, análoga, tríade) e verificador de contraste e acessibilidade. Uso gratuito no navegador.</p><div class="tags"><span class="tag">grátis</span></div></div>
+      <div class="card" data-k="thumbnail miniatura dica youtube"><div class="ic">🖼️</div><h4><a href="08-youtube.html">Módulo 8: thumbnails</a></h4><p>Monte a thumbnail no Canva ou no Photopea seguindo as regras de contraste, rosto e texto curto explicadas no módulo de YouTube.</p><div class="tags"><span class="tag roxo">neste guia</span></div></div>
+    </div>
+    </section>
+
+    <section class="grupo">
+    <h2 id="aprender"><span class="num">📚</span>Para aprender de graça</h2>
+    <div class="cards">
+      <div class="card" data-k="curso aprender davinci resolve livro manual treinamento"><div class="ic">📘</div><h4><a href="https://www.blackmagicdesign.com/products/davinciresolve/training" target="_blank" rel="noopener">Treinamento oficial do DaVinci Resolve</a></h4><p>Livros oficiais em PDF (guia para iniciantes, edição, cor, áudio e efeitos), aulas em vídeo e arquivos de projeto para praticar, para baixar sem custo. Os livros impressos são vendidos à parte. Material principalmente em inglês.</p><div class="tags"><span class="tag">grátis</span><span class="tag amarelo">em inglês</span></div></div>
+      <div class="card" data-k="curso aprender youtube canal monetização"><div class="ic">▶️</div><h4><a href="https://www.youtube.com/creators/" target="_blank" rel="noopener">YouTube para Criadores</a></h4><p>Site oficial com guias para começar, crescer o canal e ganhar dinheiro, além das novidades da plataforma. Complete com a <a href="https://support.google.com/youtube" target="_blank" rel="noopener">Central de Ajuda do YouTube</a>, que explica direitos autorais, Content ID e regras do Programa de Parcerias.</p><div class="tags"><span class="tag">grátis</span><span class="tag roxo">oficial</span></div></div>
+      <div class="card" data-k="curso aprender instagram reels meta"><div class="ic">📸</div><h4><a href="https://creators.instagram.com/" target="_blank" rel="noopener">Instagram para Criadores</a></h4><p>Site oficial da Meta com orientações sobre Reels, stories, crescimento, métricas, monetização e segurança da conta.</p><div class="tags"><span class="tag">grátis</span><span class="tag roxo">oficial</span></div></div>
+      <div class="card" data-k="curso aprender design canva"><div class="ic">🎓</div><h4><a href="https://www.canva.com/designschool/" target="_blank" rel="noopener">Canva Design School</a></h4><p>Cursos curtos e tutoriais gratuitos sobre design gráfico, redes sociais e uso do Canva.</p><div class="tags"><span class="tag">grátis</span></div></div>
+      <div class="card" data-k="curso aprender google marketing digital negócio certificado"><div class="ic">🌱</div><h4><a href="https://grow.google/" target="_blank" rel="noopener">Cresça com o Google</a></h4><p>Programa do Google com cursos de marketing digital e ferramentas para negócios (o antigo Ateliê Digital foi incorporado a ele). Oferta e idioma variam por país; alguns certificados são pagos.</p><div class="tags"><span class="tag">grátis</span><span class="tag amarelo">oferta varia</span></div></div>
+      <div class="card" data-k="aprender guia glossário termos"><div class="ic">📖</div><h4><a href="glossario.html">Glossário deste guia</a></h4><p>Não sabe o que é LUT, CTR ou J-cut? Mais de 120 termos explicados em português simples.</p><div class="tags"><span class="tag roxo">neste guia</span></div></div>
+    </div>
+    </section>
+
+    <p class="vazio" id="vazio">Nenhum recurso encontrado. Tente outra palavra, como “música”, “celular” ou “grátis”.</p>
+  </article>
+</main>
+<script>
+(function(){
+  var input=document.getElementById('filtro'), out=document.getElementById('contagem'), vazio=document.getElementById('vazio');
+  var cards=[].slice.call(document.querySelectorAll('article .card'));
+  var grupos=[].slice.call(document.querySelectorAll('article section.grupo'));
+  function norm(t){return (t||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'')}
+  cards.forEach(function(c){c._txt=norm(c.textContent+' '+(c.getAttribute('data-k')||''))});
+  function filtrar(){
+    var termos=norm(input.value).trim().split(/\s+/).filter(Boolean), n=0;
+    cards.forEach(function(c){
+      var ok=termos.every(function(t){return c._txt.indexOf(t)>-1});
+      c.hidden=!ok; if(ok)n++;
+    });
+    grupos.forEach(function(g){g.hidden=!g.querySelector('.card:not([hidden])')});
+    out.textContent=termos.length?(n+(n===1?' recurso encontrado':' recursos encontrados')):cards.length+' recursos na lista';
+    vazio.style.display=n?'none':'block';
+  }
+  input.addEventListener('input',filtrar);
+  filtrar();
+})();
+</script>
+<script src="assets/guia.js"></script>
+</body>
+</html>

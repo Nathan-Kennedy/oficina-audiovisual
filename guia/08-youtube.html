@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Módulo 08: YouTube | Guia Audiovisual com Pouco Recurso</title>
+<meta name="description" content="Como o YouTube recomenda vídeos, como montar o canal, criar títulos e thumbnails, ler a retenção, usar Shorts e entender as regras de monetização.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/guia.css">
+</head>
+<body data-page="08-youtube">
+<main class="content">
+  <header class="mod-hero" data-num="08">
+    <div class="crumb"><a href="index.html">Guia</a> › Módulo 08</div>
+    <h1>YouTube</h1>
+    <p>O maior acervo de vídeos do planeta também é um buscador. Aprenda a montar um canal, prender a atenção do começo ao fim, criar títulos e thumbnails honestos e entender como se ganha dinheiro por lá.</p>
+    <div class="meta"><span>⏱️ 32 min de leitura</span><span>🎯 Nível: iniciante</span><span>📱 Só precisa do celular</span></div>
+  </header>
+
+  <article>
+    <p class="lead">Em 23 de abril de 2005, um rapaz de 25 anos subiu um vídeo de 19 segundos falando sobre as trombas compridas dos elefantes de um zoológico. Esse vídeo, “Me at the zoo”, foi o primeiro do YouTube e continua no ar. Vinte e um anos depois, a plataforma recebe centenas de horas de vídeo <em>por minuto</em>. Como alguém com um celular consegue ser encontrado no meio disso? É o que você vai descobrir aqui.</p>
+
+    <div class="objetivos">
+      <h3>Neste módulo você vai aprender</h3>
+      <ul>
+        <li>O que o sistema de recomendação do YouTube realmente tenta otimizar, e por que não é “views”;</li>
+        <li>Como escolher um nicho e configurar o canal (nome, banner, foto, descrição, verificação);</li>
+        <li>Quando fazer vídeo longo e quando fazer Shorts;</li>
+        <li>Como estruturar um vídeo para retenção e ler o gráfico de retenção;</li>
+        <li>Como escrever títulos, criar thumbnails e testá-los no YouTube Studio;</li>
+        <li>SEO, playlists, telas finais, cards e postagens na comunidade;</li>
+        <li>As regras de monetização em novembro de 2026, as outras fontes de renda e os cuidados com direitos autorais.</li>
+      </ul>
+    </div>
+
+    <h2 id="recomendacao"><span class="num">1</span>Como o YouTube recomenda vídeos</h2>
+    <p>O YouTube já explicou várias vezes, inclusive no site oficial <a href="https://www.youtube.com/howyoutubeworks/" target="_blank" rel="noopener">How YouTube Works</a>, que o sistema de recomendação <strong>não procura “vídeos bons”</strong>. Ele procura <strong>o vídeo certo para cada pessoa, naquele momento</strong>. O objetivo declarado é a <strong>satisfação do espectador</strong>: que a pessoa assista, goste e volte.</p>
+    <p>Para estimar a satisfação, o sistema olha principalmente:</p>
+    <ul>
+      <li><strong>Clique (CTR):</strong> quando o vídeo aparece, as pessoas clicam? Isso mede se título e thumbnail despertaram interesse.</li>
+      <li><strong>Tempo de exibição e retenção:</strong> depois do clique, elas assistem ou saem em 10 segundos? Isso mede se o vídeo cumpriu a promessa.</li>
+      <li><strong>Pesquisas de satisfação:</strong> o YouTube pergunta diretamente a alguns espectadores se gostaram do que viram (“Como foi esse vídeo?”). As respostas treinam o sistema para entender satisfação além do tempo assistido.</li>
+      <li><strong>Interações:</strong> curtidas, “não gostei”, compartilhamentos, comentários e o botão “Não tenho interesse”.</li>
+      <li><strong>Contexto da pessoa:</strong> histórico, o que ela pesquisou, horário, dispositivo, idioma.</li>
+    </ul>
+
+    <div class="callout nerd"><strong>Curiosidade nerd</strong><p>Até 2012, o YouTube dava muito peso ao número de cliques. Resultado: proliferaram vídeos com thumbnail enganosa que as pessoas abriam e fechavam em segundos. Em outubro de 2012, a plataforma anunciou que passaria a priorizar o <strong>tempo de exibição</strong>. Muitos canais perderam views da noite para o dia, mas o tempo total assistido na plataforma aumentou. Foi aí que “prender a atenção” virou a regra do jogo.</p></div>
+
+    <h3>CTR e retenção são um time</h3>
+    <p>Um título chamativo com um vídeo fraco gera CTR alto e retenção baixa, e o sistema percebe que as pessoas se arrependeram do clique. Um vídeo excelente com thumbnail sem graça tem retenção alta, mas ninguém clica. Você precisa dos dois.</p>
+
+    <figure>
+      <svg viewBox="0 0 700 400" role="img" aria-label="Matriz com CTR no eixo horizontal e retenção no eixo vertical, mostrando quatro quadrantes: vídeo escondido, clickbait, ninguém vê e vídeo ideal">
+        <rect width="700" height="400" rx="14" fill="#faf8fd"/>
+        <text x="350" y="30" text-anchor="middle" font-family="Poppins" font-size="18" font-weight="700" fill="#16121d">A matriz clique × retenção</text>
+        <rect x="120" y="50" width="250" height="140" fill="#fff4dc" stroke="#ffb020"/>
+        <rect x="370" y="50" width="250" height="140" fill="#e8f8ef" stroke="#2f9a5c"/>
+        <rect x="120" y="190" width="250" height="140" fill="#fdeaea" stroke="#e5484d"/>
+        <rect x="370" y="190" width="250" height="140" fill="#f3e9fc" stroke="#8612d5"/>
+        <text x="245" y="105" text-anchor="middle" font-family="Poppins" font-size="15" font-weight="700" fill="#7a5000">Vídeo escondido</text>
+        <text x="245" y="128" text-anchor="middle" font-family="Inter" font-size="12" fill="#7a5000">bom conteúdo, embalagem fraca</text>
+        <text x="245" y="146" text-anchor="middle" font-family="Inter" font-size="12" fill="#7a5000">→ refaça título e thumbnail</text>
+        <text x="495" y="105" text-anchor="middle" font-family="Poppins" font-size="15" font-weight="700" fill="#1f6b40">Vídeo ideal</text>
+        <text x="495" y="128" text-anchor="middle" font-family="Inter" font-size="12" fill="#1f6b40">promessa clara e cumprida</text>
+        <text x="495" y="146" text-anchor="middle" font-family="Inter" font-size="12" fill="#1f6b40">→ o sistema amplia a distribuição</text>
+        <text x="245" y="245" text-anchor="middle" font-family="Poppins" font-size="15" font-weight="700" fill="#a3262a">Ninguém vê</text>
+        <text x="245" y="268" text-anchor="middle" font-family="Inter" font-size="12" fill="#a3262a">tema ou execução precisam</text>
+        <text x="245" y="286" text-anchor="middle" font-family="Inter" font-size="12" fill="#a3262a">de revisão</text>
+        <text x="495" y="245" text-anchor="middle" font-family="Poppins" font-size="15" font-weight="700" fill="#5a0b91">Clickbait</text>
+        <text x="495" y="268" text-anchor="middle" font-family="Inter" font-size="12" fill="#5a0b91">muita gente clica e sai rápido</text>
+        <text x="495" y="286" text-anchor="middle" font-family="Inter" font-size="12" fill="#5a0b91">→ entregue o que prometeu</text>
+        <line x1="120" y1="345" x2="630" y2="345" stroke="#16121d" stroke-width="2" marker-end="url(#a8)"/>
+        <line x1="105" y1="330" x2="105" y2="45" stroke="#16121d" stroke-width="2" marker-end="url(#a8)"/>
+        <text x="375" y="372" text-anchor="middle" font-family="Inter" font-size="14" font-weight="600" fill="#16121d">CTR (taxa de cliques) →</text>
+        <text x="60" y="190" text-anchor="middle" font-family="Inter" font-size="14" font-weight="600" fill="#16121d" transform="rotate(-90 60 190)">Retenção →</text>
+        <defs><marker id="a8" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#16121d"/></marker></defs>
+      </svg>
+      <figcaption>O objetivo é o canto superior direito: muita gente clica <em>e</em> fica satisfeita.</figcaption>
+    </figure>
+
+    <h3>De onde vêm as visualizações</h3>
+    <p>No YouTube Studio, em “Origens de tráfego”, você vê de onde as pessoas chegam: <strong>Navegação</strong> (página inicial), <strong>Vídeos sugeridos</strong> (a coluna ao lado ou abaixo de outro vídeo), <strong>Pesquisa no YouTube</strong>, <strong>Feed do Shorts</strong>, <strong>Externas</strong> (WhatsApp, Instagram, sites) e páginas do canal. Canais novos costumam depender de pesquisa e de tráfego externo. Quando o sistema “entende” o seu público, navegação e sugeridos crescem.</p>
+
+    <h2 id="nicho-canal"><span class="num">2</span>Nicho e configuração do canal</h2>
+    <h3>Escolhendo um nicho</h3>
+    <p>Nicho é um assunto + um público. “Culinária” é um tema; “receitas baratas para quem mora sozinho” é um nicho. Quanto mais claro o nicho, mais fácil para o sistema saber para quem recomendar, e mais fácil para o espectador decidir se inscrever (“esse canal é pra mim”).</p>
+    <p>Um bom nicho fica na interseção de três círculos: <strong>o que você sabe ou gosta</strong>, <strong>o que as pessoas procuram</strong> e <strong>o que você consegue produzir com frequência</strong> com os recursos que tem. Um canal sobre drones é ótimo, mas não se você não tem um drone.</p>
+    <div class="callout tip"><strong>Dica de ouro</strong><p>Faça o <strong>teste dos 50 títulos</strong>: antes de criar o canal, escreva 50 ideias de vídeo para o nicho. Se travar na 15ª, o nicho é estreito demais ou você não tem tanto interesse assim. Se chegar fácil a 50, você tem munição para um ano.</p></div>
+
+    <h3>Configurando o canal, item por item</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Item</th><th>Especificação</th><th>Dica</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Nome</strong></td><td>Texto livre; o @identificador é único</td><td>Curto, fácil de falar e de soletrar. Evite números e trocadilhos difíceis.</td></tr>
+        <tr><td><strong>Foto do perfil</strong></td><td>Recomendado <code>800 × 800 px</code>; aparece em círculo e bem pequena</td><td>Rosto bem iluminado ou logo simples, com contraste.</td></tr>
+        <tr><td><strong>Banner</strong></td><td><code>2560 × 1440 px</code>, área segura central de <code>1546 × 423 px</code>, até 6 MB</td><td>Tudo que importa (nome, frequência, promessa) dentro da área segura.</td></tr>
+        <tr><td><strong>Descrição do canal</strong></td><td>Até 1.000 caracteres</td><td>Primeira frase: o que o canal entrega e para quem. Inclua palavras-chave.</td></tr>
+        <tr><td><strong>Links</strong></td><td>Site, Instagram, WhatsApp comercial</td><td>Coloque o link mais importante primeiro.</td></tr>
+        <tr><td><strong>Marca-d'água</strong></td><td>Imagem quadrada que aparece no canto dos vídeos</td><td>Pode ser um botão de “inscrever-se” com o seu logo.</td></tr>
+        <tr><td><strong>Trailer do canal</strong></td><td>Vídeo de destaque para não inscritos</td><td>30 a 60 segundos: quem é você, o que o canal entrega, frequência.</td></tr>
+      </tbody>
+    </table></div>
+
+    <figure>
+      <svg viewBox="0 0 700 420" role="img" aria-label="Banner do YouTube de 2560 por 1440 pixels com as áreas visíveis em TV, computador e celular; a área segura central de 1546 por 423 aparece em todos">
+        <rect width="700" height="420" rx="14" fill="#faf8fd"/>
+        <rect x="50" y="30" width="600" height="337.5" fill="#f3e9fc" stroke="#16121d" stroke-width="2"/>
+        <text x="60" y="52" font-family="Inter" font-size="13" font-weight="600" fill="#5a0b91">TV: 2560 × 1440 (imagem inteira)</text>
+        <rect x="50" y="148.5" width="600" height="100.4" fill="#e7f0fd" stroke="#2f7fe0" stroke-width="2"/>
+        <text x="60" y="268" font-family="Inter" font-size="12" font-weight="600" fill="#1d5fb0">↑ Computador: faixa azul de 2560 × 423</text>
+        <rect x="168.8" y="148.5" width="362.4" height="100.4" fill="#70cf97" opacity=".55" stroke="#2f9a5c" stroke-width="3"/>
+        <text x="350" y="196" text-anchor="middle" font-family="Poppins" font-size="16" font-weight="700" fill="#16121d">ÁREA SEGURA</text>
+        <text x="350" y="218" text-anchor="middle" font-family="Inter" font-size="13" fill="#16121d">1546 × 423 px: aparece em todos</text>
+        <text x="350" y="236" text-anchor="middle" font-family="Inter" font-size="12" fill="#16121d">(celular mostra só esta faixa)</text>
+        <text x="350" y="300" text-anchor="middle" font-family="Inter" font-size="13" fill="#6f6880">Fundo decorativo: textura, cor, foto.</text>
+        <text x="350" y="318" text-anchor="middle" font-family="Inter" font-size="13" fill="#6f6880">Nada importante aqui fora.</text>
+        <text x="350" y="397" text-anchor="middle" font-family="Inter" font-size="12" fill="#6f6880">Esquema em escala. Use o modelo oficial do YouTube Studio para conferir no seu caso.</text>
+      </svg>
+      <figcaption>O banner é cortado de jeitos diferentes em cada tela. Só o retângulo verde aparece sempre.</figcaption>
+    </figure>
+
+    <h3>Verificação e recursos liberados</h3>
+    <p>Algumas funções, como <strong>thumbnails personalizadas</strong>, vídeos com mais de 15 minutos e transmissões ao vivo, exigem verificar o canal. Em geral basta confirmar um número de telefone (recursos intermediários); recursos avançados podem exigir histórico do canal, verificação por vídeo ou documento. Confira em <strong>YouTube Studio › Configurações › Canal › Qualificação de recursos</strong>.</p>
+
+    <div class="callout warn"><strong>Erro comum</strong><p>Criar o canal com a conta Google pessoal do celular e, anos depois, querer passar a gestão para outra pessoa. Para negócios, crie o canal como <strong>conta de marca</strong>: ela permite adicionar gerentes e trocar o proprietário sem passar senha.</p></div>
+
+    <h2 id="longo-shorts"><span class="num">3</span>Vídeos longos x Shorts</h2>
+    <p>Os <strong>Shorts</strong> são vídeos verticais (<code>9:16</code>) ou quadrados. Desde <strong>15 de outubro de 2024</strong>, podem ter até <strong>3 minutos</strong>. Os <strong>vídeos longos</strong> são horizontais (<code>16:9</code>), sem limite prático de duração para contas verificadas.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th></th><th>Shorts</th><th>Vídeo longo</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Formato</strong></td><td>Vertical 9:16, até 3 min</td><td>Horizontal 16:9, qualquer duração</td></tr>
+        <tr><td><strong>Como é descoberto</strong></td><td>Feed de rolagem, o “clique” é não pular</td><td>Thumbnail + título em busca, página inicial e sugeridos</td></tr>
+        <tr><td><strong>Ponto forte</strong></td><td>Alcance rápido, testar ideias, atrair gente nova</td><td>Relação profunda, autoridade, mais tempo de exibição, melhor receita por view</td></tr>
+        <tr><td><strong>Ponto fraco</strong></td><td>Público menos fiel; receita por view bem menor</td><td>Exige mais roteiro, edição e embalagem</td></tr>
+        <tr><td><strong>Esforço de produção</strong></td><td>Baixo a médio</td><td>Médio a alto</td></tr>
+      </tbody>
+    </table></div>
+    <p>A estratégia que funciona para muita gente é <strong>usar os dois</strong>: Shorts como “trailer” e laboratório de ideias, vídeos longos como o “filme”. Dá para colocar no Short um link para um vídeo longo relacionado (opção “Vídeo relacionado” ao publicar), criando uma ponte entre os formatos.</p>
+
+    <div class="callout nerd"><strong>Curiosidade nerd</strong><p>Os Shorts foram lançados primeiro na <strong>Índia</strong>, em setembro de 2020, logo depois que um concorrente de vídeos curtos foi bloqueado no país. A Índia era um mercado gigante, de repente sem o seu app favorito de vídeo curto: o laboratório perfeito. O lançamento global veio em julho de 2021.</p></div>
+
+    <h2 id="retencao"><span class="num">4</span>Estrutura para retenção e leitura do gráfico</h2>
+    <p>Retenção é a porcentagem de pessoas que ainda está assistindo em cada momento do vídeo. Todo vídeo perde gente, isso é normal. O jogo é <strong>perder menos e mais devagar</strong>.</p>
+
+    <h3>A estrutura em 5 partes</h3>
+    <ol class="steps">
+      <li><strong>Gancho (0–5 s)</strong>Mostre logo o resultado, o problema ou a pergunta. Nada de “Fala, galera, tudo bem? Antes de começar, se inscreva…”. A pessoa clicou por causa do título: confirme, em segundos, que ela está no lugar certo.</li>
+      <li><strong>Promessa (5–20 s)</strong>Diga o que ela vai ganhar ficando até o fim: “No final, você vai ter um roteiro pronto para usar”.</li>
+      <li><strong>Contexto mínimo</strong>Só o necessário para entender. Contexto demais é a causa número 1 de queda no início.</li>
+      <li><strong>Desenvolvimento com “loops abertos”</strong>Um loop aberto é uma pergunta que fica no ar: “e o terceiro erro é o que mais derruba vídeos, mas antes…”. O cérebro odeia histórias inacabadas, e isso mantém a atenção. Alterne também o visual (mudança de plano, B-roll, texto na tela) a cada poucos segundos.</li>
+      <li><strong>Entrega (payoff) e saída rápida</strong>Cumpra a promessa. Depois, encerre rápido e indique o próximo vídeo. Despedidas longas fazem a retenção despencar e o espectador sair da plataforma.</li>
+    </ol>
+
+    <div class="callout nerd"><strong>Curiosidade nerd</strong><p>O poder dos loops abertos tem nome na psicologia: <strong>efeito Zeigarnik</strong>. Nos anos 1920, a psicóloga Bluma Zeigarnik observou que garçons lembravam melhor dos pedidos <em>ainda não pagos</em> do que dos já concluídos. Tarefas inacabadas ficam “abertas” na memória. Séries de TV usam isso nos ganchos de fim de episódio há décadas.</p></div>
+
+    <h3>Lendo o gráfico de retenção</h3>
+    <p>No YouTube Studio, abra um vídeo › <strong>Análise › Engajamento › Retenção do público</strong>. Você vai ver uma curva parecida com esta:</p>
+
+    <figure>
+      <svg viewBox="0 0 720 420" role="img" aria-label="Gráfico de retenção de público com anotações: queda inicial, platô, pico de replay, queda abrupta e queda final">
+        <rect width="720" height="420" rx="14" fill="#faf8fd"/>
+        <text x="360" y="30" text-anchor="middle" font-family="Poppins" font-size="18" font-weight="700" fill="#16121d">Anatomia de uma curva de retenção</text>
+        <g font-family="Inter" font-size="11" fill="#6f6880">
+          <line x1="70" y1="60" x2="680" y2="60" stroke="#e8e2f0"/><text x="62" y="64" text-anchor="end">100%</text>
+          <line x1="70" y1="135" x2="680" y2="135" stroke="#e8e2f0"/><text x="62" y="139" text-anchor="end">75%</text>
+          <line x1="70" y1="210" x2="680" y2="210" stroke="#e8e2f0"/><text x="62" y="214" text-anchor="end">50%</text>
+          <line x1="70" y1="285" x2="680" y2="285" stroke="#e8e2f0"/><text x="62" y="289" text-anchor="end">25%</text>
+          <line x1="70" y1="360" x2="680" y2="360" stroke="#16121d" stroke-width="1.5"/><text x="62" y="364" text-anchor="end">0%</text>
+          <text x="70" y="380" text-anchor="middle">0:00</text><text x="222" y="380" text-anchor="middle">2:00</text><text x="375" y="380" text-anchor="middle">4:00</text><text x="527" y="380" text-anchor="middle">6:00</text><text x="680" y="380" text-anchor="middle">8:00</text>
+        </g>
+        <path d="M70 60 C 85 95, 100 120, 125 128 C 170 140, 230 150, 300 160 C 330 164, 345 150, 360 140 C 375 150, 390 168, 420 172 C 440 175, 452 176, 460 178 L 468 222 C 520 230, 590 240, 640 248 C 660 260, 670 290, 680 310" fill="none" stroke="#8612d5" stroke-width="4" stroke-linecap="round"/>
+        <path d="M70 60 C 85 95, 100 120, 125 128 C 170 140, 230 150, 300 160 C 330 164, 345 150, 360 140 C 375 150, 390 168, 420 172 C 440 175, 452 176, 460 178 L 468 222 C 520 230, 590 240, 640 248 C 660 260, 670 290, 680 310 L 680 360 L 70 360 Z" fill="#8612d5" opacity=".08"/>
+        <circle cx="100" cy="112" r="6" fill="#ffb020"/>
+        <text x="112" y="96" font-family="Inter" font-size="12" font-weight="700" fill="#16121d">① Queda inicial</text>
+        <text x="112" y="111" font-family="Inter" font-size="11" fill="#2f2a3a">normal; se for muito forte, o gancho é fraco</text>
+        <circle cx="230" cy="150" r="6" fill="#70cf97"/>
+        <text x="175" y="185" font-family="Inter" font-size="12" font-weight="700" fill="#16121d">② Platô</text>
+        <text x="175" y="200" font-family="Inter" font-size="11" fill="#2f2a3a">curva quase plana = conteúdo prendendo</text>
+        <circle cx="360" cy="140" r="6" fill="#2f7fe0"/>
+        <text x="340" y="88" font-family="Inter" font-size="12" font-weight="700" fill="#16121d">③ Pico (replay)</text>
+        <text x="340" y="103" font-family="Inter" font-size="11" fill="#2f2a3a">gente voltou para rever: ouro!</text>
+        <line x1="360" y1="108" x2="360" y2="132" stroke="#2f7fe0" stroke-dasharray="3 3"/>
+        <circle cx="464" cy="200" r="6" fill="#e5484d"/>
+        <text x="478" y="196" font-family="Inter" font-size="12" font-weight="700" fill="#16121d">④ Queda abrupta</text>
+        <text x="478" y="211" font-family="Inter" font-size="11" fill="#2f2a3a">assunto mudou, enrolação,</text><text x="478" y="225" font-family="Inter" font-size="11" fill="#2f2a3a">pedido de inscrição longo</text>
+        <circle cx="660" cy="268" r="6" fill="#6f6880"/>
+        <text x="520" y="302" font-family="Inter" font-size="12" font-weight="700" fill="#16121d">⑤ Queda final</text>
+        <text x="520" y="317" font-family="Inter" font-size="11" fill="#2f2a3a">esperada: despedida e tela final</text>
+        <text x="360" y="405" text-anchor="middle" font-family="Inter" font-size="11" fill="#6f6880">Curva ilustrativa de um vídeo de 8 minutos. Cada vídeo tem a sua forma.</text>
+      </svg>
+      <figcaption>Leia a curva como um eletrocardiograma da atenção: picos, platôs e quedas contam o que aconteceu em cada trecho.</figcaption>
+    </figure>
+
+    <p>O Studio também mostra a <strong>retenção nos primeiros 30 segundos</strong> e compara a sua curva com a “típica” de vídeos de duração parecida. Abaixo da faixa típica no começo? O problema é o gancho. Abaixo no meio? É ritmo. Clique na curva e o Studio pula para aquele momento do vídeo: assista exatamente o trecho onde as pessoas saíram e pergunte “por que eu sairia aqui?”.</p>
+
+    <div class="callout pratica"><strong>Na prática</strong><p>Pegue um vídeo seu (ou um rascunho) e marque no roteiro: onde está o gancho? Qual é a promessa? Onde há um loop aberto? Onde a promessa é paga? Se alguma dessas respostas for “não tem”, você já sabe o que reescrever.</p></div>
+
+    <h2 id="titulos-thumbs"><span class="num">5</span>Títulos e thumbnails</h2>
+    <p>Título e thumbnail são a <strong>embalagem</strong>. Na página inicial, seu vídeo disputa espaço com dezenas de outros, e a pessoa decide em um segundo. A regra de ouro é: <strong>desperte curiosidade, mas cumpra exatamente o que prometeu</strong>.</p>
+
+    <h3>Fórmulas de título</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Fórmula</th><th>Exemplo</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Resultado + restrição</strong></td><td>“Vídeo de produto profissional usando só a luz da janela”</td></tr>
+        <tr><td><strong>Número + benefício</strong></td><td>“5 ajustes de câmera que deixam seu celular parecendo câmera de cinema”</td></tr>
+        <tr><td><strong>Erro / alerta</strong></td><td>“Pare de gravar vídeos assim (o erro que estraga o áudio)”</td></tr>
+        <tr><td><strong>Teste / experimento</strong></td><td>“Testei 3 microfones de até R$ 50: o resultado me surpreendeu”</td></tr>
+        <tr><td><strong>Como + objetivo claro</strong></td><td>“Como fazer seu primeiro vídeo para o Instagram da sua loja”</td></tr>
+        <tr><td><strong>Pergunta que a pessoa já faz</strong></td><td>“Precisa de câmera para começar no YouTube?”</td></tr>
+      </tbody>
+    </table></div>
+    <p>O título pode ter até 100 caracteres, mas o que aparece no celular é bem menos. Coloque o mais importante <strong>nas primeiras 50 a 60 letras</strong>.</p>
+
+    <h3>Curiosidade sem clickbait</h3>
+    <p>Existe uma diferença entre <em>lacuna de curiosidade</em> e <em>clickbait</em>. A lacuna de curiosidade deixa uma pergunta no ar que o vídeo responde (“o erro que estraga o áudio”). Clickbait promete algo que o vídeo não entrega (“ESSE MICROFONE DE R$ 10 É MELHOR QUE UM DE R$ 5 MIL!!!”). O primeiro gera retenção; o segundo gera cliques seguidos de abandono e “não gostei”, o pior sinal possível.</p>
+
+    <h3>Anatomia de uma boa thumbnail</h3>
+    <ul>
+      <li><strong>Especificação:</strong> <code>1280 × 720 px</code> (16:9), largura mínima de 640 px, JPG, PNG ou GIF, <strong>até 2 MB</strong>.</li>
+      <li><strong>Um ponto focal só:</strong> um rosto, um objeto ou um contraste. Thumbnail com cinco elementos vira poluição em tela pequena.</li>
+      <li><strong>Rosto com emoção</strong> (quando fizer sentido): surpresa, dúvida, satisfação. Olhos visíveis.</li>
+      <li><strong>No máximo 3 ou 4 palavras</strong>, e que <em>complementem</em> o título, não repitam.</li>
+      <li><strong>Contraste:</strong> fundo simples, sujeito destacado, cores que se separam (roxo e amarelo, azul e laranja).</li>
+      <li><strong>Teste do polegar:</strong> reduza a thumbnail para o tamanho de uma unha na tela do celular. Ainda dá para entender?</li>
+      <li><strong>Evite o canto inferior direito:</strong> é onde aparece a duração do vídeo.</li>
+    </ul>
+
+    <div class="compare">
+      <div class="bad"><h4>Thumbnail que afasta</h4><ul><li>Print aleatório do vídeo, escuro e desfocado</li><li>Frase inteira escrita em fonte fina</li><li>Seis elementos disputando atenção</li><li>Promete algo que não está no vídeo</li></ul></div>
+      <div class="good"><h4>Thumbnail que chama</h4><ul><li>Foto feita especialmente para a thumb, bem iluminada</li><li>2 a 3 palavras grandes, fonte grossa, com contorno</li><li>Um sujeito principal, fundo limpo</li><li>Mostra o resultado ou a tensão do vídeo</li></ul></div>
+    </div>
+
+    <h3>Testar e comparar no YouTube Studio</h3>
+    <p>O YouTube Studio tem a ferramenta <strong>Testar e comparar</strong> (Test &amp; Compare): você envia até três thumbnails (e, para parte dos canais, também variações de título) para o mesmo vídeo, e o YouTube distribui as versões entre os espectadores. A vencedora é escolhida pelo <strong>tempo de exibição</strong> gerado, não apenas pelos cliques, o que é coerente com tudo que vimos sobre satisfação. A ferramenta exige recursos avançados e é usada no Studio pelo computador. A disponibilidade de teste de títulos tem variado entre canais, então verifique se aparece para você.</p>
+
+    <div class="callout tip"><strong>Dica de ouro</strong><p>Faça versões <strong>realmente diferentes</strong> no teste (rosto x objeto, fundo claro x escuro). Variações quase iguais demoram para dar resultado ou terminam empatadas. E fotografe a thumbnail <em>no dia da gravação</em>: refazer depois é muito mais trabalhoso.</p></div>
+
+    <h2 id="seo"><span class="num">6</span>SEO, playlists, telas finais e comunidade</h2>
+    <p>O YouTube pertence ao Google e funciona como um grande buscador de vídeos. <strong>SEO</strong> (otimização para mecanismos de busca) é ajudar o sistema a entender sobre o que é o seu vídeo e para quem.</p>
+
+    <h3>Pesquisa de palavras-chave com o autocompletar</h3>
+    <ol class="steps">
+      <li><strong>Abra a busca do YouTube em uma aba anônima</strong>Assim o histórico não interfere nas sugestões.</li>
+      <li><strong>Digite o começo do tema</strong>Por exemplo, “como gravar vídeo com”. Anote as sugestões: elas refletem buscas reais.</li>
+      <li><strong>Use o truque do alfabeto</strong>“como gravar vídeo com a…”, “…com b…”, e assim por diante. Aparecem variações que você nem imaginava.</li>
+      <li><strong>Veja os resultados</strong>Quais vídeos aparecem? São antigos, de canais grandes, com thumbnails fracas? Lacunas são oportunidades.</li>
+      <li><strong>Escolha uma palavra-chave principal por vídeo</strong>Use-a no título, no começo da descrição e <em>falada</em> no vídeo. O YouTube transcreve o áudio automaticamente.</li>
+    </ol>
+
+    <h3>Descrição e capítulos</h3>
+    <p>A descrição aceita até 5.000 caracteres, mas as <strong>duas primeiras linhas</strong> são as que aparecem antes do “mais”. Escreva ali um resumo natural com a palavra-chave. Depois, adicione os <strong>capítulos</strong>: uma lista de marcações de tempo que divide o vídeo em partes. Regras para os capítulos funcionarem:</p>
+    <ul>
+      <li>O primeiro deve começar em <code>00:00</code>;</li>
+      <li>Pelo menos três marcações, em ordem crescente;</li>
+      <li>Cada capítulo com pelo menos 10 segundos.</li>
+    </ul>
+    <p>Exemplo: <code>00:00 Introdução</code> · <code>00:35 Luz da janela</code> · <code>02:10 Rebatedor caseiro</code> · <code>04:00 Resultado</code>. Capítulos ajudam o espectador a navegar e podem aparecer direto nos resultados de busca do Google.</p>
+
+    <h3>E as tags?</h3>
+    <p>O próprio YouTube diz que as tags têm <strong>papel mínimo</strong> na descoberta. Servem principalmente para palavras escritas de jeitos diferentes (“maquiagem” e “maquilagem”, “edição” e “edicao”). Não perca tempo com 30 tags.</p>
+
+    <h3>Playlists, telas finais e cards</h3>
+    <ul>
+      <li><strong>Playlists:</strong> agrupam vídeos de um mesmo tema e tocam em sequência, aumentando o tempo de sessão. Dê títulos pesquisáveis (“Iluminação com pouco dinheiro”, não “Vídeos 2026”).</li>
+      <li><strong>Telas finais:</strong> elementos clicáveis nos últimos 5 a 20 segundos (vídeo sugerido, playlist, botão de inscrição). O vídeo precisa ter pelo menos 25 segundos. Planeje o final do vídeo com espaço para eles.</li>
+      <li><strong>Cards:</strong> pequenos avisos que aparecem durante o vídeo, com link para outro vídeo, playlist ou canal. Até 5 por vídeo. Use quando você citar algo (“eu expliquei isso neste vídeo aqui”).</li>
+    </ul>
+
+    <h3>Postagens na comunidade</h3>
+    <p>A aba <strong>Postagens</strong> (comunidade) permite publicar texto, imagens, enquetes e testes para os inscritos, que podem aparecer na página inicial deles. É ótima para manter o canal vivo entre um vídeo e outro, perguntar o tema do próximo episódio e avisar sobre lançamentos.</p>
+
+    <h2 id="analytics"><span class="num">7</span>YouTube Studio: glossário de métricas</h2>
+    <p>O Studio (também em app no celular) é o painel de controle do canal. Estas são as métricas que você mais vai consultar:</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Métrica</th><th>O que é</th><th>Como ler</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Impressões</strong></td><td>Quantas vezes a thumbnail foi exibida no YouTube</td><td>Mostra quanto o sistema está “oferecendo” seu vídeo.</td></tr>
+        <tr><td><strong>CTR de impressões</strong></td><td>% de impressões que viraram cliques</td><td>A maioria dos canais fica entre 2% e 10%. Compare com a sua média, não com a de outros canais: CTR cai naturalmente quando o vídeo chega a públicos mais amplos.</td></tr>
+        <tr><td><strong>Visualizações</strong></td><td>Quantas vezes o vídeo foi assistido</td><td>Número de vitrine. Sozinho, diz pouco.</td></tr>
+        <tr><td><strong>Tempo de exibição (horas)</strong></td><td>Soma de todo o tempo assistido</td><td>Base para a monetização de vídeos longos.</td></tr>
+        <tr><td><strong>Duração média da visualização</strong></td><td>Quanto, em média, cada visualização durou</td><td>Em um vídeo de 8 min, 4 min de média é excelente.</td></tr>
+        <tr><td><strong>Retenção do público</strong></td><td>% que continua assistindo em cada momento</td><td>Ver seção 4.</td></tr>
+        <tr><td><strong>Espectadores únicos</strong></td><td>Estimativa de pessoas diferentes que assistiram</td><td>Compare com visualizações: muita repetição indica conteúdo revisto.</td></tr>
+        <tr><td><strong>Inscritos ganhos/perdidos</strong></td><td>Saldo de inscrições por vídeo</td><td>Mostra quais vídeos convertem espectadores em público fiel.</td></tr>
+        <tr><td><strong>Espectadores recorrentes</strong></td><td>Quem já tinha assistido ao canal antes</td><td>Mede fidelidade.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout warn"><strong>Erro comum</strong><p>Olhar as estatísticas a cada 10 minutos depois de publicar. Os dados das primeiras horas oscilam muito e geram ansiedade sem ajudar em nada. Analise depois de 48 horas, 7 dias e 28 dias, sempre comparando com os seus próprios vídeos.</p></div>
+
+    <h2 id="monetizacao"><span class="num">8</span>Monetização em novembro de 2026</h2>
+    <p>Para ganhar dinheiro <em>dentro</em> do YouTube, o canal precisa entrar no <strong>Programa de Parcerias do YouTube (YPP)</strong>. Em novembro de 2026, existem dois níveis:</p>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>Nível</th><th>Requisitos</th><th>O que libera</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Apoio dos fãs</strong> (nível inicial)</td><td><strong>500 inscritos</strong> + <strong>3 envios públicos</strong> nos últimos 90 dias + <strong>3.000 horas</strong> de exibição pública em vídeos longos nos últimos 12 meses <strong>OU</strong> <strong>3 milhões</strong> de visualizações válidas de Shorts nos últimos 90 dias</td><td>Clube dos canais (assinaturas), Super Chat, Super Stickers, Super Thanks, Compras do YouTube (onde disponível)</td></tr>
+        <tr><td><strong>Receita de anúncios</strong> (nível completo)</td><td><strong>1.000 inscritos</strong> + <strong>4.000 horas</strong> de exibição pública em vídeos longos nos últimos 12 meses <strong>OU</strong> <strong>10 milhões</strong> de visualizações válidas de Shorts nos últimos 90 dias</td><td>Tudo do nível anterior + participação na receita de anúncios dos vídeos longos e dos Shorts, e receita do YouTube Premium</td></tr>
+      </tbody>
+    </table></div>
+    <p>Além dos números, é preciso: morar em um país onde o programa está disponível, seguir as políticas de monetização, não ter avisos ativos de diretrizes da comunidade, ativar a <strong>verificação em duas etapas</strong> na conta Google e ter (ou criar) uma conta <strong>AdSense</strong> vinculada. A disponibilidade do nível de apoio dos fãs também pode variar por país.</p>
+
+    <div class="callout info"><strong>Atenção: mudança anunciada para 2027</strong><p>O YouTube anunciou que, a partir de <strong>1º de fevereiro de 2027</strong>, os requisitos para <strong>novos candidatos</strong> ao nível de receita de anúncios ficarão mais exigentes. Segundo o que foi divulgado, o mínimo passaria para <strong>8.000 horas de exibição</strong> em 12 meses ou <strong>20 milhões de visualizações de Shorts</strong> em 90 dias, mantendo 1.000 inscritos. Detalhes sobre o nível de apoio dos fãs e sobre quem já está no programa podem variar. Regras de plataforma mudam: confira sempre a aba <strong>Ganhar dinheiro</strong> no YouTube Studio e a página oficial do <a href="https://support.google.com/youtube/answer/72851?hl=pt-BR" target="_blank" rel="noopener">Programa de Parcerias do YouTube</a>.</p></div>
+
+    <h3>Quanto se ganha?</h3>
+    <p>Depende muito do nicho, do país do público e da época do ano. Nos vídeos longos, o criador fica com a maior parte (55%) da receita líquida dos anúncios exibidos nos seus vídeos; nos Shorts, a receita é reunida num “bolo” e o criador recebe 45% da parte que cabe a ele. Na prática, Shorts pagam bem menos por visualização que vídeos longos. Por isso, para a maioria dos pequenos criadores, os anúncios são <strong>uma</strong> das fontes de renda, raramente a principal.</p>
+
+    <h3>Outras fontes de renda</h3>
+    <div class="cards">
+      <div class="card"><div class="ic">💜</div><h4>Clube dos canais</h4><p>Inscritos pagam mensalidade por selos, emojis e conteúdo exclusivo.</p></div>
+      <div class="card"><div class="ic">💸</div><h4>Super Thanks / Super Chat</h4><p>Gorjetas em vídeos e em lives, com mensagem destacada.</p></div>
+      <div class="card"><div class="ic">🤝</div><h4>Patrocínios</h4><p>Marcas pagam por menção ou vídeo dedicado. Marque “contém promoção paga” nos detalhes do vídeo.</p></div>
+      <div class="card"><div class="ic">🔗</div><h4>Afiliados</h4><p>Links de produtos com comissão. Avise o espectador de que é um link de afiliado.</p></div>
+      <div class="card"><div class="ic">🎓</div><h4>Produtos e serviços</h4><p>Cursos, consultorias, presets, trabalhos de vídeo. O canal funciona como portfólio.</p></div>
+    </div>
+
+    <div class="callout tip"><strong>Dica de ouro</strong><p>Um canal de nicho com 2 mil inscritos certos (por exemplo, “edição de vídeo para pequenos negócios”) pode render mais vendendo um serviço ou uma mentoria do que um canal genérico com 50 mil inscritos vivendo só de anúncios.</p></div>
+
+    <h2 id="regras"><span class="num">9</span>Direitos autorais, diretrizes e conteúdo infantil</h2>
+    <h3>Content ID e avisos de direitos autorais</h3>
+    <p>O <strong>Content ID</strong> é um sistema automático que compara cada vídeo enviado com um banco de arquivos registrados pelos detentores de direitos (gravadoras, estúdios, emissoras). Quando encontra uma correspondência, o dono do conteúdo escolhe: <strong>bloquear</strong> o vídeo, <strong>monetizar</strong> (os anúncios passam a pagar a ele, não a você) ou apenas <strong>rastrear</strong> as estatísticas. Uma reivindicação do Content ID <em>não</em> é um aviso (strike).</p>
+    <p>Já o <strong>aviso de direitos autorais</strong> acontece quando o detentor faz um pedido formal de remoção. Com <strong>três avisos ativos</strong>, o canal pode ser encerrado. Um aviso expira em 90 dias, desde que você conclua a “Escola de direitos autorais”. Também é possível pedir a retratação ao reclamante ou enviar uma contranotificação, se tiver certeza de que o uso é legítimo.</p>
+    <p>A saída mais segura para trilha sonora é a <strong>Biblioteca de áudio</strong> do YouTube Studio: músicas e efeitos gratuitos, liberados para uso, inclusive em vídeos monetizados. Algumas faixas exigem atribuição na descrição, então leia a licença de cada uma.</p>
+
+    <h3>“Fair use” e a lei brasileira</h3>
+    <p>Você vai ouvir muito falar em <em>fair use</em> (“uso justo”). Ele é uma doutrina da lei dos <strong>Estados Unidos</strong>, que avalia caso a caso se o uso de uma obra alheia é aceitável. O Brasil não tem fair use com esse nome nem com essa flexibilidade. Aqui vale a <strong>Lei de Direitos Autorais (Lei nº 9.610/1998)</strong>, que traz uma <strong>lista fechada de exceções</strong>, chamadas de limitações. Entre elas, o artigo 46 permite, por exemplo, a <strong>citação de trechos</strong> de uma obra para fins de estudo, crítica ou polêmica, na medida justificada e com indicação do autor e da origem; e o artigo 47 considera livres as <strong>paráfrases e paródias</strong> que não sejam reprodução da obra original nem a desacreditem.</p>
+    <p>Na prática: usar uma música inteira de fundo “porque coloquei os créditos” <strong>não</strong> é permitido. Dar crédito é educado, mas não substitui autorização. E lembre que o Content ID é automático e não avalia a lei de cada país: mesmo um uso legítimo pode ser reivindicado e precisar de contestação. Na dúvida, use material próprio, licenciado ou da biblioteca de áudio. Isto é informação geral, não aconselhamento jurídico.</p>
+
+    <h3>Diretrizes da comunidade</h3>
+    <p>As <a href="https://www.youtube.com/howyoutubeworks/policies/community-guidelines/" target="_blank" rel="noopener">Diretrizes da Comunidade</a> proíbem, entre outros, spam e golpes, conteúdo violento ou perigoso, assédio, discurso de ódio, desinformação prejudicial e nudez. Na primeira violação, o canal geralmente recebe um <strong>alerta</strong> (que pode ser removido fazendo um treinamento sobre a política). Violações seguintes geram <strong>avisos</strong>, com bloqueio temporário de publicações; três avisos em 90 dias levam ao encerramento do canal.</p>
+
+    <h3>Conteúdo para crianças</h3>
+    <p>Todo vídeo precisa ser marcado como <strong>“é conteúdo para crianças”</strong> ou <strong>“não é conteúdo para crianças”</strong>. Isso vem de um acordo de 2019 com a autoridade de defesa do consumidor dos EUA (FTC), baseado na lei americana de privacidade infantil (COPPA), mas a configuração vale para criadores do mundo todo. Vídeos marcados como infantis têm comentários desativados, não recebem anúncios personalizados e perdem alguns recursos (como notificações e miniplayer). Marcar errado de propósito pode gerar consequências. A pergunta é: “o público principal deste vídeo são crianças?”. Personagens, brinquedos, cantigas e linguagem infantil indicam que sim.</p>
+    <div class="callout warn"><strong>Erro comum</strong><p>Marcar um vídeo de desenho, brinquedo ou cantiga como “não é para crianças” só para manter os comentários e os anúncios personalizados. O YouTube também usa sistemas automáticos para identificar conteúdo infantil e pode alterar a classificação.</p></div>
+
+    <ul class="checklist">
+      <li>Canal com nome, foto, banner (dentro da área segura) e descrição com palavra-chave.</li>
+      <li>Telefone verificado para liberar thumbnails personalizadas.</li>
+      <li>Verificação em duas etapas ativada na conta Google.</li>
+      <li>Roteiro com gancho, promessa, loops abertos e entrega.</li>
+      <li>Thumbnail 1280 × 720, até 2 MB, legível no tamanho de uma unha.</li>
+      <li>Título com o principal nos primeiros 50 caracteres.</li>
+      <li>Descrição com resumo + capítulos começando em 00:00.</li>
+      <li>Música da Biblioteca de áudio ou licenciada.</li>
+      <li>Público definido (para crianças ou não).</li>
+      <li>Tela final e playlist configuradas.</li>
+    </ul>
+
+    <h3>Perguntas frequentes</h3>
+    <details><summary>Preciso postar toda semana?</summary><p>Consistência ajuda o público a criar o hábito, mas o YouTube recompensa vídeos que satisfazem, não calendários. Um bom vídeo a cada 15 dias, mantido por um ano, vale mais que quatro vídeos fracos por semana durante um mês.</p></details>
+    <details><summary>Shorts “atrapalham” o canal de vídeos longos?</summary><p>O YouTube tem dito que os sistemas tratam os formatos de forma separada e que Shorts não prejudicam a recomendação dos vídeos longos. O que pode acontecer é atrair um público que só gosta de Shorts. Mantenha o mesmo tema nos dois formatos.</p></details>
+    <details><summary>Posso reenviar um vídeo que foi mal?</summary><p>Pode, mas geralmente vale mais trocar a thumbnail e o título primeiro (ou testá-los com Testar e comparar). Se o conteúdo for o problema, refaça com um gancho melhor em vez de apenas reenviar o mesmo arquivo.</p></details>
+    <details><summary>Dá para gravar tudo no celular?</summary><p>Sim. Grave na horizontal para vídeos longos, cuide do áudio (módulo 3) e da luz (módulo 2). O público perdoa imagem simples, mas não perdoa som ruim.</p></details>
+
+    <div class="resumo"><h3>📌 Resumo do módulo</h3><ul>
+      <li>O YouTube otimiza a <strong>satisfação</strong>: CTR, tempo de exibição/retenção, pesquisas com espectadores e interações.</li>
+      <li>Nicho claro = sistema e espectador entendem para quem é o canal.</li>
+      <li>Banner 2560 × 1440 com o essencial em 1546 × 423; foto 800 × 800; verifique o telefone para liberar thumbnails.</li>
+      <li>Shorts (9:16, até 3 min) atraem; vídeos longos (16:9) aprofundam e pagam melhor.</li>
+      <li>Estrutura: gancho, promessa, contexto mínimo, loops abertos, entrega e saída rápida.</li>
+      <li>Thumbnail 1280 × 720, até 2 MB, um ponto focal, até 3 ou 4 palavras. Teste com Testar e comparar.</li>
+      <li>SEO: palavra-chave do autocompletar no título, no início da descrição e falada; capítulos ajudam; tags pouco importam.</li>
+      <li>YPP em nov/2026: 500 inscritos (apoio dos fãs) ou 1.000 inscritos (anúncios), com metas de horas ou de views de Shorts. Regras mais duras anunciadas para fev/2027: confira a aba Ganhar dinheiro.</li>
+      <li>No Brasil vale a Lei 9.610/98: crédito não é autorização. Use a Biblioteca de áudio.</li>
+    </ul></div>
+
+    <div class="callout pratica"><strong>Exercício do módulo</strong><p>1) Defina seu nicho em uma frase (assunto + público) e liste 20 ideias de vídeos usando o autocompletar do YouTube. 2) Escolha a melhor ideia e escreva um roteiro de até 4 minutos com gancho, promessa, dois loops abertos e entrega. 3) Grave, edite e crie <strong>duas thumbnails bem diferentes</strong>. 4) Publique com título otimizado, descrição com capítulos e tela final. 5) Após 7 dias, abra a retenção do público e anote: onde está a maior queda? O que acontecia no vídeo naquele momento? 6) Corte o melhor trecho em um Short com link para o vídeo completo.</p></div>
+
+    <div class="quiz"><script type="application/json">[
+      {"q":"Segundo o próprio YouTube, o que o sistema de recomendação busca otimizar?","o":["O número bruto de visualizações","A satisfação do espectador","A quantidade de vídeos publicados por semana","O número de tags do vídeo"],"a":1,"e":"O YouTube combina clique, tempo de exibição, retenção, pesquisas de satisfação e interações para estimar se a pessoa ficou satisfeita com o que assistiu."},
+      {"q":"Seu vídeo tem CTR alto, mas quase todo mundo sai nos primeiros 15 segundos. O diagnóstico mais provável é:","o":["Thumbnail fraca","O vídeo não entregou logo o que o título e a thumbnail prometeram","Falta de tags"],"a":1,"e":"CTR alto mostra que a embalagem atraiu. A queda rápida mostra que o começo do vídeo não confirmou a promessa: é o quadrante do clickbait."},
+      {"q":"Qual é a área segura do banner do canal (2560 × 1440)?","o":["1280 × 720","1546 × 423","1920 × 1080"],"a":1,"e":"A faixa central de 1546 × 423 px aparece em todos os dispositivos. O resto pode ser cortado no celular e no computador."},
+      {"q":"Desde outubro de 2024, qual a duração máxima de um Short?","o":["60 segundos","90 segundos","3 minutos","10 minutos"],"a":2,"e":"Desde 15/10/2024, Shorts verticais ou quadrados podem ter até 3 minutos."},
+      {"q":"No gráfico de retenção, um pico subindo no meio da curva normalmente indica:","o":["Erro do YouTube","Que muitas pessoas voltaram para rever aquele trecho","Que os anúncios começaram"],"a":1,"e":"Picos indicam replays: algo ali foi tão interessante (ou rápido demais) que as pessoas voltaram para ver de novo."},
+      {"q":"Qual destas configurações faz os capítulos do vídeo funcionarem?","o":["Primeira marcação em 00:00, pelo menos três capítulos, cada um com 10 s ou mais","Capítulos só funcionam em canais monetizados","Basta escrever “capítulos” na descrição"],"a":0,"e":"Os capítulos exigem a primeira marcação em 00:00, no mínimo três marcações em ordem crescente e duração mínima de 10 segundos por capítulo."},
+      {"q":"Em novembro de 2026, quais são os requisitos do nível de receita de anúncios do YPP?","o":["500 inscritos e 1.000 horas","1.000 inscritos + 4.000 horas em 12 meses OU 10 milhões de views de Shorts em 90 dias","10.000 inscritos e 1 milhão de views"],"a":1,"e":"Esse é o nível completo vigente em nov/2026. O nível de apoio dos fãs pede 500 inscritos, 3 envios em 90 dias e 3.000 horas ou 3 milhões de views de Shorts. Para fev/2027 foram anunciadas metas mais altas para novos candidatos."},
+      {"q":"Você usou uma música famosa inteira de fundo e colocou o nome do artista na descrição. Pela lei brasileira:","o":["Está liberado, porque deu os créditos","Não está liberado: crédito não substitui autorização, e a Lei 9.610/98 só prevê exceções específicas","Está liberado se o vídeo não for monetizado"],"a":1,"e":"O Brasil não tem fair use como os EUA. A Lei 9.610/98 traz exceções pontuais (como citação de trechos para crítica ou estudo). Usar a música inteira como trilha exige licença."}
+    ]</script></div>
+  </article>
+</main>
+<script src="assets/guia.js"></script>
+</body>
+</html>

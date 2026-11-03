@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ferramentas interativas | Guia Audiovisual com Pouco Recurso</title>
+<meta name="description" content="Calculadoras e ferramentas gratuitas para quem produz vídeo: obturador, espaço em disco, preço do serviço, roteiro, teleprompter e área segura.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/guia.css">
+<style>
+.tool .hint{font-size:14px;color:var(--muted);margin-top:6px}
+.tool .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.tool textarea{min-height:140px;resize:vertical;line-height:1.6}
+.script-out{white-space:pre-wrap;font-family:Inter,sans-serif;background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:18px;margin-top:16px;font-size:15.5px;display:none}
+#tp{position:fixed;inset:0;background:#000;color:#fff;z-index:200;display:none;overflow:hidden}
+#tp .txt{position:absolute;left:8%;right:8%;top:100%;font:600 52px/1.5 Inter,sans-serif;text-align:center}
+#tp.mirror .txt{transform:scaleX(-1)}
+#tp .ctrl{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);display:flex;gap:10px;z-index:2;background:rgba(40,40,40,.85);padding:10px 14px;border-radius:14px;align-items:center;font-size:14px}
+#tp .ctrl button{background:#333;color:#fff;border:0;border-radius:8px;padding:8px 12px;cursor:pointer;font:inherit}
+#tp .guide{position:absolute;left:0;right:0;top:38%;height:3px;background:rgba(112,207,151,.6);z-index:1}
+.safe-wrap{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:start}
+@media(max-width:760px){.safe-wrap{grid-template-columns:1fr}}
+.safe{position:relative;width:270px;aspect-ratio:9/16;background:#222 center/cover no-repeat;border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+.safe .z{position:absolute;background:rgba(229,72,77,.38);border:1px dashed rgba(255,255,255,.7);color:#fff;font-size:10.5px;font-weight:600;display:flex;align-items:center;justify-content:center;text-align:center;padding:2px}
+.safe .grid34{position:absolute;left:0;right:0;border-top:2px dashed #ffb020;border-bottom:2px dashed #ffb020}
+.legend span{display:inline-flex;align-items:center;gap:6px;margin-right:14px;font-size:14px}
+.legend i{width:14px;height:14px;border-radius:3px;display:inline-block}
+</style>
+</head>
+<body data-page="ferramentas">
+<main class="content">
+  <header class="mod-hero" data-num="🧮">
+    <div class="crumb"><a href="index.html">Guia</a> › Ferramentas</div>
+    <h1>Ferramentas interativas</h1>
+    <p>Calculadoras e utilitários para usar no dia a dia de produção. Tudo funciona direto no navegador, até no celular, e nada é enviado para servidor nenhum.</p>
+    <div class="meta"><span>🧮 7 ferramentas</span><span>🔒 Funciona offline depois de carregada</span></div>
+  </header>
+
+  <article>
+    <h2 id="obturador"><span class="num">1</span>Calculadora do obturador (regra dos 180°)</h2>
+    <p>Para o movimento parecer natural, o tempo de exposição de cada quadro deve ser mais ou menos <strong>metade do intervalo entre quadros</strong>. Informe o fps e veja o obturador ideal. Detalhes no <a href="01-camera.html">Módulo 1</a>.</p>
+    <div class="tool" id="t-shutter">
+      <div class="row">
+        <div><label for="fps">Taxa de quadros (fps)</label>
+          <select id="fps"><option>24</option><option selected>30</option><option>50</option><option>60</option><option>120</option><option>240</option></select></div>
+        <div><label for="rede">Rede elétrica / lâmpadas</label>
+          <select id="rede"><option value="60" selected>60 Hz (Brasil)</option><option value="50">50 Hz (Europa e outros)</option></select></div>
+      </div>
+      <div class="out" id="shutter-out"></div>
+    </div>
+
+    <h2 id="espaco"><span class="num">2</span>Quanto espaço meu vídeo vai ocupar?</h2>
+    <p>O tamanho do arquivo depende do <strong>bitrate</strong> (quantos megabits são gravados por segundo) e da duração. Os valores de referência abaixo são médias de celulares atuais; o seu aparelho pode variar.</p>
+    <div class="tool" id="t-storage">
+      <div class="row">
+        <div><label for="preset">Formato de gravação</label>
+          <select id="preset">
+            <option value="10">720p 30fps (~10 Mbps)</option>
+            <option value="17" selected>1080p 30fps (~17 Mbps)</option>
+            <option value="25">1080p 60fps (~25 Mbps)</option>
+            <option value="45">4K 30fps HEVC (~45 Mbps)</option>
+            <option value="60">4K 30fps H.264 (~60 Mbps)</option>
+            <option value="90">4K 60fps (~90 Mbps)</option>
+            <option value="c">Personalizado…</option>
+          </select></div>
+        <div><label for="mbps">Bitrate (Mbps)</label><input id="mbps" type="number" min="1" value="17"></div>
+        <div><label for="min">Duração (minutos)</label><input id="min" type="number" min="1" value="10"></div>
+        <div><label for="free">Espaço livre no celular (GB)</label><input id="free" type="number" min="1" value="32"></div>
+      </div>
+      <div class="out" id="storage-out"></div>
+    </div>
+
+    <h2 id="preco"><span class="num">3</span>Calculadora do preço do seu trabalho</h2>
+    <p>Cobrar “no chute” é o erro mais comum de quem começa. Esta calculadora usa a fórmula explicada no <a href="09-monetizacao.html">Módulo 9</a>: <strong>(custos + retirada desejada + reserva de equipamento) ÷ horas produtivas, mais impostos e margem</strong>.</p>
+    <div class="tool" id="t-price">
+      <div class="row">
+        <div><label for="p-ret">Quanto quer ganhar por mês (R$)</label><input id="p-ret" type="number" value="2500"></div>
+        <div><label for="p-fix">Custos fixos mensais (R$)</label><input id="p-fix" type="number" value="400"><div class="hint">internet, celular, softwares, transporte, MEI</div></div>
+        <div><label for="p-eq">Valor total dos equipamentos (R$)</label><input id="p-eq" type="number" value="3000"></div>
+        <div><label for="p-vida">Vida útil dos equipamentos (meses)</label><input id="p-vida" type="number" value="24"></div>
+        <div><label for="p-h">Horas produtivas por mês</label><input id="p-h" type="number" value="100"><div class="hint">só horas faturáveis, sem contar prospecção</div></div>
+        <div><label for="p-imp">Impostos e taxas (%)</label><input id="p-imp" type="number" value="6"></div>
+        <div><label for="p-mar">Margem de lucro (%)</label><input id="p-mar" type="number" value="20"></div>
+        <div><label for="p-proj">Horas do projeto</label><input id="p-proj" type="number" value="8"><div class="hint">captação + edição + reuniões + deslocamento</div></div>
+      </div>
+      <div class="out" id="price-out"></div>
+      <p class="hint">Valores apenas de referência. Compare com o preço praticado na sua região antes de fechar.</p>
+    </div>
+
+    <h2 id="roteiro"><span class="num">4</span>Gerador de roteiro para vídeo curto</h2>
+    <p>Preencha os campos e o gerador monta um roteiro com a estrutura <strong>gancho → problema → solução → prova → chamada para ação</strong>, já com sugestão de cenas. Veja mais estruturas no <a href="05-roteiro.html">Módulo 5</a>.</p>
+    <div class="tool" id="t-script">
+      <div class="row">
+        <div><label for="s-tema">Sobre o que é o vídeo?</label><input id="s-tema" value="bolo de pote da padaria"></div>
+        <div><label for="s-pub">Para quem?</label><input id="s-pub" value="quem quer um doce barato no fim da tarde"></div>
+        <div><label for="s-gancho">Tipo de gancho</label>
+          <select id="s-gancho">
+            <option value="pergunta">Pergunta</option><option value="erro">Erro comum</option><option value="resultado">Resultado primeiro</option>
+            <option value="segredo">Segredo / bastidor</option><option value="numero">Lista com número</option><option value="polemica">Opinião forte</option>
+          </select></div>
+      </div>
+      <div class="row">
+        <div><label for="s-prob">Qual problema ou desejo do público?</label><input id="s-prob" value="vontade de doce sem gastar muito"></div>
+        <div><label for="s-sol">Qual a solução/novidade?</label><input id="s-sol" value="bolo de pote feito no dia por R$ 8"></div>
+        <div><label for="s-cta">O que a pessoa deve fazer no final?</label><input id="s-cta" value="passar na loja hoje até as 19h"></div>
+      </div>
+      <label for="s-dur">Duração</label>
+      <select id="s-dur"><option value="15">15 segundos</option><option value="30" selected>30 segundos</option><option value="60">60 segundos</option></select>
+      <div class="btnrow"><button class="btn primary" id="s-go">Gerar roteiro</button><button class="btn ghost" id="s-copy" style="display:none">Copiar</button><button class="btn ghost" id="s-tp" style="display:none">Abrir no teleprompter</button></div>
+      <div class="script-out" id="s-out"></div>
+    </div>
+
+    <h2 id="teleprompter"><span class="num">5</span>Teleprompter e tempo de fala</h2>
+    <p>Cole seu texto para saber quanto tempo ele leva para ser falado (média de <strong>150 palavras por minuto</strong> numa fala natural em português) e use o teleprompter em tela cheia. Dica: coloque o celular ou o notebook bem perto da lente para o olhar não desviar.</p>
+    <div class="tool" id="t-tp">
+      <label for="tp-text">Seu texto</label>
+      <textarea id="tp-text">Oi! Sabia que dá para gravar um vídeo bonito só com o celular? Hoje eu vou te mostrar três truques simples: luz da janela, celular apoiado e áudio pertinho da boca. Fica até o final que o terceiro é o que mais faz diferença.</textarea>
+      <div class="row">
+        <div><label for="tp-wpm">Velocidade da fala (palavras/min)</label><input id="tp-wpm" type="number" value="150"></div>
+        <div><label for="tp-size">Tamanho da letra no teleprompter</label><select id="tp-size"><option value="40">Pequena</option><option value="52" selected>Média</option><option value="68">Grande</option></select></div>
+      </div>
+      <div class="out" id="tp-out"></div>
+      <div class="btnrow"><button class="btn primary" id="tp-open">▶ Abrir teleprompter</button></div>
+    </div>
+
+    <h2 id="area-segura"><span class="num">6</span>Simulador de área segura (Reels, TikTok e Shorts)</h2>
+    <p>Nome do perfil, legenda e botões cobrem partes do vídeo vertical. Carregue um quadro do seu vídeo (print ou foto) e veja se algum texto importante vai ficar escondido. As faixas amarelas mostram o recorte <strong>3:4</strong> que aparece na grade do perfil do Instagram.</p>
+    <div class="tool" id="t-safe">
+      <div class="safe-wrap">
+        <div class="safe" id="safe">
+          <div class="z" style="left:0;right:0;top:0;height:11%">topo: nome / câmera</div>
+          <div class="z" style="right:0;width:16%;top:42%;bottom:20%">botões</div>
+          <div class="z" style="left:0;right:0;bottom:0;height:20%">legenda, perfil e música</div>
+          <div class="grid34" style="top:12.5%;bottom:12.5%;display:none" id="g34"></div>
+        </div>
+        <div>
+          <label for="safe-file">Escolha uma imagem vertical (9:16)</label>
+          <input id="safe-file" type="file" accept="image/*">
+          <label style="display:flex;gap:10px;align-items:center;font-weight:500;margin-top:16px"><input type="checkbox" id="safe-34" style="width:auto"> Mostrar recorte 3:4 da grade do perfil</label>
+          <label style="display:flex;gap:10px;align-items:center;font-weight:500"><input type="checkbox" id="safe-z" style="width:auto" checked> Mostrar áreas cobertas pela interface</label>
+          <p class="legend" style="margin-top:14px"><span><i style="background:rgba(229,72,77,.6)"></i>coberto pela interface</span><span><i style="border:2px dashed #ffb020"></i>recorte 3:4</span></p>
+          <div class="callout tip" style="margin-top:14px"><strong>Regra prática</strong><p>Mantenha rosto, texto e produto na faixa central do vídeo. As áreas variam um pouco entre aplicativos e aparelhos, então use o simulador como referência, não como medida exata.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="proporcao"><span class="num">7</span>Calculadora de proporção e resolução</h2>
+    <p>Descubra a altura certa para uma largura em qualquer proporção, útil para montar artes, capas e exportações.</p>
+    <div class="tool" id="t-ratio">
+      <div class="row">
+        <div><label for="r-ar">Proporção</label>
+          <select id="r-ar">
+            <option value="9:16" selected>9:16 (Reels, Stories, Shorts, TikTok)</option>
+            <option value="16:9">16:9 (YouTube, TV)</option>
+            <option value="3:4">3:4 (grade do Instagram)</option>
+            <option value="4:5">4:5 (post vertical)</option>
+            <option value="1:1">1:1 (quadrado)</option>
+            <option value="2.39:1">2.39:1 (cinema “widescreen”)</option>
+          </select></div>
+        <div><label for="r-w">Largura (px)</label><input id="r-w" type="number" value="1080"></div>
+      </div>
+      <div class="out" id="r-out"></div>
+    </div>
+
+    <div class="callout nerd"><strong>Curiosidade nerd</strong><p>O formato 16:9 foi escolhido nos anos 1980 como meio-termo matemático entre o formato das TVs antigas (4:3) e os formatos de cinema mais largos: ele fica perto da média geométrica entre 4:3 e 2,35:1. Assim, todos os formatos “cabiam” na tela com o mínimo de barras pretas.</p></div>
+  </article>
+</main>
+
+<div id="tp"><div class="guide"></div><div class="txt" id="tp-txt"></div>
+  <div class="ctrl"><button id="tp-play">⏸</button><button id="tp-slow">−</button><span id="tp-spd">vel. 3</span><button id="tp-fast">+</button><button id="tp-mir">Espelhar</button><button id="tp-close">✕ Fechar</button></div></div>
+
+<script src="assets/guia.js"></script>
+<script>
+(function(){
+  function $(i){return document.getElementById(i)}
+  function fmt(n,d){return n.toLocaleString('pt-BR',{minimumFractionDigits:d||0,maximumFractionDigits:d||0})}
+  function brl(n){return n.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}
+
+  /* 1 shutter */
+  function sh(){
+    var f=+$('fps').value, hz=+$('rede').value, ideal=2*f;
+    var std=[25,30,50,60,100,120,125,180,200,240,250,320,360,480,500,960,1000], near=std.reduce(function(a,b){return Math.abs(b-ideal)<Math.abs(a-ideal)?b:a});
+    var flick=[];for(var k=1;k<=8;k++)flick.push(hz*2/k);
+    var safe=flick.filter(function(v){return v>=f}).map(function(v){return '1/'+fmt(v)});
+    $('shutter-out').innerHTML='Obturador ideal: <b>1/'+fmt(ideal)+'</b> (use 1/'+near+' se não houver o valor exato)<br><br>'+
+      '<span style="font-size:15px">Para evitar que lâmpadas pisquem na imagem (efeito “flicker”) em rede de '+hz+' Hz, prefira velocidades múltiplas da frequência da luz, como: <strong>'+safe.slice(0,4).join(', ')+'</strong>. '+
+      (f>=120?'Em câmera lenta, use mais luz, porque o obturador rápido deixa a imagem escura.':'')+'</span>';
+  }
+  $('fps').onchange=$('rede').onchange=sh;sh();
+
+  /* 2 storage */
+  function st(){
+    var p=$('preset').value; if(p!=='c')$('mbps').value=p;
+    var mb=+$('mbps').value, mi=+$('min').value, free=+$('free').value;
+    var gb=mb*60*mi/8/1000, perGb=1000*8/mb/60, fit=free*1000*8/mb/60;
+    $('storage-out').innerHTML='Arquivo estimado: <b>'+fmt(gb,1)+' GB</b><br><span style="font-size:15px">Cada 1 GB guarda cerca de <strong>'+fmt(perGb,1)+' min</strong> nesse formato. Com '+free+' GB livres dá para gravar aproximadamente <strong>'+(fit>=60?fmt(fit/60,1)+' horas':fmt(fit)+' minutos')+'</strong>.</span>';
+  }
+  ['preset','mbps','min','free'].forEach(function(i){$(i).oninput=function(){if(i==='mbps')$('preset').value='c';st()}});st();
+
+  /* 3 price */
+  function pr(){
+    var v=function(i){return +$(i).value||0};
+    var dep=v('p-vida')?v('p-eq')/v('p-vida'):0, base=v('p-ret')+v('p-fix')+dep, h=v('p-h')||1;
+    var hora=base/h, comMargem=hora*(1+v('p-mar')/100), final=comMargem/(1-v('p-imp')/100), proj=final*v('p-proj');
+    $('price-out').innerHTML='Sua hora deve custar no mínimo: <b>'+brl(final)+'</b><br>'+
+      '<span style="font-size:15px">Custo mensal total: '+brl(base)+' (inclui '+brl(dep)+'/mês de reserva para trocar equipamento). '+
+      'Hora de custo: '+brl(hora)+' → com margem de '+v('p-mar')+'%: '+brl(comMargem)+' → com impostos de '+v('p-imp')+'%: '+brl(final)+'.</span>'+
+      '<br><br>Preço sugerido para um projeto de '+v('p-proj')+' h: <b>'+brl(Math.ceil(proj/10)*10)+'</b>';
+  }
+  [].forEach.call(document.querySelectorAll('#t-price input'),function(i){i.oninput=pr});pr();
+
+  /* 4 script */
+  var G={
+    pergunta:function(d){return 'Você também tem '+d.prob+'?'},
+    erro:function(d){return 'Pare de fazer isso se você tem '+d.prob+'.'},
+    resultado:function(d){return 'Olha isso: '+d.sol+'.'},
+    segredo:function(d){return 'Pouca gente sabe disso sobre '+d.tema+'...'},
+    numero:function(d){return '3 motivos para conhecer '+d.tema+' hoje.'},
+    polemica:function(d){return 'Vou falar a verdade sobre '+d.tema+'.'}
+  };
+  var script='';
+  $('s-go').onclick=function(){
+    var d={tema:$('s-tema').value,pub:$('s-pub').value,prob:$('s-prob').value,sol:$('s-sol').value,cta:$('s-cta').value};
+    var dur=+$('s-dur').value, t=function(p){return Math.round(dur*p)};
+    var a=0,b=t(.12),c=t(.35),e=t(.7),f=t(.88);
+    script='ROTEIRO — '+d.tema.toUpperCase()+' ('+dur+'s)\nPúblico: '+d.pub+'\n\n'+
+    '['+a+'–'+b+'s] GANCHO\n  Fala: "'+G[$('s-gancho').value](d)+'"\n  Cena: close forte, já em movimento. Texto grande na tela.\n\n'+
+    '['+b+'–'+c+'s] PROBLEMA\n  Fala: "Sabe quando bate '+d.prob+'?"\n  Cena: situação do dia a dia que o público reconhece.\n\n'+
+    '['+c+'–'+e+'s] SOLUÇÃO\n  Fala: "A saída é '+d.sol+'."\n  Cena: plano detalhe do produto/serviço + 2 ou 3 cortes rápidos (B-roll).\n\n'+
+    '['+e+'–'+f+'s] PROVA\n  Fala: "Quem experimenta volta." (depoimento, antes/depois ou número real)\n  Cena: reação de cliente ou resultado na tela.\n\n'+
+    '['+f+'–'+dur+'s] CHAMADA PARA AÇÃO\n  Fala: "'+d.cta.charAt(0).toUpperCase()+d.cta.slice(1)+'!"\n  Cena: você olhando para a câmera + texto com endereço/@.\n\n'+
+    'CHECKLIST: luz de frente • áudio perto da boca • legenda • música baixa • gravar 2 versões do gancho';
+    $('s-out').textContent=script;$('s-out').style.display='block';$('s-copy').style.display=$('s-tp').style.display='inline-flex';
+  };
+  $('s-copy').onclick=function(){navigator.clipboard.writeText(script);this.textContent='Copiado ✓'};
+  $('s-tp').onclick=function(){
+    var falas=script.split('\n').filter(function(l){return l.indexOf('Fala:')>-1}).map(function(l){return l.replace(/^\s*Fala:\s*"?|"\s*(\(.*\))?$/g,'')}).join('\n\n');
+    $('tp-text').value=falas;tpc();openTP();
+  };
+
+  /* 5 teleprompter */
+  function tpc(){
+    var w=$('tp-text').value.trim().split(/\s+/).filter(Boolean).length, wpm=+$('tp-wpm').value||150, s=Math.round(w/wpm*60);
+    $('tp-out').innerHTML='<b>'+w+'</b> palavras ≈ <b>'+(s>=60?Math.floor(s/60)+' min '+(s%60)+' s':s+' s')+'</b> de fala'+(s>90?'<br><span style="font-size:15px">Para Reels, tente ficar abaixo de 60–90 segundos ou divida em partes.</span>':'');
+  }
+  $('tp-text').oninput=$('tp-wpm').oninput=tpc;tpc();
+  var tp=$('tp'),tx=$('tp-txt'),y=0,spd=3,run=true,raf;
+  function loop(){if(run){y-=spd*0.35;tx.style.top=y+'px'}if(-y>tx.offsetHeight+innerHeight)y=innerHeight;raf=requestAnimationFrame(loop)}
+  function openTP(){tx.textContent=$('tp-text').value;tx.style.fontSize=$('tp-size').value+'px';y=innerHeight*0.6;tp.style.display='block';run=true;$('tp-play').textContent='⏸';cancelAnimationFrame(raf);loop();if(tp.requestFullscreen)tp.requestFullscreen().catch(function(){})}
+  function closeTP(){tp.style.display='none';cancelAnimationFrame(raf);if(document.fullscreenElement)document.exitFullscreen()}
+  $('tp-open').onclick=openTP;$('tp-close').onclick=closeTP;
+  $('tp-play').onclick=function(){run=!run;this.textContent=run?'⏸':'▶'};
+  $('tp-slow').onclick=function(){spd=Math.max(1,spd-1);$('tp-spd').textContent='vel. '+spd};
+  $('tp-fast').onclick=function(){spd=Math.min(12,spd+1);$('tp-spd').textContent='vel. '+spd};
+  $('tp-mir').onclick=function(){tp.classList.toggle('mirror')};
+  document.addEventListener('keydown',function(e){if(tp.style.display!=='block')return;if(e.key==='Escape')closeTP();if(e.key===' '){e.preventDefault();$('tp-play').click()}if(e.key==='ArrowUp')$('tp-fast').click();if(e.key==='ArrowDown')$('tp-slow').click()});
+
+  /* 6 safe zone */
+  $('safe-file').onchange=function(){var f=this.files[0];if(!f)return;var u=URL.createObjectURL(f);$('safe').style.backgroundImage='url('+u+')'};
+  $('safe-34').onchange=function(){$('g34').style.display=this.checked?'block':'none'};
+  $('safe-z').onchange=function(){var c=this.checked;[].forEach.call(document.querySelectorAll('#safe .z'),function(z){z.style.display=c?'flex':'none'})};
+
+  /* 7 ratio */
+  function ra(){
+    var p=$('r-ar').value.split(':'), w=+$('r-w').value, h=Math.round(w*(+p[1])/(+p[0]));
+    if(h%2)h++;
+    $('r-out').innerHTML='Altura: <b>'+fmt(h)+' px</b> → resolução <b>'+fmt(w)+' × '+fmt(h)+'</b><br><span style="font-size:15px">Arredondado para número par, porque muitos codecs de vídeo exigem dimensões pares.</span>';
+  }
+  $('r-ar').onchange=$('r-w').oninput=ra;ra();
+})();
+</script>
+</body>
+</html>

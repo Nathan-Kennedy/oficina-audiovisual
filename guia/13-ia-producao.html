@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Módulo 13: IA como assistente de produção | Guia Audiovisual com Pouco Recurso</title>
+<meta name="description" content="Use IA para automatizar as partes repetitivas da edição, dos posts e dos anúncios, mantendo a criação, a verdade e a decisão nas mãos humanas.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/guia.css">
+<style>
+  .prompt-box{border:1px solid var(--line);border-radius:14px;margin:18px 0 22px;overflow:hidden;background:var(--bg2)}
+  .prompt-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:9px 14px;background:var(--roxo-cl);font:600 14px Poppins,sans-serif;color:var(--ink)}
+  .prompt-head button{border:0;border-radius:8px;padding:6px 14px;background:var(--roxo);color:#fff;font:600 13px Inter,sans-serif;cursor:pointer;flex-shrink:0}
+  .prompt-head button:hover{background:var(--roxo-esc)}
+  .prompt-head button.ok{background:var(--verde-esc)}
+  pre.prompt{margin:0;padding:14px 16px;white-space:pre-wrap;word-wrap:break-word;font:14.5px/1.6 ui-monospace,Consolas,monospace;color:var(--txt)}
+  .deleg-badge{display:inline-block;padding:4px 12px;border-radius:999px;font:700 14px Poppins,sans-serif;margin-bottom:6px}
+  .deleg-badge.h{background:var(--amarelo-cl);color:#9a5d00}
+  .deleg-badge.r{background:var(--azul-cl);color:var(--azul)}
+  .deleg-badge.e{background:var(--verde-cl);color:var(--verde-esc)}
+  [data-theme=dark] .deleg-badge.h{color:#ffcf73}
+  [data-theme=dark] .deleg-badge.e{color:var(--verde)}
+  .tool .out p{margin:6px 0}
+  .evo{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:20px 0}
+  .evo > div{border:1px solid var(--line);border-radius:14px;padding:14px 16px;background:var(--card);font-size:15.5px}
+  .evo h4{font-size:15px;margin-bottom:6px}
+  .evo .lbl{font:700 12px Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+  .evo .lbl.hum{color:#b87400}.evo .lbl.ia{color:var(--azul)}.evo .lbl.fin{color:var(--verde-esc)}
+</style>
+</head>
+<body data-page="13-ia-producao">
+<main class="content">
+  <header class="mod-hero" data-num="13">
+    <div class="crumb"><a href="index.html">Guia</a> › Módulo 13</div>
+    <h1>IA como assistente de produção</h1>
+    <p>Automatize as partes repetitivas e mantenha a criação nas mãos de quem cria: quem filma, escreve, desenha e dá voz é gente.</p>
+    <div class="meta"><span>⏱️ 35 min de leitura</span><span>🎯 Nível: iniciante a intermediário</span><span>💻 Celular ou computador</span></div>
+  </header>
+
+  <article>
+    <p class="lead">Pense em quanto tempo você gastou no último vídeo só digitando legenda, cortando “ééé” e silêncio, renomeando arquivo e reescrevendo a mesma descrição para três redes. Nada disso é criação, é trabalho braçal de computador. A proposta deste módulo é simples: deixar a máquina carregar esse peso e reservar a sua cabeça para o que só uma pessoa faz, que é ter a ideia, olhar para o cliente, escolher o enquadramento e decidir o que vai ao ar.</p>
+
+    <div class="objetivos">
+      <h3>Neste módulo você vai aprender</h3>
+      <ul>
+        <li>O que a IA faz bem, o que faz mal e por que ela “inventa” coisas com toda a confiança</li>
+        <li>O fluxo <strong>“Humano cria, IA assiste, humano decide”</strong> e uma matriz para saber o que delegar</li>
+        <li>Prompts prontos (para copiar) que partem do <strong>seu</strong> material: roteiro, notas, transcrição, métricas</li>
+        <li>Como usar transcrição, legenda automática, limpeza de áudio e reenquadramento para editar mais rápido</li>
+        <li>Como adaptar um vídeo para vários formatos e criar variações de anúncio sem falsificar nada</li>
+        <li>Automações gratuitas para agendar, organizar e transcrever, e as regras de ética e lei que valem no Brasil</li>
+        <li>Como se posicionar e cobrar como “o profissional que usa IA bem”, sem desvalorizar o próprio trabalho</li>
+      </ul>
+    </div>
+
+    <!-- ============ 1 ============ -->
+    <h2 id="faz-bem-faz-mal"><span class="num">1</span>O que a IA faz bem e o que faz mal</h2>
+    <p>As ferramentas de IA que você encontra em editores e chats são, no fundo, <strong>máquinas de padrão</strong>. Foram treinadas com quantidades gigantescas de texto, áudio e imagem e aprenderam a prever “o que costuma vir depois”. Por isso são ótimas em tarefas que têm forma conhecida (transformar fala em texto, achar silêncios, resumir, reorganizar) e fracas em tudo o que depende de <strong>contexto real, verdade e gosto</strong>.</p>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>A IA costuma ir bem em…</th><th>A IA costuma ir mal em…</th></tr></thead>
+      <tbody>
+        <tr><td>Transcrever fala em texto (com revisão)</td><td>Saber se aquilo que foi dito é verdade</td></tr>
+        <tr><td>Achar silêncios, “ééé” e pausas longas</td><td>Sentir o timing de uma piada ou de uma emoção</td></tr>
+        <tr><td>Gerar 10 variações de uma frase</td><td>Escolher qual delas combina com o seu cliente</td></tr>
+        <tr><td>Resumir uma reunião ou um briefing gravado</td><td>Perceber o que o cliente <em>quis dizer</em> e não falou</td></tr>
+        <tr><td>Reorganizar um texto em tópicos, capítulos, roteiro</td><td>Ter um ponto de vista original sobre o assunto</td></tr>
+        <tr><td>Reenquadrar, isolar voz, reduzir ruído</td><td>Decidir o que é ético mostrar e o que não é</td></tr>
+        <tr><td>Traduzir e adaptar tamanho de texto</td><td>Entender gíria local, nomes próprios e a cultura da sua cidade</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>Alucinação: quando a máquina inventa com cara de certeza</h3>
+    <p>Modelos de linguagem não “consultam a verdade”, eles produzem o texto mais provável. Quando falta informação, preenchem o buraco com algo que <em>parece</em> certo: um preço, uma data, um prêmio que o cliente nunca ganhou, uma lei com número errado. Isso tem nome: <strong>alucinação</strong>. E o perigo é que o texto alucinado vem bem escrito, sem gaguejar.</p>
+    <p>Por isso existe uma regra que vale para o módulo inteiro: <strong>a IA não conhece o seu cliente</strong>. Ela não sabe que a padaria fecha às 19h, que o dono detesta a palavra “gourmet” e que o carro-chefe é a rosca de coco da avó. Quem sabe é você. Quanto mais material real você entregar (e quanto mais você mandar ela <em>não inventar</em>), melhor o resultado.</p>
+
+    <figure>
+      <svg viewBox="0 0 640 400" role="img" aria-label="Matriz dois por dois: no eixo horizontal, quanto a tarefa é repetitiva; no eixo vertical, quanto ela exige gosto, verdade e contexto. Tarefas repetitivas e de pouco gosto, como legenda e silêncio, vão para a IA executar. Tarefas que exigem muito gosto, como ideia e aprovação, ficam com o humano.">
+        <rect x="0" y="0" width="640" height="400" rx="14" fill="#faf8fd"/>
+        <rect x="90" y="30" width="250" height="160" rx="10" fill="#fff4dc"/>
+        <rect x="350" y="30" width="250" height="160" rx="10" fill="#e7f0fd"/>
+        <rect x="90" y="200" width="250" height="160" rx="10" fill="#f3e9fc"/>
+        <rect x="350" y="200" width="250" height="160" rx="10" fill="#e8f8ef"/>
+        <text x="215" y="58" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="15" fill="#9a5d00">Só humano</text>
+        <text x="215" y="86" text-anchor="middle" font-family="Inter" font-size="13" fill="#16121d">ideia · ponto de vista</text>
+        <text x="215" y="106" text-anchor="middle" font-family="Inter" font-size="13" fill="#16121d">direção de cena · aprovação</text>
+        <text x="215" y="126" text-anchor="middle" font-family="Inter" font-size="13" fill="#16121d">relação com o cliente</text>
+        <text x="475" y="58" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="15" fill="#2f7fe0">IA rascunha, você revisa</text>
+        <text x="475" y="86" text-anchor="middle" font-family="Inter" font-size="13" fill="#16121d">legendas de post · ganchos</text>
+        <text x="475" y="106" text-anchor="middle" font-family="Inter" font-size="13" fill="#16121d">variações de anúncio</text>
+        <text x="475" y="126" text-anchor="middle" font-family="Inter" font-size="13" fill="#16121d">descrição com capítulos</text>
+        <text x="215" y="228" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="15" fill="#5a0b91">Humano, com apoio pontual</text>
+        <text x="215" y="256" text-anchor="middle" font-family="Inter" font-size="13" fill="#16121d">cor · trilha · ritmo do corte</text>
+        <text x="215" y="276" text-anchor="middle" font-family="Inter" font-size="13" fill="#16121d">(a IA sugere, você escolhe)</text>
+        <text x="475" y="228" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="15" fill="#2f9a5c">IA executa, você confere</text>
+        <text x="475" y="256" text-anchor="middle" font-family="Inter" font-size="13" fill="#16121d">transcrição · corte de silêncio</text>
+        <text x="475" y="276" text-anchor="middle" font-family="Inter" font-size="13" fill="#16121d">redução de ruído · reenquadre</text>
+        <text x="475" y="296" text-anchor="middle" font-family="Inter" font-size="13" fill="#16121d">renomear e agendar</text>
+        <line x1="80" y1="370" x2="610" y2="370" stroke="#16121d" stroke-width="2"/>
+        <polygon points="610,365 620,370 610,375" fill="#16121d"/>
+        <line x1="80" y1="370" x2="80" y2="22" stroke="#16121d" stroke-width="2"/>
+        <polygon points="75,22 80,12 85,22" fill="#16121d"/>
+        <text x="345" y="392" text-anchor="middle" font-family="Inter" font-size="13" fill="#6f6880">quanto a tarefa é repetitiva e tem padrão →</text>
+        <text x="30" y="195" text-anchor="middle" font-family="Inter" font-size="13" fill="#6f6880" transform="rotate(-90 30 195)">quanto exige gosto, verdade e contexto →</text>
+      </svg>
+      <figcaption>Um mapa mental rápido: quanto mais repetitiva e menos dependente de gosto, mais a tarefa pode ir para a máquina. Quanto mais exige verdade e sensibilidade, mais ela fica com você.</figcaption>
+    </figure>
+
+    <div class="callout nerd"><strong>Curiosidade nerd</strong><p>A expressão “inteligência artificial” nasceu num documento: a proposta de um encontro de verão na Faculdade de Dartmouth, nos EUA, escrita em 1955 por John McCarthy e colegas. O encontro aconteceu em 1956 e virou o “marco zero” da área. Os autores imaginavam resolver boa parte do problema em um verão. Setenta anos depois, a IA ainda escreve que a padaria do seu cliente “oferece experiências gastronômicas inesquecíveis”, e é você quem precisa trocar isso por “pão quentinho às 6h”.</p></div>
+
+    <!-- ============ 2 ============ -->
+    <h2 id="humano-cria"><span class="num">2</span>Humano cria, IA assiste, humano decide</h2>
+    <p>Esta é a espinha dorsal do módulo. O material bruto nasce de gente: alguém teve a ideia, segurou o celular, gravou a voz, escreveu o roteiro, desenhou a arte. A IA entra <strong>entre</strong> as etapas humanas, como um assistente de edição que nunca se cansa, mas que também não tem opinião própria que valha. E no fim, sempre, uma pessoa aprova.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 360" role="img" aria-label="Fluxo de produção em duas faixas. Na faixa humana: ideia, captação, edição, revisão e aprovação, publicação e decisão. Na faixa da IA, entre as etapas: organizar e transcrever, legendas, limpeza de áudio e versões, e análise de métricas.">
+        <rect x="0" y="0" width="760" height="360" rx="14" fill="#faf8fd"/>
+        <rect x="10" y="40" width="740" height="120" rx="12" fill="#fff4dc"/>
+        <rect x="10" y="200" width="740" height="110" rx="12" fill="#e7f0fd"/>
+        <text x="24" y="30" font-family="Poppins" font-weight="700" font-size="14" fill="#9a5d00">HUMANO cria e decide</text>
+        <text x="24" y="335" font-family="Poppins" font-weight="700" font-size="14" fill="#2f7fe0">IA assiste (sempre conferida)</text>
+        <g font-family="Inter" font-size="13" text-anchor="middle" fill="#16121d">
+          <rect x="22" y="70" width="92" height="60" rx="10" fill="#fff" stroke="#ffb020" stroke-width="2"/>
+          <text x="68" y="97" font-weight="700">💡 Ideia</text><text x="68" y="116" font-size="11">você</text>
+          <rect x="150" y="70" width="92" height="60" rx="10" fill="#fff" stroke="#ffb020" stroke-width="2"/>
+          <text x="196" y="97" font-weight="700">🎥 Captação</text><text x="196" y="116" font-size="11">você</text>
+          <rect x="300" y="70" width="104" height="60" rx="10" fill="#fff" stroke="#8612d5" stroke-width="2"/>
+          <text x="352" y="97" font-weight="700">✂️ Edição</text><text x="352" y="116" font-size="11">você + IA ao lado</text>
+          <rect x="462" y="70" width="104" height="60" rx="10" fill="#fff" stroke="#ffb020" stroke-width="2"/>
+          <text x="514" y="94" font-weight="700">✅ Revisão</text><text x="514" y="112" font-size="11">e aprovação</text>
+          <rect x="590" y="56" width="70" height="40" rx="10" fill="#fff" stroke="#70cf97" stroke-width="2"/>
+          <text x="625" y="81" font-size="12" font-weight="700">Publica</text>
+          <rect x="672" y="104" width="70" height="44" rx="10" fill="#fff" stroke="#ffb020" stroke-width="2"/>
+          <text x="707" y="124" font-size="12" font-weight="700">🧭 Decide</text><text x="707" y="139" font-size="10">próximo passo</text>
+          <rect x="150" y="225" width="130" height="58" rx="10" fill="#fff" stroke="#2f7fe0" stroke-width="2" stroke-dasharray="5 4"/>
+          <text x="215" y="250" font-weight="700">🤖 Organizar</text><text x="215" y="268" font-size="11">transcrever, separar</text>
+          <rect x="360" y="225" width="150" height="58" rx="10" fill="#fff" stroke="#2f7fe0" stroke-width="2" stroke-dasharray="5 4"/>
+          <text x="435" y="250" font-weight="700">🤖 Legendas, áudio</text><text x="435" y="268" font-size="11">limpeza, versões 9:16</text>
+          <rect x="590" y="225" width="150" height="58" rx="10" fill="#fff" stroke="#2f7fe0" stroke-width="2" stroke-dasharray="5 4"/>
+          <text x="665" y="250" font-weight="700">🤖 Métricas</text><text x="665" y="268" font-size="11">resumo e padrões</text>
+        </g>
+        <g stroke="#16121d" stroke-width="2" fill="none">
+          <path d="M114 100 H146"/><path d="M242 100 C 250 170, 215 190, 215 222"/>
+          <path d="M280 254 C 320 254, 330 150, 352 132"/><path d="M404 100 C 420 170, 435 190, 435 222"/>
+          <path d="M510 254 C 540 254, 514 160, 514 132"/><path d="M566 90 H588"/>
+          <path d="M625 96 C 625 170, 665 190, 665 222"/><path d="M740 254 C 760 230, 740 170, 720 150"/>
+        </g>
+        <text x="745" y="335" text-anchor="end" font-family="Inter" font-size="12" fill="#6f6880">Toda seta que sai da IA volta para um humano antes de seguir.</text>
+      </svg>
+      <figcaption>O fluxo “humano primeiro”: a IA só aparece entre etapas humanas e nunca tem a última palavra.</figcaption>
+    </figure>
+
+    <h3>O que nunca delegar (e por quê)</h3>
+    <div class="cards">
+      <div class="card"><div class="ic">💡</div><h4>A ideia e o ponto de vista</h4><p>É o que diferencia o seu trabalho do de todo mundo que usa a mesma ferramenta. Se a ideia vem da máquina, o resultado tende à média.</p></div>
+      <div class="card"><div class="ic">📸</div><h4>As imagens reais do cliente</h4><p>Produto, loja, equipe e resultado precisam ser verdadeiros. Imagem gerada vendendo coisa real é propaganda enganosa.</p></div>
+      <div class="card"><div class="ic">✅</div><h4>A aprovação final</h4><p>A responsabilidade legal e profissional é sua. “Foi a IA que escreveu” não vale como defesa para cliente nem para juiz.</p></div>
+      <div class="card"><div class="ic">🤝</div><h4>A relação com o cliente</h4><p>Confiança se constrói com conversa, presença e escuta. Resposta automática fria em negociação custa contrato.</p></div>
+      <div class="card"><div class="ic">🎭</div><h4>A voz, o rosto e a arte das pessoas</h4><p>Atores, locutores, fotógrafos, ilustradores e músicos vivem do próprio trabalho. Não se clona nem se imita ninguém para fugir de contratar.</p></div>
+    </div>
+    <p>Os motivos se resumem em cinco palavras: <strong>autenticidade</strong> (o público percebe o genérico), <strong>confiança</strong> (do cliente e do público), <strong>responsabilidade</strong> (legal e ética), <strong>qualidade</strong> (a IA erra com convicção) e <strong>respeito</strong> a quem cria. Este guia existe graças a um programa público de fomento à cultura; valorizar o trabalho criativo humano faz parte do compromisso.</p>
+
+    <h3>Matriz de delegação</h3>
+    <p>Três níveis bastam para classificar qualquer tarefa:</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Nível</th><th>O que significa</th><th>Exemplos</th></tr></thead>
+      <tbody>
+        <tr><td><span class="tag amarelo">Fazer você</span></td><td>A IA não entra, ou entra só como “parceira de conversa” que você pode ignorar</td><td>Ideia, roteiro, direção, gravação, locução, aprovação, negociação</td></tr>
+        <tr><td><span class="tag roxo">IA rascunha + você revisa</span></td><td>A IA produz uma primeira versão a partir do seu material; você reescreve, corta e aprova</td><td>Legendas de post, ganchos, descrição do YouTube, variações de anúncio, resumo de briefing</td></tr>
+        <tr><td><span class="tag">IA executa + você confere</span></td><td>Tarefa técnica com resultado verificável; você checa o resultado por amostragem ou do começo ao fim</td><td>Transcrição, corte de silêncio, redução de ruído, reenquadre, renomear arquivos, agendar</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="tool" id="mapa-delegacao">
+      <h3>🧭 Mapa de delegação interativo</h3>
+      <p>Escolha uma tarefa da sua rotina e veja quem faz, com que ferramenta, quanto tempo se economiza (estimativa ilustrativa) e onde está o seu ponto de controle.</p>
+      <div class="row">
+        <div>
+          <label for="md-tarefa">Tarefa de produção</label>
+          <select id="md-tarefa"></select>
+        </div>
+      </div>
+      <div class="out" id="md-out" aria-live="polite"></div>
+    </div>
+
+    <div class="callout warn"><strong>Erro comum</strong><p>Pular o ponto de controle “porque a ferramenta é boa”. A legenda automática acerta 95% e erra justamente o nome do cliente, a rua e o preço, que são as três coisas que não podem sair erradas.</p></div>
+
+    <!-- ============ 3 ============ -->
+    <h2 id="pre-producao"><span class="num">3</span>Pré-produção com a IA de assistente</h2>
+    <p>Na pré-produção, a IA funciona como aquele colega com quem você conversa para destravar as ideias. O segredo é a ordem: <strong>primeiro você pensa e escreve, depois pede ajuda</strong>. Se você abre o chat e digita “me dá uma ideia de vídeo para padaria”, vai receber a mesma ideia que outras mil pessoas receberam. Se você entrega o seu rascunho, recebe ajuda em cima do que é seu.</p>
+
+    <h3>A anatomia de um bom prompt</h3>
+    <ol class="steps">
+      <li><strong>Contexto</strong>Quem é o cliente, onde fica, quem é o público. Dados reais, ditos por você.</li>
+      <li><strong>Seu material</strong>Cole o roteiro, as notas, a transcrição. É a matéria-prima humana.</li>
+      <li><strong>A tarefa</strong>Uma tarefa por vez: “sugira 5 ganchos”, “aponte repetições”.</li>
+      <li><strong>Limites</strong>“Não invente informações”, “mantenha meu tom”, “máximo de 150 caracteres”.</li>
+      <li><strong>Formato da resposta</strong>Lista, tabela, tópicos. Facilita a sua revisão.</li>
+    </ol>
+
+    <h3>Ganchos e ângulos a partir da sua ideia</h3>
+    <p>Você já sabe o que quer contar. Peça à IA ângulos diferentes para <em>abrir</em> o vídeo (veja mais sobre ganchos no <a href="05-roteiro.html">Módulo 05 · Roteiro</a> e no <a href="11-titulos-capas.html">Módulo 11 · Títulos e capas</a>).</p>
+    <div class="prompt-box"><div class="prompt-head"><span>Prompt 1 · Ganchos alternativos</span><button type="button" class="copy-btn">Copiar</button></div>
+<pre class="prompt">Aqui está o roteiro que eu escrevi para um Reels de até 40 segundos:
+[COLE SEU ROTEIRO]
+
+Contexto: o cliente é [TIPO DE NEGÓCIO] em [CIDADE]; o público é [QUEM ASSISTE].
+
+Sugira 5 ganchos alternativos para os 3 primeiros segundos, mantendo o meu tom e o meu vocabulário. Use apenas informações que estão no roteiro. Não invente fatos, números, preços ou promessas. Para cada gancho, diga em uma linha por que ele pode prender a atenção.</pre></div>
+
+    <h3>Organizar o roteiro que você escreveu</h3>
+    <p>A IA é uma boa “editora de texto”: aponta repetições, frases longas para falar em voz alta e trechos fora de ordem. Peça <strong>apontamentos</strong>, não uma reescrita completa, assim a voz continua sua.</p>
+    <div class="prompt-box"><div class="prompt-head"><span>Prompt 2 · Revisão de roteiro</span><button type="button" class="copy-btn">Copiar</button></div>
+<pre class="prompt">Eu escrevi este roteiro e vou gravá-lo falando para a câmera:
+[COLE SEU ROTEIRO]
+
+Faça uma revisão como um editor cuidadoso:
+1) aponte frases repetidas ou redundantes;
+2) marque frases difíceis de falar em voz alta (longas demais, travalínguas);
+3) sugira uma ordem mais clara, se houver;
+4) estime o tempo de fala.
+Não reescreva o roteiro inteiro. Não acrescente informações que não estão no texto. Mostre as sugestões em lista, citando o trecho original.</pre></div>
+
+    <h3>Lista de planos e checklist de gravação</h3>
+    <p>Com o roteiro fechado, a IA transforma o texto numa <strong>decupagem</strong> (lista de planos) e numa checklist de equipamento. Você ajusta para a realidade do local, que só você conhece.</p>
+    <div class="prompt-box"><div class="prompt-head"><span>Prompt 3 · Lista de planos (decupagem)</span><button type="button" class="copy-btn">Copiar</button></div>
+<pre class="prompt">Este é o meu roteiro final:
+[COLE SEU ROTEIRO]
+
+Equipamento disponível: [EX.: celular, tripé, microfone de lapela, luz de LED pequena]. Local: [DESCREVA O LUGAR REAL].
+
+Monte uma tabela de planos com as colunas: nº, trecho do roteiro, tipo de plano (geral, médio, close, detalhe), movimento, observação. Depois, uma checklist curta do que levar para a gravação. Use só o equipamento que listei e não invente cenas que não estão no roteiro.</pre></div>
+
+    <h3>Resumo de briefing gravado</h3>
+    <p>Muito cliente manda áudio de 6 minutos no WhatsApp. Transcreva (veja a seção 7) e peça um resumo estruturado. Depois <strong>confirme com o cliente</strong> por escrito: é o melhor seguro contra retrabalho.</p>
+    <div class="prompt-box"><div class="prompt-head"><span>Prompt 4 · Resumo de briefing</span><button type="button" class="copy-btn">Copiar</button></div>
+<pre class="prompt">Abaixo está a transcrição de um áudio em que meu cliente explica o que quer:
+[COLE A TRANSCRIÇÃO]
+
+Organize em tópicos: objetivo do vídeo, público, mensagem principal, informações obrigatórias (preço, endereço, horário, contato), prazos, referências citadas e pontos que ficaram vagos. Em “pontos vagos”, escreva perguntas que eu devo fazer ao cliente. Use somente o que foi dito; se algo não foi mencionado, escreva “não informado”. Não invente informações.</pre></div>
+
+    <h3>Pesquisa com checagem</h3>
+    <p>Para roteiros informativos, a IA ajuda a mapear o assunto, mas <strong>todo fato precisa de fonte confiável</strong> que você mesmo abriu e leu. Peça que ela separe “o que é consenso” de “o que precisa verificar”.</p>
+    <div class="prompt-box"><div class="prompt-head"><span>Prompt 5 · Mapa de pesquisa com checagem</span><button type="button" class="copy-btn">Copiar</button></div>
+<pre class="prompt">Vou gravar um vídeo explicando [TEMA]. Minhas anotações até agora:
+[COLE SUAS NOTAS]
+
+Liste os pontos das minhas notas que precisam ser checados em fonte oficial e diga que tipo de fonte serve para cada um (órgão público, fabricante, lei, artigo científico). Aponte possíveis erros nas minhas notas, explicando o motivo. Não invente números, datas ou citações: se não tiver certeza, diga “verificar”.</pre></div>
+
+    <div class="callout tip"><strong>Dica de ouro</strong><p>Crie um arquivo de texto “Ficha do cliente” com os fatos fixos (nome correto, endereço, horários, palavras proibidas, tom de voz, produtos). Cole a ficha no começo de qualquer prompt para esse cliente. A IA erra muito menos quando tem uma fonte de verdade escrita por você.</p></div>
+
+    <!-- ============ 4 ============ -->
+    <h2 id="edicao-ia"><span class="num">4</span>Editando vídeo com a IA ao lado</h2>
+    <p>É na edição que a IA mais economiza horas, porque boa parte do trabalho é mecânica: achar a fala certa no meio de 20 minutos de bruto, apagar silêncio, digitar legenda, transformar horizontal em vertical. Os fundamentos do corte estão no <a href="06-edicao.html">Módulo 06 · Edição</a> e os de som no <a href="03-audio.html">Módulo 03 · Áudio</a>; aqui o foco é onde a automação entra.</p>
+
+    <figure>
+      <svg viewBox="0 0 720 230" role="img" aria-label="Linha do tempo da automação na edição: Moviola, 1924; edição não linear com o Avid, 1989; edição no computador pessoal nos anos 2000; legenda automática nas redes, anos 2010; Whisper de código aberto, 2022; edição por transcrição nos editores, anos 2020.">
+        <rect x="0" y="0" width="720" height="230" rx="14" fill="#f3e9fc"/>
+        <line x1="40" y1="120" x2="690" y2="120" stroke="#8612d5" stroke-width="4" stroke-linecap="round"/>
+        <g font-family="Inter" text-anchor="middle" fill="#16121d">
+          <circle cx="70" cy="120" r="10" fill="#ffb020"/><text x="70" y="96" font-family="Poppins" font-weight="700" font-size="15">1924</text><text x="70" y="150" font-size="12">Moviola:</text><text x="70" y="166" font-size="12">tesoura e cola</text>
+          <circle cx="190" cy="120" r="10" fill="#ffb020"/><text x="190" y="96" font-family="Poppins" font-weight="700" font-size="15">1989</text><text x="190" y="150" font-size="12">Avid: edição</text><text x="190" y="166" font-size="12">não linear</text>
+          <circle cx="310" cy="120" r="10" fill="#ffb020"/><text x="310" y="96" font-family="Poppins" font-weight="700" font-size="15">anos 2000</text><text x="310" y="150" font-size="12">editar no</text><text x="310" y="166" font-size="12">computador de casa</text>
+          <circle cx="430" cy="120" r="10" fill="#70cf97"/><text x="430" y="96" font-family="Poppins" font-weight="700" font-size="15">anos 2010</text><text x="430" y="150" font-size="12">legenda automática</text><text x="430" y="166" font-size="12">e edição no celular</text>
+          <circle cx="550" cy="120" r="10" fill="#70cf97"/><text x="550" y="96" font-family="Poppins" font-weight="700" font-size="15">2022</text><text x="550" y="150" font-size="12">Whisper aberto:</text><text x="550" y="166" font-size="12">transcrição local</text>
+          <circle cx="660" cy="120" r="10" fill="#70cf97"/><text x="660" y="96" font-family="Poppins" font-weight="700" font-size="15">hoje</text><text x="660" y="150" font-size="12">editar apagando</text><text x="660" y="166" font-size="12">palavras do texto</text>
+        </g>
+        <text x="360" y="40" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="16" fill="#5a0b91">Cem anos tirando trabalho braçal da edição</text>
+        <text x="360" y="206" text-anchor="middle" font-family="Inter" font-size="12" fill="#6f6880">Em todas as fases, a decisão de onde cortar continuou humana.</text>
+      </svg>
+      <figcaption>Da tesoura ao texto: cada salto tecnológico tirou um pouco de trabalho manual, e nenhum tirou a necessidade de alguém decidir o corte.</figcaption>
+    </figure>
+
+    <div class="callout nerd"><strong>Curiosidade nerd</strong><p>Na era da película, montar um filme era literalmente cortar fita com lâmina e colar com fita adesiva numa mesa como a Moviola. Desfazer um corte significava achar o pedacinho de filme no cesto. Quando a Avid mostrou seu sistema de edição não linear em 1989, a grande revolução foi poder mudar de ideia sem destruir nada. A edição por transcrição é o capítulo mais recente dessa história: você apaga uma frase do texto e o vídeo some junto.</p></div>
+
+    <h3>Transcrição e edição por texto</h3>
+    <p>O editor transcreve o bruto e mostra a fala como um documento. Você seleciona e apaga frases, troca parágrafos de lugar, e a linha do tempo acompanha. Para entrevista, depoimento e vídeo falado, é a maior economia de tempo que existe: você encontra “aquela fala boa” com Ctrl+F.</p>
+    <ul>
+      <li><strong>DaVinci Resolve:</strong> a transcrição, a edição por texto e a geração automática de legendas são, até a versão atual, recursos da edição <strong>Studio</strong> (paga, licença única). A versão gratuita continua excelente para cortar e colorir manualmente.</li>
+      <li><strong>Adobe Premiere Pro:</strong> tem edição baseada em texto e legendas automáticas, dentro da assinatura paga.</li>
+      <li><strong>Descript:</strong> nasceu em torno da edição por texto; tem plano gratuito com limite de horas de transcrição.</li>
+      <li><strong>CapCut:</strong> oferece transcrição e legendas automáticas, mas desde 2025 vários recursos de IA foram limitados ou movidos para o plano Pro. <strong>Verifique o plano atual</strong> no próprio app.</li>
+    </ul>
+    <div class="callout info"><strong>Importante</strong><p>Planos e limites de ferramentas mudam o tempo todo, às vezes de um mês para o outro. Tudo o que este módulo diz sobre “grátis” e “pago” reflete o que se sabia em 2026; confirme na página oficial antes de montar seu fluxo em cima de um recurso.</p></div>
+
+    <h3>Legendas automáticas + revisão humana</h3>
+    <p>A legenda automática é um rascunho. O reconhecimento de fala tropeça exatamente onde o seu conteúdo é mais local: <strong>sotaque</strong> (o “R” e o ritmo da fala de Rondônia, por exemplo), <strong>nomes próprios</strong> (de pessoas, ruas e bairros), <strong>marcas</strong> e <strong>gírias</strong>. Revise sempre, de preferência ouvindo.</p>
+    <div class="prompt-box"><div class="prompt-head"><span>Prompt 6 · Revisão de legenda transcrita</span><button type="button" class="copy-btn">Copiar</button></div>
+<pre class="prompt">Abaixo está a legenda gerada automaticamente de um vídeo que eu gravei, em formato SRT:
+[COLE O SRT]
+
+Nomes e termos corretos: [EX.: Padaria Pão da Vó, Rua Tancredo Neves, Setor 2, Ariquemes].
+
+Corrija apenas ortografia, pontuação e os nomes da lista. Não mude o sentido das falas, não resuma e não altere os tempos (timecodes). Marque com [?] qualquer trecho que pareça ter sido mal transcrito para eu conferir ouvindo.</pre></div>
+
+    <h3>Outros assistentes de edição</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Recurso</th><th>O que faz</th><th>Onde costuma aparecer</th><th>Seu ponto de controle</th></tr></thead>
+      <tbody>
+        <tr><td>Remoção de silêncio e vícios</td><td>Detecta pausas e “ééé”, corta automaticamente</td><td>CapCut, Descript, Premiere, plugins</td><td>Devolver pausas que dão respiro e intenção</td></tr>
+        <tr><td>Reenquadre 16:9 → 9:16</td><td>Segue o rosto ou o objeto e recorta na vertical</td><td>CapCut, Premiere (Auto Reframe), Resolve Studio (Smart Reframe)</td><td>Conferir cortes de mão, produto e texto na borda</td></tr>
+        <tr><td>Detecção de cenas</td><td>Encontra os cortes num vídeo já montado</td><td>Resolve (Scene Cut Detection), Premiere</td><td>Ajustar cortes que caíram no lugar errado</td></tr>
+        <tr><td>Isolamento de voz e redução de ruído</td><td>Separa a fala do ruído de fundo</td><td>Resolve Studio (Voice Isolation), Adobe Podcast (Enhance Speech, grátis com limite), Audacity (redução de ruído, grátis), CapCut</td><td>Ouvir com fone: excesso deixa a voz “robótica”</td></tr>
+        <tr><td>Correspondência de cor</td><td>Iguala a cor entre câmeras ou planos</td><td>Resolve (Color Match), Premiere</td><td>Pele com aparência natural é decisão sua</td></tr>
+        <tr><td>Sincronia com a batida</td><td>Marca os tempos fortes da música</td><td>CapCut, Premiere, Resolve (marcadores)</td><td>Escolher onde quebrar o ritmo de propósito</td></tr>
+        <tr><td>Estabilização e aumento de resolução</td><td>Suaviza tremor, amplia imagem pequena</td><td>Resolve (estabilização; Super Scale no Studio), CapCut</td><td>Ver se não criou deformação ou “pele de plástico”</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="callout warn"><strong>Erro comum</strong><p>Cortar todos os silêncios no automático. O vídeo fica sem ar, com a pessoa “engolindo” as palavras. Use um limite mais suave (pausas acima de 0,6 a 0,8 s, por exemplo) e reponha manualmente as pausas que carregam emoção ou humor.</p></div>
+
+    <h3>Do bruto ao Reels em 30 minutos</h3>
+    <p>Um fluxo realista para um vídeo falado de 30 a 60 segundos, a partir de uns 10 minutos de material bruto. Repare que em todos os passos há uma ação humana.</p>
+    <ol class="steps">
+      <li><strong>Importar e organizar (2 min)</strong>A ferramenta nomeia e agrupa; <em>você</em> descarta os takes ruins de olho.</li>
+      <li><strong>Transcrever (3 min, quase todos de espera)</strong>A IA transcreve; <em>você</em> passa o olho e marca as melhores falas.</li>
+      <li><strong>Montar pelo texto (7 min)</strong><em>Você</em> escolhe e ordena as frases, apaga as repetições e decide o gancho.</li>
+      <li><strong>Limpar silêncios (2 min)</strong>A IA corta pausas; <em>você</em> devolve as que dão respiro.</li>
+      <li><strong>Reenquadrar para 9:16 (2 min)</strong>A IA acompanha o rosto; <em>você</em> corrige os trechos em que ela “perdeu” o produto.</li>
+      <li><strong>Limpar o áudio (2 min)</strong>A IA reduz o ruído; <em>você</em> ouve com fone e diminui a intensidade se a voz ficou artificial.</li>
+      <li><strong>Inserir trilha e B-roll (5 min)</strong><em>Você</em> escolhe música (com licença) e imagens de cobertura; a batida pode ser marcada automaticamente.</li>
+      <li><strong>Legendar (4 min)</strong>A IA gera; <em>você</em> revisa nomes, preço, endereço e quebra de linha.</li>
+      <li><strong>Revisar e exportar (3 min)</strong><em>Você</em> assiste do começo ao fim, no celular, com e sem som. Só então exporta.</li>
+    </ol>
+
+    <h3>Quanto tempo se economiza (ilustrativo)</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Etapa (vídeo de 60 s, 10 min de bruto)</th><th>Manual</th><th>Com assistência</th></tr></thead>
+      <tbody>
+        <tr><td>Achar as melhores falas</td><td>20–30 min</td><td>5–10 min</td></tr>
+        <tr><td>Cortar silêncios e vícios</td><td>15–20 min</td><td>2–5 min</td></tr>
+        <tr><td>Versão vertical a partir do horizontal</td><td>15 min</td><td>2–5 min</td></tr>
+        <tr><td>Legenda completa</td><td>30–45 min</td><td>5–10 min (com revisão)</td></tr>
+        <tr><td>Limpeza de áudio</td><td>10–15 min</td><td>2–4 min</td></tr>
+        <tr><td><strong>Total aproximado</strong></td><td><strong>1h30 a 2h</strong></td><td><strong>20 a 35 min</strong></td></tr>
+      </tbody>
+    </table></div>
+    <p>Esses números são ilustrativos e variam muito com a máquina, a ferramenta e a sua prática. O ponto não é a precisão, é a ordem de grandeza: o tempo que sobra vai para gravar melhor, atender melhor e descansar.</p>
+
+    <div class="callout pratica"><strong>Na prática</strong><p>Pegue um vídeo antigo seu, com bruto guardado, e refaça só a etapa de legenda com uma ferramenta automática. Cronometre geração + revisão e compare com o tempo que você levou na mão. Anote quantos erros de nome próprio apareceram: isso mostra onde a sua revisão precisa focar.</p></div>
+
+    <!-- ============ 5 ============ -->
+    <h2 id="posts-legendas"><span class="num">5</span>Posts, legendas e um vídeo virando cinco</h2>
+    <p>Texto é onde a IA é mais tentadora, e onde é mais fácil perder a sua voz. A regra aqui é: <strong>as notas são suas, o rascunho é da IA e a versão final é sua de novo</strong>. Para estratégia de cada rede, veja o <a href="07-instagram.html">Módulo 07 · Instagram</a> e o <a href="08-youtube.html">Módulo 08 · YouTube</a>.</p>
+
+    <h3>Antes → rascunho da IA → final humano</h3>
+    <div class="evo">
+      <div><span class="lbl hum">1 · Notas do humano</span><h4>Escritas no celular, sem capricho</h4><p>“bolo de pote novo, maracujá c/ chocolate. R$ 12. só sexta e sábado. dona Cida que inventou. faz 20 anos q ela trabalha aqui. pedido pelo zap.”</p></div>
+      <div><span class="lbl ia">2 · Rascunho da IA</span><h4>Correto, mas genérico (e com invenção)</h4><p>“✨ Descubra uma explosão de sabores! Nosso irresistível bolo de pote de maracujá com chocolate é uma experiência única, feito com ingredientes selecionados. Peça já!”</p></div>
+      <div><span class="lbl fin">3 · Final humano</span><h4>Com voz, fato e gente</h4><p>“A dona Cida trabalha aqui há 20 anos e resolveu juntar maracujá com chocolate num pote. Deu nisso. R$ 12, só sexta e sábado. Encomenda pelo WhatsApp do perfil.”</p></div>
+    </div>
+    <p>Repare: a IA inventou “ingredientes selecionados” (ninguém disse isso) e apagou a dona Cida, que é a melhor parte da história. O texto final recupera o fato humano e corta o enfeite. A IA serviu para dar estrutura e mostrar que “preço + dias + como pedir” precisava estar claro.</p>
+
+    <div class="prompt-box"><div class="prompt-head"><span>Prompt 7 · Variações de legenda a partir das suas notas</span><button type="button" class="copy-btn">Copiar</button></div>
+<pre class="prompt">Estas são as minhas anotações sobre o vídeo que eu gravei:
+[COLE SUAS NOTAS]
+
+Exemplos de legendas que eu já escrevi para esse cliente (para você copiar o tom):
+[COLE 2 OU 3 LEGENDAS ANTIGAS]
+
+Escreva 3 opções de legenda para Reels, com até 300 caracteres cada, no mesmo tom dos exemplos. Use apenas os fatos das anotações. Não invente qualidades, ingredientes, prêmios, descontos ou prazos. Evite clichês como “experiência única” e “explosão de sabores”. Termine cada opção com a chamada para ação que está nas notas.</pre></div>
+
+    <h3>Um vídeo, vários formatos</h3>
+    <p>Com a transcrição do vídeo em mãos, você tem matéria-prima para uma semana. A IA ajuda a <strong>reformatar</strong> (não a criar do zero) para cada lugar.</p>
+
+    <figure>
+      <svg viewBox="0 0 700 300" role="img" aria-label="Diagrama: um vídeo gravado por uma pessoa gera uma transcrição, que se desdobra em legenda de Reels, roteiro de carrossel, descrição do YouTube com capítulos, post de LinkedIn e texto alternativo, cada um revisado por um humano.">
+        <rect x="0" y="0" width="700" height="300" rx="14" fill="#e8f8ef"/>
+        <rect x="24" y="110" width="130" height="80" rx="12" fill="#fff" stroke="#ffb020" stroke-width="2.5"/>
+        <text x="89" y="145" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="14" fill="#16121d">🎥 Vídeo</text>
+        <text x="89" y="166" text-anchor="middle" font-family="Inter" font-size="12" fill="#6f6880">gravado por você</text>
+        <rect x="200" y="120" width="120" height="60" rx="12" fill="#fff" stroke="#2f7fe0" stroke-width="2" stroke-dasharray="5 4"/>
+        <text x="260" y="148" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="13" fill="#16121d">Transcrição</text>
+        <text x="260" y="166" text-anchor="middle" font-family="Inter" font-size="11" fill="#6f6880">IA executa</text>
+        <path d="M154 150 H198" stroke="#16121d" stroke-width="2"/>
+        <g font-family="Inter" font-size="13" fill="#16121d">
+          <rect x="400" y="18" width="200" height="40" rx="10" fill="#fff" stroke="#8612d5" stroke-width="2"/><text x="414" y="43">Legenda do Reels</text>
+          <rect x="400" y="70" width="200" height="40" rx="10" fill="#fff" stroke="#8612d5" stroke-width="2"/><text x="414" y="95">Roteiro de carrossel</text>
+          <rect x="400" y="122" width="200" height="40" rx="10" fill="#fff" stroke="#8612d5" stroke-width="2"/><text x="414" y="147">Descrição + capítulos</text>
+          <rect x="400" y="174" width="200" height="40" rx="10" fill="#fff" stroke="#8612d5" stroke-width="2"/><text x="414" y="199">Post de LinkedIn</text>
+          <rect x="400" y="226" width="200" height="40" rx="10" fill="#fff" stroke="#8612d5" stroke-width="2"/><text x="414" y="251">Texto alternativo</text>
+        </g>
+        <g stroke="#16121d" stroke-width="1.6" fill="none">
+          <path d="M320 150 C 360 150, 360 38, 398 38"/><path d="M320 150 C 360 150, 360 90, 398 90"/><path d="M320 150 H398"/><path d="M320 150 C 360 150, 360 194, 398 194"/><path d="M320 150 C 360 150, 360 246, 398 246"/>
+        </g>
+        <g font-family="Inter" font-size="16"><text x="612" y="44">✍️</text><text x="612" y="96">✍️</text><text x="612" y="148">✍️</text><text x="612" y="200">✍️</text><text x="612" y="252">✍️</text></g>
+        <text x="650" y="150" text-anchor="middle" font-family="Inter" font-size="11" fill="#2f9a5c" transform="rotate(90 650 150)">cada versão revisada por você</text>
+      </svg>
+      <figcaption>A transcrição é a ponte: o conteúdo continua sendo o que você gravou; a IA só muda a embalagem, e você confere cada embalagem.</figcaption>
+    </figure>
+
+    <div class="prompt-box"><div class="prompt-head"><span>Prompt 8 · Roteiro de carrossel a partir do vídeo</span><button type="button" class="copy-btn">Copiar</button></div>
+<pre class="prompt">Esta é a transcrição de um vídeo que eu gravei:
+[COLE A TRANSCRIÇÃO]
+
+Transforme o conteúdo em um roteiro de carrossel para Instagram com 7 a 9 cards: card 1 com a promessa principal, cards do meio com uma ideia por card (máximo de 25 palavras cada), último card com chamada para ação. Use as minhas palavras sempre que possível. Não acrescente dicas, dados ou exemplos que não estejam na transcrição. Indique, para cada card, uma sugestão de imagem que eu possa fotografar ou tirar do próprio vídeo.</pre></div>
+
+    <div class="prompt-box"><div class="prompt-head"><span>Prompt 9 · Descrição do YouTube com capítulos</span><button type="button" class="copy-btn">Copiar</button></div>
+<pre class="prompt">Abaixo está a transcrição com marcações de tempo do meu vídeo do YouTube:
+[COLE A TRANSCRIÇÃO COM TEMPOS]
+
+Escreva:
+1) uma descrição de 2 parágrafos curtos, em primeira pessoa, resumindo o que eu falo no vídeo;
+2) uma lista de capítulos no formato 00:00 Título, começando em 00:00, com títulos de até 6 palavras, usando os tempos reais da transcrição;
+3) 5 palavras-chave que aparecem de fato na fala.
+Não invente tópicos que não foram falados e não altere os tempos.</pre></div>
+
+    <h3>Texto alternativo: acessibilidade que quase ninguém faz</h3>
+    <p>O <strong>texto alternativo</strong> (alt text) é a descrição lida por leitores de tela para pessoas cegas ou com baixa visão. Instagram, Facebook e outras redes têm campo para isso nas configurações avançadas do post. A IA ajuda a rascunhar, mas só você sabe quem está na foto e o que importa nela.</p>
+    <div class="prompt-box"><div class="prompt-head"><span>Prompt 10 · Texto alternativo</span><button type="button" class="copy-btn">Copiar</button></div>
+<pre class="prompt">Vou publicar uma foto que eu fiz. Descrição feita por mim:
+[EX.: dona Cida, mulher de cabelos grisalhos e avental verde, segura um pote de bolo de maracujá com chocolate no balcão da padaria; ao fundo, vitrine de pães]
+
+Escreva um texto alternativo objetivo para leitor de tela, com até 200 caracteres, em português claro. Não comece com “imagem de”. Não acrescente detalhes que eu não descrevi e não interprete emoções que não citei.</pre></div>
+
+    <div class="callout tip"><strong>Dica de ouro</strong><p>Peça hashtags e palavras-chave só <em>depois</em> de escrever a legenda, e peça que a IA use termos que realmente aparecem no conteúdo. Hashtag que promete o que o vídeo não entrega atrai o público errado e derruba a retenção.</p></div>
+
+    <!-- ============ 6 ============ -->
+    <h2 id="anuncios-ia"><span class="num">6</span>Anúncios com IA: variar sem falsificar</h2>
+    <p>Em tráfego pago, testar variações é ouro: o mesmo vídeo com três textos diferentes pode ter resultados muito distintos (o básico está no <a href="12-anuncios.html">Módulo 12 · Anúncios</a>). A IA acelera a criação dessas variações. O que ela <strong>não</strong> pode mudar é a base: as imagens reais, a oferta real e o preço real.</p>
+
+    <h3>Variações de texto para teste A/B</h3>
+    <div class="prompt-box"><div class="prompt-head"><span>Prompt 11 · Variações de copy para anúncio</span><button type="button" class="copy-btn">Copiar</button></div>
+<pre class="prompt">Eu produzi este criativo para anúncio: [DESCREVA O VÍDEO OU A ARTE QUE VOCÊ FEZ].
+Oferta real: [PRODUTO/SERVIÇO, PREÇO, CONDIÇÕES, VALIDADE].
+Público: [QUEM, ONDE]. Objetivo: [MENSAGENS NO WHATSAPP / VISITAS / VENDAS].
+
+Escreva 6 variações de texto principal (até 125 caracteres) e 6 títulos (até 40 caracteres), em 3 abordagens: benefício prático, história/pessoa real, urgência honesta (apenas se houver prazo real). Não invente descontos, depoimentos, garantias, números de clientes ou resultados. Não use promessas de saúde, renda ou emagrecimento. Organize em tabela: abordagem, texto, título.</pre></div>
+
+    <h3>Recursos generativos das plataformas</h3>
+    <p>As próprias plataformas de anúncio vêm embutindo IA. No Gerenciador de Anúncios da Meta, o pacote <strong>Advantage+</strong> inclui melhorias automáticas de criativo, como variações de texto, ajustes de enquadramento, expansão de imagem e fundos gerados. No TikTok, o conjunto se chama <strong>Symphony</strong> e vai de sugestões de roteiro a geração de vídeo, inclusive com avatares. O Google também tem ferramentas para gerar e adaptar recursos de anúncio. Os nomes e recursos mudam rápido; o que importa é o critério:</p>
+    <div class="compare">
+      <div class="bad"><h4>Evite</h4><ul>
+        <li>Deixar a plataforma “melhorar” a imagem do produto sem revisar o resultado</li>
+        <li>Fundo gerado mostrando uma loja que não existe</li>
+        <li>Avatar sintético apresentado como se fosse cliente ou funcionário real</li>
+        <li>Foto de “antes e depois” criada ou retocada por IA</li>
+        <li>Ativar todas as otimizações automáticas e nunca olhar o que foi publicado</li>
+      </ul></div>
+      <div class="good"><h4>Faça</h4><ul>
+        <li>Usar a IA para redimensionar (1:1, 4:5, 9:16) um criativo gravado de verdade</li>
+        <li>Gerar variações de texto e escolher, você, quais vão ao ar</li>
+        <li>Ativar recursos automáticos um de cada vez e conferir a prévia de cada formato</li>
+        <li>Traduzir ou adaptar o texto mantendo a oferta idêntica</li>
+        <li>Guardar prints do que foi aprovado pelo cliente</li>
+      </ul></div>
+    </div>
+
+    <h3>Traduzir e adaptar</h3>
+    <p>Se o cliente atende turistas ou exporta, a IA traduz bem textos curtos. Mesmo assim, peça revisão de um falante fluente quando o anúncio for importante; tradução literal de gíria vira piada.</p>
+    <div class="prompt-box"><div class="prompt-head"><span>Prompt 12 · Tradução com adaptação</span><button type="button" class="copy-btn">Copiar</button></div>
+<pre class="prompt">Este é o texto de anúncio que eu escrevi em português:
+[COLE SEU TEXTO]
+
+Traduza para [IDIOMA], adaptando expressões para soarem naturais, mas mantendo exatamente a mesma oferta, preço, condições e chamada para ação. Não acrescente nem retire informações. Depois da tradução, liste as expressões que você adaptou e explique cada adaptação em uma linha, para que eu possa conferir.</pre></div>
+
+    <div class="callout warn"><strong>Erro comum</strong><p>Achar que “é só um anúncio” e que um pouco de retoque gerado não faz mal. O Código de Defesa do Consumidor proíbe publicidade enganosa, e as plataformas exigem identificação quando o anúncio de tema social, eleitoral ou político traz imagem ou som realista alterado digitalmente. Imagem falsa de produto pode render reembolso, denúncia e anúncio reprovado.</p></div>
+
+    <!-- ============ 7 ============ -->
+    <h2 id="automacao"><span class="num">7</span>Automação sem código para as partes chatas</h2>
+    <p>Nem toda automação é “IA”. Muitas das maiores economias de tempo vêm de coisas simples: agendar, padronizar nomes, fazer backup sozinho, ter respostas prontas. Juntando essas rotinas com um pouco de IA, a semana rende muito mais.</p>
+
+    <h3>Agendamento (grátis)</h3>
+    <ul>
+      <li><strong>Meta Business Suite</strong> (e o próprio app do Instagram): agenda posts, Reels e stories de Instagram e Facebook, sem custo.</li>
+      <li><strong>YouTube Studio:</strong> todo vídeo pode ser enviado como “programado” para uma data e hora.</li>
+      <li><strong>TikTok:</strong> o agendamento existe pelo navegador no computador (TikTok Studio), com antecedência limitada a alguns dias. <strong>Verifique as regras atuais</strong>.</li>
+    </ul>
+
+    <h3>Fluxos automáticos</h3>
+    <p>Ferramentas como <strong>Zapier</strong> e <strong>Make</strong> ligam um aplicativo a outro sem programação (“quando chegar um arquivo nesta pasta, avise no meu e-mail”), com planos gratuitos limitados. O <a href="https://n8n.io" target="_blank" rel="noopener">n8n</a> faz o mesmo, tem código-fonte disponível e pode ser instalado no seu próprio computador ou servidor (auto-hospedado), o que ajuda quando o orçamento é zero e os dados do cliente são sensíveis. Exemplos úteis para quem produz:</p>
+    <ul>
+      <li>Arquivo novo na pasta “Brutos” → cópia automática para o backup na nuvem.</li>
+      <li>Formulário de briefing respondido → linha numa planilha + tarefa no seu quadro de produção.</li>
+      <li>Vídeo aprovado na pasta “Final” → lembrete para agendar e para enviar o link ao cliente.</li>
+    </ul>
+
+    <h3>Transcrever áudios de cliente no seu computador</h3>
+    <p>O <a href="https://github.com/openai/whisper" target="_blank" rel="noopener">Whisper</a> é um modelo de reconhecimento de fala de código aberto. Ele roda localmente, sem enviar o áudio para a internet, o que é ótimo para briefings confidenciais. Para quem não programa, há programas gratuitos que usam o Whisper por trás, como o <strong>Subtitle Edit</strong> (Windows, código aberto), que transcreve e já gera arquivo de legenda. Num computador simples o processo é mais lento, mas funciona.</p>
+    <div class="callout nerd"><strong>Curiosidade nerd</strong><p>O Whisper foi lançado pela OpenAI em setembro de 2022 como código aberto, treinado com cerca de 680 mil horas de áudio em vários idiomas. Uma parte desse áudio era em idiomas diferentes do inglês, e é por isso que ele entende português razoavelmente bem, inclusive com sotaques. Razoavelmente: ele ainda escreve “Ariquemes” de jeitos criativos. A revisão continua sendo sua.</p></div>
+
+    <h3>Respostas rápidas e modelos</h3>
+    <ul>
+      <li><strong>WhatsApp Business:</strong> respostas rápidas (atalhos com “/”), mensagem de ausência e de saudação. Use para informações repetitivas (prazos, formas de pagamento, como enviar material), nunca para negociar.</li>
+      <li><strong>Modelos no Canva e no CapCut:</strong> monte um kit por cliente (fontes, cores, vinheta, posição da legenda). Isso é automação também: você decide o padrão uma vez e reaproveita. Os modelos são criação sua; trate-os como patrimônio.</li>
+      <li><strong>Nomes de arquivo padronizados:</strong> <code>2026-11-05_padaria-vo_reels-bolo_v2.mp4</code>. Muitos gerenciadores de arquivo renomeiam em lote.</li>
+    </ul>
+
+    <h3>Uma semana de produção com assistência</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Dia</th><th>Humano faz</th><th>IA / automação ajuda</th></tr></thead>
+      <tbody>
+        <tr><td>Segunda</td><td>Reunião ou áudio com o cliente; define ideias e prioridades</td><td>Transcreve o áudio e resume o briefing para você confirmar</td></tr>
+        <tr><td>Terça</td><td>Escreve roteiros e planeja a gravação</td><td>Revisa repetições, sugere ganchos, monta a lista de planos</td></tr>
+        <tr><td>Quarta</td><td>Grava no local, dirige as pessoas, fotografa produtos</td><td>Backup automático dos arquivos para a nuvem</td></tr>
+        <tr><td>Quinta</td><td>Edita: escolhe falas, ritmo, trilha, cor</td><td>Transcrição, corte de silêncio, reenquadre, legenda, limpeza de áudio</td></tr>
+        <tr><td>Sexta</td><td>Revisa, envia para aprovação, ajusta, escreve as legendas finais</td><td>Rascunhos de legenda e descrição; agendamento da semana seguinte</td></tr>
+        <tr><td>Fim do mês</td><td>Interpreta resultados e decide os próximos passos com o cliente</td><td>Organiza as métricas e aponta padrões</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>Análise de métricas</h3>
+    <p>Exporte os números do painel (Instagram, YouTube, Meta Ads) e peça ajuda para enxergar padrões. A IA não sabe que a queda foi porque choveu no feriado; você sabe. O detalhe de como ganhar dinheiro com esses dados está no <a href="09-monetizacao.html">Módulo 09 · Monetização</a>.</p>
+    <div class="prompt-box"><div class="prompt-head"><span>Prompt 13 · Análise de métricas</span><button type="button" class="copy-btn">Copiar</button></div>
+<pre class="prompt">Estes são os dados reais dos últimos 30 dias do perfil do meu cliente (exportados do painel):
+[COLE A TABELA: data, formato, tema, alcance, retenção/tempo médio, salvamentos, compartilhamentos, mensagens]
+
+Contexto que você não sabe: [EX.: feriado no dia 15, promoção nos dias 20 a 22].
+
+Aponte: os 3 conteúdos com melhor desempenho e o que eles têm em comum; os 3 piores; padrões de formato, tema ou horário. Calcule só com os números fornecidos e mostre as contas. Não invente médias de mercado nem dados que não estão na tabela. Termine com 3 perguntas que eu deveria investigar, sem decidir por mim.</pre></div>
+
+    <div class="callout pratica"><strong>Na prática</strong><p>Escolha <em>uma</em> automação desta seção e configure hoje: agende os posts da próxima semana no Meta Business Suite, ou crie cinco respostas rápidas no WhatsApp Business. Uma automação funcionando vale mais que dez planejadas.</p></div>
+
+    <!-- ============ 8 ============ -->
+    <h2 id="etica-lei"><span class="num">8</span>Ética, lei e respeito ao trabalho humano</h2>
+    <p>Esta é a parte em que não há atalho. A tecnologia permite muita coisa que é antiética, ilegal ou as duas. Para quem trabalha com clientes pequenos em cidade pequena, onde todo mundo se conhece, reputação é tudo.</p>
+
+    <h3>Voz, rosto e consentimento</h3>
+    <ul>
+      <li><strong>Não clone voz nem rosto de ninguém</strong> sem autorização expressa, por escrito, explicando como e onde será usado. No Brasil, a imagem e a voz são protegidas como direitos da personalidade, e uso indevido pode gerar indenização.</li>
+      <li><strong>Nada de deepfake</strong>: colocar alguém dizendo ou fazendo o que não disse nem fez, mesmo “de brincadeira”.</li>
+      <li><strong>Não substitua profissionais por clones.</strong> Se o projeto precisa de locução, contrate um locutor; se precisa de atriz, contrate uma atriz; se precisa de foto de produto, fotografe ou contrate quem fotografa. Usar IA para gerar uma “voz parecida com a do locutor fulano” é desrespeitoso e juridicamente arriscado.</li>
+    </ul>
+
+    <h3>Rotular o que é gerado ou alterado</h3>
+    <p>As grandes plataformas pedem que você identifique conteúdo realista criado ou alterado por IA. Os nomes dos rótulos mudam, mas a lógica é a mesma:</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Plataforma</th><th>Como funciona (2026)</th></tr></thead>
+      <tbody>
+        <tr><td>YouTube</td><td>Ao enviar, há uma pergunta sobre <strong>conteúdo alterado ou sintético</strong>. Se o vídeo mostra de forma realista algo que não aconteceu, ou pessoa real dizendo o que não disse, é preciso marcar; o YouTube exibe um aviso. Ajustes como correção de cor, legendas e limpeza de áudio não exigem rótulo. <a href="https://support.google.com/youtube/answer/14328491" target="_blank" rel="noopener">Ajuda oficial</a></td></tr>
+        <tr><td>Instagram e Facebook (Meta)</td><td>O rótulo <strong>“Informações de IA”</strong> (antes chamado “Feito com IA”) aparece quando a Meta detecta sinais técnicos de IA no arquivo ou quando você declara. Vídeo e áudio realistas gerados ou alterados digitalmente devem ser declarados.</td></tr>
+        <tr><td>TikTok</td><td>Há uma opção para marcar o vídeo como <strong>conteúdo gerado por IA</strong>; conteúdo realista gerado precisa de rótulo, e o TikTok pode aplicá-lo automaticamente quando detecta metadados de IA (como Content Credentials).</td></tr>
+      </tbody>
+    </table></div>
+    <p>Se você só usou IA como <strong>assistente</strong> (transcrever, legendar, limpar ruído, reenquadrar) sobre imagens reais, em geral não há o que rotular. A regra mira o que pode enganar quem assiste.</p>
+
+    <h3>Direito autoral: quem é o autor?</h3>
+    <p>A <a href="https://www.planalto.gov.br/ccivil_03/leis/l9610.htm" target="_blank" rel="noopener">Lei de Direitos Autorais (Lei 9.610/98)</a> define autor como a <strong>pessoa física</strong> criadora da obra. A proteção de algo gerado inteiramente por máquina, sem contribuição criativa humana relevante, é um tema em debate no Brasil e no mundo, sem resposta definitiva. Consequência prática: <strong>quanto mais o resultado nasce do seu trabalho (sua gravação, seu texto, sua edição), mais clara é a sua autoria</strong>. Mais um motivo para o humano criar e a IA só assistir. E atenção ao contrário: pedir para a IA imitar o estilo de um artista específico ou reproduzir personagens e músicas protegidas pode infringir direitos de terceiros.</p>
+
+    <h3>Dados do cliente e LGPD</h3>
+    <p>Muitas ferramentas online de IA processam o que você envia nos servidores delas, e algumas podem usar esse conteúdo para treinar modelos, dependendo do plano e das configurações. Antes de colar um contrato, uma planilha de vendas ou o áudio de um briefing confidencial, <strong>pergunte ao cliente</strong>, leia a política de privacidade e prefira ferramentas locais (como o Whisper) para material sensível. A <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="_blank" rel="noopener">LGPD (Lei 13.709/2018)</a> vale para dados pessoais de clientes e de clientes dos seus clientes.</p>
+
+    <h3>O que está em discussão no Brasil</h3>
+    <ul>
+      <li><strong>Marco da IA (PL 2338/2023):</strong> aprovado no Senado em dezembro de 2024 e enviado à Câmara dos Deputados, onde tramitou em comissão especial ao longo de 2025 e 2026. O texto trata, entre outras coisas, de direitos de autores cujas obras são usadas para treinar IA. Até a última verificação deste guia, não havia texto final em vigor. <a href="https://www25.senado.leg.br/web/atividade/materias/-/materia/157233" target="_blank" rel="noopener">Acompanhe a tramitação</a>.</li>
+      <li><strong>Eleições:</strong> desde a Resolução TSE 23.732/2024 (que alterou a norma sobre propaganda eleitoral), é proibido usar deepfake na propaganda eleitoral, e todo conteúdo sintético usado em propaganda precisa ser identificado de forma explícita. O TSE atualizou as regras para as eleições de 2026. Se você atende candidato ou partido, leia a norma vigente no <a href="https://www.tse.jus.br" target="_blank" rel="noopener">site do TSE</a> e tenha orientação jurídica.</li>
+      <li><strong>Consumidor:</strong> imagem gerada para mostrar produto, resultado ou cliente que não existe pode configurar publicidade enganosa, que o Código de Defesa do Consumidor já proíbe, com ou sem lei de IA.</li>
+    </ul>
+
+    <h3>Código de conduta do profissional que usa IA</h3>
+    <ul class="checklist">
+      <li>A ideia, o roteiro e o ponto de vista do projeto são meus ou do cliente</li>
+      <li>As imagens de produto, local, equipe e resultado são reais</li>
+      <li>Não clono voz nem rosto sem autorização escrita, e não uso IA para substituir atores, locutores, fotógrafos ou músicos</li>
+      <li>Reviso todo texto, legenda e tradução gerados antes de publicar</li>
+      <li>Confiro nomes, preços, endereços e datas em fonte confiável</li>
+      <li>Rotulo conteúdo realista gerado ou alterado, conforme as regras de cada plataforma</li>
+      <li>Peço permissão antes de enviar material confidencial do cliente para ferramentas online</li>
+      <li>Explico ao cliente, com transparência, onde a IA entra no meu processo</li>
+      <li>Uso trilhas, fontes e imagens com licença, e dou crédito a quem criou</li>
+      <li>Em conteúdo eleitoral, sigo as normas do TSE e procuro orientação jurídica</li>
+    </ul>
+
+    <div class="callout info"><strong>Importante</strong><p>Este guia é educativo e não substitui orientação jurídica. Leis e regras de plataformas sobre IA estão mudando rapidamente; em caso de dúvida em trabalho comercial ou político, consulte um advogado.</p></div>
+
+    <!-- ============ 9 ============ -->
+    <h2 id="carreira"><span class="num">9</span>Carreira: o profissional que usa IA bem</h2>
+    <p>Quando o editor de texto ganhou corretor ortográfico, ninguém deixou de precisar de bons escritores. Com a IA acontece algo parecido: quem só apertava botões perde espaço; quem <strong>pensa, dirige e entende de gente</strong> ganha tempo para fazer mais disso.</p>
+
+    <h3>Posicionamento</h3>
+    <p>Não se venda como “faço vídeo com IA”. Isso soa barato e substituível. Venda <strong>resultado e processo</strong>: “produzo conteúdo real do seu negócio, com entrega rápida porque uso ferramentas modernas para a parte técnica”. A IA é parte da sua caixa de ferramentas, como o tripé e o microfone.</p>
+
+    <h3>Preço: não cobre menos porque a IA ajudou</h3>
+    <p>O cliente paga pelo <strong>resultado</strong> e pela <strong>experiência</strong> de quem sabe o que fazer, não pelas horas de digitação. Se antes você entregava em 3 dias e agora entrega em 1, você ficou mais valioso: entrega mais rápido, atende mais clientes ou inclui mais coisas no mesmo pacote (uma versão vertical extra, legendas em dois idiomas, carrossel derivado). Lembre também que assinaturas de ferramentas são custo do seu negócio e entram no preço.</p>
+
+    <div class="callout tip"><strong>Dica de ouro</strong><p>Use o tempo economizado para o que o cliente enxerga: chegar mais cedo na gravação, testar uma luz melhor, gravar dois ganchos em vez de um, ligar para saber como foram as vendas. Isso diferencia você de quem só usa a IA para fazer mais barato.</p></div>
+
+    <h3>Transparência com o cliente</h3>
+    <p>Explique o seu processo sem jargão e sem esconder nada. Um modelo:</p>
+    <blockquote style="border-left:4px solid var(--verde);padding:10px 18px;margin:18px 0;background:var(--verde-cl);border-radius:0 12px 12px 0">“Todo o conteúdo é gravado e criado por mim com o seu negócio de verdade: as pessoas, os produtos e o lugar. Uso ferramentas de inteligência artificial nas partes técnicas, como transcrever, legendar e limpar o som, para entregar mais rápido. Tudo é revisado por mim antes de chegar para você aprovar. Não uso imagens falsas nem vozes clonadas.”</blockquote>
+    <p>Esse parágrafo vira argumento de venda: o cliente entende que você é eficiente e confiável ao mesmo tempo.</p>
+
+    <h3>Habilidades que ganham valor</h3>
+    <div class="cards">
+      <div class="card"><div class="ic">🎬</div><h4>Direção</h4><p>Deixar o cliente à vontade na frente da câmera, conseguir o take natural. Máquina nenhuma faz isso no set.</p></div>
+      <div class="card"><div class="ic">👁️</div><h4>Gosto e curadoria</h4><p>Escolher entre dez opções a única que tem a cara do cliente. Quanto mais opções a IA gera, mais vale quem sabe escolher.</p></div>
+      <div class="card"><div class="ic">📖</div><h4>Contar histórias</h4><p>Achar a dona Cida no meio do bolo de pote. Conexão humana é o que segura a atenção.</p></div>
+      <div class="card"><div class="ic">🤝</div><h4>Relacionamento</h4><p>Escutar, negociar, entender o que o cliente precisa e às vezes nem sabe que precisa.</p></div>
+      <div class="card"><div class="ic">🔎</div><h4>Checagem e senso crítico</h4><p>Desconfiar do texto bonito demais e verificar antes de publicar.</p></div>
+      <div class="card"><div class="ic">🎛️</div><h4>Técnica de captação</h4><p>Luz, som e enquadramento bons na origem. A IA limpa ruído, mas não salva áudio gravado longe da boca.</p></div>
+    </div>
+
+    <div class="callout nerd"><strong>Curiosidade nerd</strong><p>Quando surgiram os programas de edição no computador pessoal, previu-se o fim dos montadores. O que aconteceu foi o contrário: a quantidade de vídeo produzido explodiu, e com ela a demanda por gente que sabe editar. Ferramentas que barateiam a parte técnica tendem a aumentar o volume de trabalho e a valorizar quem tem critério.</p></div>
+
+    <!-- ============ 10 ============ -->
+    <h2 id="mapa-ferramentas"><span class="num">10</span>Mapa de ferramentas</h2>
+    <p>Uma visão geral por tarefa. Planos gratuitos costumam ter limites (minutos, marca d’água, créditos por mês) e mudam com frequência: <strong>verifique o plano atual</strong> antes de depender de uma ferramenta. Para a lista completa do guia, veja <a href="ferramentas.html">Ferramentas</a> e <a href="recursos.html">Recursos</a>.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Tarefa</th><th>Opções gratuitas ou de baixo custo</th><th>O que o humano continua fazendo</th></tr></thead>
+      <tbody>
+        <tr><td>Brainstorm e revisão de roteiro</td><td>Assistentes de chat de IA (planos gratuitos com limite)</td><td>Ideia original, escolha do ângulo, voz do texto</td></tr>
+        <tr><td>Transcrição</td><td>Whisper via Subtitle Edit (grátis, local); transcrição embutida em editores (varia por plano)</td><td>Revisar nomes, sotaque, termos técnicos</td></tr>
+        <tr><td>Edição por texto</td><td>Descript (grátis com limite); Premiere e Resolve Studio (pagos); CapCut (verifique o plano)</td><td>Escolher falas, ordem e ritmo</td></tr>
+        <tr><td>Legendas automáticas</td><td>CapCut (limitado no grátis), YouTube (legenda automática no Studio), Subtitle Edit + Whisper</td><td>Revisar texto, quebra de linha e estilo</td></tr>
+        <tr><td>Limpeza de áudio</td><td>Adobe Podcast Enhance (grátis com limite), Audacity (grátis), Resolve Studio (Voice Isolation)</td><td>Ouvir com fone, dosar a intensidade</td></tr>
+        <tr><td>Reenquadre vertical</td><td>CapCut, Premiere (Auto Reframe), Resolve Studio (Smart Reframe)</td><td>Corrigir enquadramentos perdidos</td></tr>
+        <tr><td>Legendas de post e descrições</td><td>Assistentes de chat de IA</td><td>Fatos, tom, chamada para ação, aprovação</td></tr>
+        <tr><td>Variações de anúncio</td><td>Recursos do Advantage+ (Meta), Symphony (TikTok), assistentes de chat</td><td>Oferta real, criativo real, escolha do que vai ao ar</td></tr>
+        <tr><td>Agendamento</td><td>Meta Business Suite, YouTube Studio, TikTok Studio (web)</td><td>Calendário e estratégia</td></tr>
+        <tr><td>Automação entre apps</td><td>n8n (auto-hospedado), Zapier e Make (grátis com limite)</td><td>Desenhar o fluxo e conferir se roda certo</td></tr>
+        <tr><td>Modelos visuais</td><td>Canva (grátis com recursos pagos), modelos do CapCut</td><td>Identidade visual e direção de arte</td></tr>
+        <tr><td>Análise de métricas</td><td>Painéis nativos + assistente de chat com os dados exportados</td><td>Interpretar o contexto e decidir</td></tr>
+      </tbody>
+    </table></div>
+    <p>Termos como “alucinação”, “B-roll” e “SRT” estão no <a href="glossario.html">Glossário</a>.</p>
+
+    <!-- ============ 11 ============ -->
+    <h2 id="duvidas"><span class="num">11</span>Dúvidas frequentes</h2>
+    <details><summary>Usar IA na edição tira o mérito do meu trabalho?</summary><p>Não, se a criação continua sua. Ninguém acha que o fotógrafo perdeu o mérito por usar foco automático. O mérito está na ideia, na captação, nas escolhas de corte e no cuidado com o cliente. O que tira o mérito, e a confiança, é apresentar como real algo que foi fabricado.</p></details>
+    <details><summary>Preciso avisar o cliente que uso IA?</summary><p>É a melhor prática. Não precisa listar cada ferramenta, mas explique em linhas gerais onde a IA entra (técnica) e onde não entra (criação, imagens, aprovação). Peça autorização antes de enviar material sensível para ferramentas online. Transparência evita surpresa e vira argumento de venda.</p></details>
+    <details><summary>Não tenho dinheiro para ferramentas pagas. Vale a pena mesmo assim?</summary><p>Vale. Whisper via Subtitle Edit, Audacity, legendas automáticas do YouTube, agendadores nativos, respostas rápidas do WhatsApp e assistentes de chat com plano gratuito já cobrem boa parte do fluxo. Comece pela tarefa que mais rouba seu tempo e só pague quando uma ferramenta comprovadamente devolver horas que viram dinheiro.</p></details>
+    <details><summary>Posso usar uma voz de IA para narrar o vídeo do cliente?</summary><p>Vozes sintéticas genéricas, licenciadas pela ferramenta e identificadas quando necessário, existem e alguns usam para rascunhos ou acessibilidade. Mas este guia recomenda: para trabalho final, a voz deve ser sua, do cliente ou de um locutor contratado. Voz humana transmite confiança, e clonar ou imitar a voz de uma pessoa real sem autorização escrita é proibido em qualquer caso.</p></details>
+    <details><summary>A IA vai roubar meu trabalho de videomaker?</summary><p>Vai roubar tarefas, principalmente as mecânicas. O trabalho de estar no local, dirigir, entender o negócio do cliente e contar a história dele continua humano, e fica mais valioso quando você entrega com mais rapidez. Quem corre risco é quem compete só por preço fazendo o que a máquina faz.</p></details>
+
+    <div class="resumo"><h3>📌 Resumo do módulo</h3><ul>
+      <li><strong>Humano cria, IA assiste, humano decide:</strong> a IA só entra entre etapas humanas e nunca dá a palavra final.</li>
+      <li>A IA é ótima em padrão e repetição e fraca em verdade, contexto e gosto; ela alucina e não conhece o seu cliente.</li>
+      <li>Use a matriz: <em>fazer você</em>, <em>IA rascunha + você revisa</em>, <em>IA executa + você confere</em>.</li>
+      <li>Bons prompts partem do seu material (roteiro, notas, transcrição, dados) e mandam “não inventar informações”.</li>
+      <li>Na edição, transcrição, corte de silêncio, reenquadre, legenda e limpeza de áudio podem cortar o tempo pela metade ou mais, sempre com revisão.</li>
+      <li>Um vídeo vira vários formatos pela transcrição; anúncios ganham variações de texto, mas imagens e ofertas continuam reais.</li>
+      <li>Rotule conteúdo realista gerado ou alterado, peça consentimento, proteja dados do cliente e nunca substitua artistas por clones.</li>
+      <li>Não cobre menos porque a IA ajudou: cobre pelo resultado e use o tempo ganho no que o cliente enxerga.</li>
+    </ul></div>
+
+    <div class="callout pratica"><strong>Exercício do módulo</strong><p>Monte o seu “fluxo assistido” com um conteúdo real. (1) Grave um vídeo falado de até 60 segundos sobre um negócio da sua cidade, com roteiro escrito por você. (2) Use o Prompt 2 para revisar o roteiro <em>antes</em> de gravar e anote quais sugestões aceitou e quais recusou, e por quê. (3) Na edição, use pelo menos duas assistências (transcrição, corte de silêncio, legenda, reenquadre ou limpeza de áudio) e cronometre. (4) Com a transcrição, gere legenda de Reels e descrição com o Prompt 7 e reescreva a versão final com a sua voz. (5) Preencha uma tabela com três colunas: o que eu fiz, o que a IA fez, o que eu corrigi na IA. (6) Escreva o parágrafo de transparência que você mandaria para esse cliente.</p></div>
+
+    <div class="quiz"><script type="application/json">[
+      {"q":"Qual frase resume a filosofia deste módulo?","o":["IA cria, humano publica","Humano cria, IA assiste, humano decide","IA decide, humano executa","Quanto mais IA, melhor o conteúdo"],"a":1,"e":"O material bruto nasce de pessoas, a IA ajuda nas etapas repetitivas e a decisão final, inclusive a aprovação, é sempre humana."},
+      {"q":"O que é “alucinação” em IA?","o":["Quando a ferramenta trava no meio da tarefa","Quando a IA produz informação falsa com aparência de verdade","Um efeito visual psicodélico gerado por IA","Quando a legenda sai fora de sincronia"],"a":1,"e":"Modelos de linguagem geram o texto mais provável, não o verdadeiro. Sem informação real, preenchem lacunas com dados inventados, escritos com confiança."},
+      {"q":"Qual destas tarefas fica no nível “IA executa + você confere”?","o":["Escolher o ponto de vista do vídeo","Aprovar o vídeo final com o cliente","Cortar silêncios do bruto","Negociar o preço do pacote"],"a":2,"e":"Corte de silêncio é técnico e verificável: a ferramenta executa e você confere, devolvendo pausas que dão respiro."},
+      {"q":"Qual instrução deve aparecer em praticamente todo prompt de produção?","o":["“Seja criativo e invente o que for preciso”","“Escreva o texto mais longo possível”","“Use apenas as informações fornecidas; não invente informações”","“Ignore o tom dos exemplos”"],"a":2,"e":"Partir do seu material e proibir invenções reduz alucinações e mantém a verdade sobre o cliente."},
+      {"q":"Por que a legenda automática precisa de revisão humana?","o":["Porque sempre sai em outro idioma","Porque erra com frequência nomes próprios, sotaques, gírias e números","Porque as plataformas proíbem legenda automática","Porque deixa o vídeo mais pesado"],"a":1,"e":"O reconhecimento de fala tropeça justamente no que é mais local e importante: nomes, ruas, marcas, preços e expressões regionais."},
+      {"q":"Num anúncio para uma loja, qual uso de IA é adequado?","o":["Gerar um fundo mostrando uma loja maior que a real","Criar depoimentos de clientes que não existem","Gerar variações de texto para teste A/B a partir do criativo real e da oferta real","Criar um “antes e depois” sintético"],"a":2,"e":"Variar o texto mantendo imagens, oferta e preço reais acelera testes sem enganar o consumidor. As outras opções configuram publicidade enganosa."},
+      {"q":"Você terminou o vídeo em metade do tempo graças à IA. Como fica o preço?","o":["Cobra metade, já que levou metade do tempo","Cobra pelo resultado e pela experiência, e usa o tempo ganho para entregar mais valor","Não cobra a edição, só a gravação","Esconde do cliente que usou IA para cobrar mais"],"a":1,"e":"O cliente paga pelo resultado e pelo seu critério. Entregar mais rápido aumenta seu valor; transparência sobre o processo é a melhor prática."},
+      {"q":"Sobre clonar a voz de um locutor conhecido para narrar um comercial, o correto é:","o":["Pode, se a voz for apenas parecida","Pode, se o vídeo for pequeno e local","Não fazer: sem autorização expressa e escrita é uso indevido, e o caminho respeitoso é contratar o profissional","Pode, desde que coloque o rótulo de IA"],"a":2,"e":"Voz é protegida como direito da personalidade. Rotular não autoriza o uso. Se o projeto precisa de locução, contrate um locutor."}
+    ]</script></div>
+  </article>
+</main>
+
+<script>
+(function(){
+  /* ---------- Botões "Copiar" dos prompts ---------- */
+  document.querySelectorAll('.prompt-box').forEach(function(box){
+    var btn = box.querySelector('.copy-btn');
+    var pre = box.querySelector('pre.prompt');
+    if(!btn || !pre) return;
+    btn.addEventListener('click', function(){
+      var txt = pre.innerText;
+      function ok(){ btn.textContent = 'Copiado ✓'; btn.classList.add('ok'); setTimeout(function(){ btn.textContent = 'Copiar'; btn.classList.remove('ok'); }, 1800); }
+      function fallback(){
+        var ta = document.createElement('textarea'); ta.value = txt; ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.select();
+        try { document.execCommand('copy'); ok(); } catch(e) { btn.textContent = 'Selecione e copie'; }
+        document.body.removeChild(ta);
+      }
+      if(navigator.clipboard && window.isSecureContext){ navigator.clipboard.writeText(txt).then(ok, fallback); } else { fallback(); }
+    });
+  });
+
+  /* ---------- Mapa de delegação ---------- */
+  var N = {h:['h','Fazer você'], r:['r','IA rascunha + você revisa'], e:['e','IA executa + você confere']};
+  var T = [
+    {t:'Ter a ideia do vídeo', n:'h', f:'Caderno, conversa com o cliente; um chat de IA só para “discutir” a ideia que já é sua', s:'0% (não delegue)', c:'A ideia nasce de você e do cliente. Se pedir opinião à IA, decida sozinho o que aproveitar.'},
+    {t:'Escrever o roteiro', n:'h', f:'Você escreve; depois a IA aponta repetições e frases longas (Prompt 2)', s:'10–20% (só na revisão)', c:'O texto é seu. Aceite ou recuse cada sugestão de forma consciente.'},
+    {t:'Criar ganchos alternativos', n:'r', f:'Assistente de chat com o seu roteiro (Prompt 1)', s:'40–60%', c:'Escolher o gancho que combina com o cliente e não promete o que o vídeo não entrega.'},
+    {t:'Gravar e dirigir', n:'h', f:'Celular, tripé, microfone, luz e a sua conversa com quem está em cena', s:'0% (não delegue)', c:'Presença, direção e imagens reais. Nenhuma ferramenta substitui o set.'},
+    {t:'Transcrever o bruto', n:'e', f:'Whisper via Subtitle Edit (grátis, local), transcrição do editor (varia por plano)', s:'80–90%', c:'Conferir nomes, números e trechos marcados como duvidosos.'},
+    {t:'Cortar silêncios e “ééé”', n:'e', f:'CapCut, Descript, Premiere ou plugins de corte automático', s:'70–85%', c:'Assistir ao resultado e devolver pausas que dão respiro, humor ou emoção.'},
+    {t:'Reenquadrar 16:9 para 9:16', n:'e', f:'CapCut, Premiere (Auto Reframe), Resolve Studio (Smart Reframe)', s:'60–80%', c:'Corrigir trechos em que produto, mão ou texto saíram da tela.'},
+    {t:'Limpar ruído do áudio', n:'e', f:'Adobe Podcast Enhance (grátis com limite), Audacity, Resolve Studio (Voice Isolation)', s:'60–80%', c:'Ouvir com fone e reduzir a intensidade se a voz ficar metálica.'},
+    {t:'Gerar legendas do vídeo', n:'e', f:'CapCut (limitado no grátis), YouTube Studio, Subtitle Edit + Whisper (Prompt 6 para revisar)', s:'70–85%', c:'Ler tudo ouvindo: nomes próprios, preço, endereço, quebra de linha.'},
+    {t:'Escrever legenda do post', n:'r', f:'Assistente de chat com as suas notas e legendas antigas (Prompt 7)', s:'40–60%', c:'Reescrever com a sua voz, cortar clichês e checar cada fato.'},
+    {t:'Descrição do YouTube com capítulos', n:'r', f:'Assistente de chat com a transcrição com tempos (Prompt 9)', s:'60–75%', c:'Conferir se os tempos batem com o vídeo e se os títulos são fiéis.'},
+    {t:'Variações de texto de anúncio', n:'r', f:'Assistente de chat (Prompt 11), recursos do Advantage+ e do Symphony', s:'50–70%', c:'Garantir oferta, preço e condições reais; escolher o que vai ao ar.'},
+    {t:'Agendar publicações', n:'e', f:'Meta Business Suite, YouTube Studio, TikTok Studio (web)', s:'50–70%', c:'Conferir data, hora, capa e legenda de cada post agendado.'},
+    {t:'Analisar métricas do mês', n:'r', f:'Painéis nativos + assistente de chat com os dados exportados (Prompt 13)', s:'40–60%', c:'Trazer o contexto (clima, feriado, promoção) e decidir os próximos passos.'},
+    {t:'Aprovar o vídeo final', n:'h', f:'Seus olhos, seus ouvidos e o cliente', s:'0% (não delegue)', c:'Assistir do começo ao fim, no celular, com e sem som. A responsabilidade é sua.'}
+  ];
+  var sel = document.getElementById('md-tarefa'), out = document.getElementById('md-out');
+  if(!sel || !out) return;
+  T.forEach(function(x, i){ var o = document.createElement('option'); o.value = i; o.textContent = x.t; sel.appendChild(o); });
+  function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
+  function render(){
+    var x = T[+sel.value], n = N[x.n];
+    out.innerHTML = '<span class="deleg-badge ' + n[0] + '">' + n[1] + '</span>' +
+      '<p><b style="font-size:18px">' + esc(x.t) + '</b></p>' +
+      '<p>🧰 <strong>Ferramentas sugeridas:</strong> ' + esc(x.f) + '</p>' +
+      '<p>⏱️ <strong>Tempo economizado (ilustrativo):</strong> ' + esc(x.s) + '</p>' +
+      '<p>🧑‍⚖️ <strong>Ponto de controle humano:</strong> ' + esc(x.c) + '</p>';
+  }
+  sel.addEventListener('change', render);
+  render();
+})();
+</script>
+<script src="assets/guia.js"></script>
+</body>
+</html>

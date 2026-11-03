@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Módulo 06: Edição | Guia Audiovisual com Pouco Recurso</title>
+<meta name="description" content="Fluxo de edição, cortes, ritmo, legendas, som, cor e exportação, com tutorial de CapCut no celular e DaVinci Resolve grátis no PC.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/guia.css">
+</head>
+<body data-page="06-edicao">
+<main class="content">
+  <header class="mod-hero" data-num="06">
+    <div class="crumb"><a href="index.html">Guia</a> › Módulo 06</div>
+    <h1>Edição</h1>
+    <p>Onde o vídeo nasce pela segunda vez: organização, cortes, ritmo, legendas, som, cor e exportação, com apps gratuitos.</p>
+    <div class="meta"><span>⏱️ 30 min de leitura</span><span>🎯 Nível: iniciante a intermediário</span><span>📱 Celular ou PC</span></div>
+  </header>
+
+  <article>
+    <p class="lead">Existe um ditado antigo no cinema: um filme é escrito três vezes. Uma no roteiro, outra na filmagem e a última na edição. É na ilha de edição (que hoje pode ser a tela do seu celular) que você decide o que fica, o que sai, em que ordem, com qual ritmo e com qual som. Um material mediano bem editado vira um bom vídeo. Um material ótimo mal editado vira um vídeo chato. A boa notícia: editar bem depende muito mais de entender os porquês do que de ter um computador caro.</p>
+
+    <div class="objetivos">
+      <h3>Neste módulo você vai aprender</h3>
+      <ul>
+        <li>Um fluxo de edição profissional, da organização dos arquivos à exportação.</li>
+        <li>Quais ferramentas gratuitas usar (CapCut, DaVinci Resolve, VN, InShot, Canva, Lightroom, Audacity) e o que mudou nos planos grátis.</li>
+        <li>Os tipos de corte: seco, jump cut, J-cut, L-cut, match cut, inserto e quando evitar transições.</li>
+        <li>Ritmo: cortar na ação, cortar na batida e manter a atenção sem cansar.</li>
+        <li>Legendas legíveis, música, efeitos sonoros, ducking e direitos autorais.</li>
+        <li>Correção e tratamento de cor: balanço de branco, exposição, saturação, LUTs e tom de pele.</li>
+        <li>Passo a passo completo no CapCut e um mini tutorial do DaVinci Resolve grátis, com atalhos.</li>
+        <li>As configurações de exportação certas para Reels, TikTok, Shorts e YouTube.</li>
+      </ul>
+    </div>
+
+    <h2 id="fluxo"><span class="num">1</span>O fluxo de edição: uma linha de montagem</h2>
+    <p>Iniciante abre o editor e começa a colocar música, efeito e texto ao mesmo tempo. Uma hora depois, está perdido. Profissionais trabalham em <strong>etapas</strong>, do grosso para o fino, como um escultor que primeiro tira os pedaços grandes de pedra e só no final faz os detalhes. Cada etapa tem uma pergunta própria.</p>
+
+    <figure>
+      <svg viewBox="0 0 860 300" role="img" aria-label="Fluxo de edição em oito etapas, em duas fileiras: organizar e fazer backup, corte bruto, corte fino, som, cor, legendas e textos, revisão e exportação.">
+        <rect width="860" height="300" rx="12" fill="#faf8fd"/>
+        <defs><marker id="sf" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#8612d5"/></marker></defs>
+        <g font-family="Poppins, sans-serif" font-weight="700" text-anchor="middle">
+          <rect x="30" y="40" width="170" height="90" rx="14" fill="#ffb020"/><text x="115" y="78" font-size="16" fill="#16121d">1. Organizar</text><text x="115" y="100" font-size="12" font-family="Inter, sans-serif" font-weight="500" fill="#16121d">pastas, nomes, backup</text>
+          <rect x="235" y="40" width="170" height="90" rx="14" fill="#8612d5"/><text x="320" y="78" font-size="16" fill="#fff">2. Corte bruto</text><text x="320" y="100" font-size="12" font-family="Inter, sans-serif" font-weight="500" fill="#fff">ordem e história</text>
+          <rect x="440" y="40" width="170" height="90" rx="14" fill="#8612d5"/><text x="525" y="78" font-size="16" fill="#fff">3. Corte fino</text><text x="525" y="100" font-size="12" font-family="Inter, sans-serif" font-weight="500" fill="#fff">ritmo, frame a frame</text>
+          <rect x="645" y="40" width="170" height="90" rx="14" fill="#16121d"/><text x="730" y="78" font-size="16" fill="#fff">4. Som</text><text x="730" y="100" font-size="12" font-family="Inter, sans-serif" font-weight="500" fill="#fff">voz, música, efeitos</text>
+          <rect x="645" y="175" width="170" height="90" rx="14" fill="#16121d"/><text x="730" y="213" font-size="16" fill="#fff">5. Cor</text><text x="730" y="235" font-size="12" font-family="Inter, sans-serif" font-weight="500" fill="#fff">correção e estilo</text>
+          <rect x="440" y="175" width="170" height="90" rx="14" fill="#f3e9fc" stroke="#8612d5" stroke-width="2"/><text x="525" y="213" font-size="16" fill="#5a0b91">6. Legendas</text><text x="525" y="235" font-size="12" font-family="Inter, sans-serif" font-weight="500" fill="#5a0b91">textos e gráficos</text>
+          <rect x="235" y="175" width="170" height="90" rx="14" fill="#f3e9fc" stroke="#8612d5" stroke-width="2"/><text x="320" y="213" font-size="16" fill="#5a0b91">7. Revisão</text><text x="320" y="235" font-size="12" font-family="Inter, sans-serif" font-weight="500" fill="#5a0b91">ver no celular, sem som</text>
+          <rect x="30" y="175" width="170" height="90" rx="14" fill="#70cf97"/><text x="115" y="213" font-size="16" fill="#10251a">8. Exportar</text><text x="115" y="235" font-size="12" font-family="Inter, sans-serif" font-weight="500" fill="#10251a">formato da plataforma</text>
+        </g>
+        <g stroke="#8612d5" stroke-width="3" fill="none" marker-end="url(#sf)">
+          <line x1="202" y1="85" x2="231" y2="85"/><line x1="407" y1="85" x2="436" y2="85"/><line x1="612" y1="85" x2="641" y2="85"/>
+          <line x1="730" y1="132" x2="730" y2="171"/>
+          <line x1="643" y1="220" x2="614" y2="220"/><line x1="438" y1="220" x2="409" y2="220"/><line x1="233" y1="220" x2="204" y2="220"/>
+        </g>
+        <text x="430" y="290" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#6f6880">Do grosso para o fino: não ajuste cor de um plano que talvez nem entre no vídeo.</text>
+      </svg>
+      <figcaption>O fluxo de edição em oito etapas. Pular para a cor ou para os efeitos antes de fechar a história é desperdício de tempo.</figcaption>
+    </figure>
+
+    <h3>1. Organizar e fazer backup</h3>
+    <p>Crie uma pasta por projeto com um nome padrão, por exemplo <code>2026-11-05_PadariaPaoDeCadaDia_Reel-pao-de-queijo</code>. Dentro dela, subpastas: <code>01_video</code>, <code>02_audio</code>, <code>03_musica</code>, <code>04_graficos</code>, <code>05_exportados</code>. Data no começo, no formato ano-mês-dia, faz as pastas ficarem em ordem cronológica automaticamente.</p>
+    <p>E <strong>backup antes de editar</strong>. A regra clássica é a <strong>3-2-1</strong>: três cópias, em dois tipos de mídia diferentes, uma delas fora do local (nuvem, por exemplo). Para quem tem pouco recurso: uma cópia no celular, uma no computador ou HD externo e uma na nuvem (Google Drive, OneDrive etc.). Em trabalhos de evento, <strong>nunca apague o cartão ou a galeria antes de ter duas cópias</strong>. Casamento não se regrava.</p>
+
+    <h3>2. Corte bruto (rough cut)</h3>
+    <p>Assista a todo o material e coloque na linha do tempo só os melhores trechos, na ordem da história. Sem se preocupar com precisão. A pergunta é: <strong>a história funciona?</strong> Se o vídeo tem fala, comece montando a fala (ela é a espinha), depois cubra com B-roll.</p>
+
+    <h3>3. Corte fino (fine cut)</h3>
+    <p>Agora sim, frame a frame: tire respirações longas, “ééé”, pausas mortas, repetições. Ajuste o ponto exato de cada corte. A pergunta é: <strong>tem algum segundo sobrando?</strong> Quase sempre tem.</p>
+
+    <h3>4 a 8. Som, cor, legendas, revisão e exportação</h3>
+    <p>Com a montagem travada, você trata o som (seção 6), a cor (seção 7), coloca legendas e textos (seção 5), revisa e exporta (seção 10). Na revisão, assista <strong>no celular, como o público vai assistir</strong>, uma vez com som e outra sem som. E, se possível, deixe descansar algumas horas: olhos frescos enxergam erros que olhos cansados não veem.</p>
+
+    <div class="callout nerd"><strong>Curiosidade nerd: a “regra dos seis” de Walter Murch</strong><p>O montador <strong>Walter Murch</strong> (de <em>Apocalypse Now</em> e <em>O Poderoso Chefão II</em>) propôs, no livro <em>Num Piscar de Olhos</em>, uma lista de prioridades para decidir um corte, com pesos: <strong>emoção</strong> (51%), <strong>história</strong> (23%), <strong>ritmo</strong> (10%), direção do olhar (7%), plano bidimensional da tela (5%) e espaço tridimensional (4%). Ou seja: se um corte é emocionalmente certo, ele pode quebrar regras técnicas. Murch também observou que piscamos em momentos de “pontuação” do pensamento, e que bons cortes parecem acontecer nesses mesmos lugares. Daí o nome do livro.</p></div>
+
+    <h2 id="ferramentas"><span class="num">2</span>Ferramentas gratuitas: o que usar em 2026</h2>
+    <p>Não existe “melhor editor”, existe o melhor para o seu aparelho, seu tempo e seu tipo de vídeo. Uma observação importante antes da tabela: <strong>aplicativos mudam de plano o tempo todo</strong>. Recursos que eram grátis viram pagos (e às vezes o contrário). Os dados abaixo são uma referência de novembro de 2026; confira sempre dentro do app.</p>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>Ferramenta</th><th>Onde roda</th><th>O que o grátis oferece</th><th>Limitações / pago</th><th>Melhor para</th></tr></thead>
+      <tbody>
+        <tr><td><strong>CapCut</strong></td><td>Android, iPhone, Windows, Mac, navegador</td><td>Linha do tempo com várias camadas, cortes, textos, músicas, filtros, velocidade, exportação em 1080p</td><td>Desde 2025, vários recursos que eram grátis passaram para o plano Pro, e os preços das assinaturas subiram em vários países. Exportação em 4K, muitos efeitos, modelos e ferramentas de IA (e, conforme versão e plataforma, até as legendas automáticas) podem exigir assinatura. Projetos com itens Pro não exportam sem assinar</td><td>Reels e TikTok rápidos no celular</td></tr>
+        <tr><td><strong>DaVinci Resolve (gratuito)</strong></td><td>Windows, Mac, Linux</td><td>Editor profissional completo: edição, cor (referência na indústria), áudio (Fairlight), efeitos (Fusion), exportação até 4K UHD a 60 fps</td><td>Versão Studio é paga (licença única, cerca de US$ 295 como referência) e libera resoluções maiores, redução de ruído, várias ferramentas de IA e mais aceleração por hardware. Exige computador razoável</td><td>Vídeos de YouTube, eventos, institucionais, cor caprichada</td></tr>
+        <tr><td><strong>VN</strong></td><td>Android, iPhone, Mac</td><td>Linha do tempo com várias trilhas, keyframes, curvas de velocidade, exporta sem marca d’água</td><td>Assinatura VN Pro libera recursos extras (preço varia por região)</td><td>Quem quer um editor de celular mais “de computador”</td></tr>
+        <tr><td><strong>InShot</strong></td><td>Android, iPhone</td><td>Cortes simples, música, textos, mudança de proporção</td><td>No grátis, exporta com marca d’água e exibe anúncios; o Pro remove</td><td>Edições muito simples e rápidas</td></tr>
+        <tr><td><strong>Canva</strong></td><td>Navegador, celular, desktop</td><td>Editor de vídeo com modelos, textos animados, exportação em 1080p</td><td>Muitos elementos e modelos são Pro; 4K e algumas ferramentas exigem assinatura</td><td>Vídeos com muito texto e design, cartazes animados, peças para Stories</td></tr>
+        <tr><td><strong>Lightroom Mobile</strong></td><td>Android, iPhone</td><td>Edição de fotos: luz, cor, curvas, predefinições (também edita vídeo curto)</td><td>Recursos avançados (várias ferramentas de IA e máscaras mais completas) ficam na assinatura</td><td>Fotos de capa, thumbnails, padronizar cores de fotos</td></tr>
+        <tr><td><strong>Audacity</strong></td><td>Windows, Mac, Linux</td><td>Editor de áudio livre e gratuito: cortar, normalizar, reduzir ruído, compressor</td><td>Não edita vídeo</td><td>Limpar locuções e podcasts</td></tr>
+      </tbody>
+    </table></div>
+    <p>Links oficiais: <a href="https://www.capcut.com/" target="_blank" rel="noopener">CapCut</a> · <a href="https://www.blackmagicdesign.com/products/davinciresolve" target="_blank" rel="noopener">DaVinci Resolve</a> · <a href="https://www.canva.com/" target="_blank" rel="noopener">Canva</a> · <a href="https://www.audacityteam.org/" target="_blank" rel="noopener">Audacity</a>.</p>
+
+    <div class="callout warn"><strong>Erro comum</strong><p>Baixar versões “Pro desbloqueadas” (APK modificado) de aplicativos de edição. Além de ser pirataria, esses arquivos são um caminho conhecido para vírus, roubo de contas e de dados bancários. Se o seu celular é a sua ferramenta de trabalho, não arrisque. Os planos gratuitos, bem usados, são suficientes para começar.</p></div>
+
+    <div class="callout tip"><strong>Dica de ouro: evite usar recurso pago sem perceber</strong><p>No CapCut, itens Pro costumam ter um selo ou ícone indicando que são pagos. Se você usar um efeito ou modelo Pro e só descobrir na hora de exportar, vai ter que refazer partes do vídeo. Antes de começar, aprenda a reconhecer esse selo e prefira efeitos sem ele.</p></div>
+
+    <h3>Celular ou computador?</h3>
+    <p>Para Reels, Stories e TikTok, o celular resolve muito bem, e é mais rápido. Para vídeos longos, eventos (com horas de material) e cor mais cuidadosa, o computador ganha: tela maior, mouse, teclado com atalhos, mais armazenamento. O DaVinci Resolve pede uma máquina razoável; como ponto de partida, pense em 16 GB de RAM e, se possível, uma placa de vídeo dedicada (confira os requisitos no site oficial).</p>
+
+    <h2 id="cortes"><span class="num">3</span>Técnicas de corte: o vocabulário do editor</h2>
+    <p>Cortar parece simples: termina um plano, começa outro. Mas <strong>onde</strong> e <strong>como</strong> você corta muda completamente a sensação do vídeo.</p>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>Corte</th><th>O que é</th><th>Quando usar</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Corte seco</strong></td><td>Um plano termina e o outro começa, sem transição</td><td>Na grande maioria dos casos. É o padrão do cinema e das redes</td></tr>
+        <tr><td><strong>Jump cut</strong></td><td>Corte entre dois trechos do mesmo plano, com a pessoa “pulando” levemente</td><td>Vídeos de fala para remover pausas e erros; dá energia e velocidade</td></tr>
+        <tr><td><strong>J-cut</strong></td><td>O som do próximo plano começa antes da imagem dele</td><td>Entrar numa cena de forma suave; o som “puxa” o espectador</td></tr>
+        <tr><td><strong>L-cut</strong></td><td>A imagem muda, mas o som do plano anterior continua</td><td>Mostrar B-roll enquanto a pessoa continua falando; reações em entrevistas</td></tr>
+        <tr><td><strong>Match cut</strong></td><td>Une dois planos por semelhança de forma, movimento ou cor</td><td>Transições criativas sem efeito: massa girando → bolo girando</td></tr>
+        <tr><td><strong>Inserto / cutaway</strong></td><td>Corte rápido para um detalhe ou outro assunto e volta</td><td>Esconder um corte na fala, mostrar o que está sendo dito</td></tr>
+        <tr><td><strong>Corte na ação</strong></td><td>Corta no meio de um movimento e continua no outro plano</td><td>Deixar a mudança de plano quase invisível (seção 4)</td></tr>
+        <tr><td><strong>Fusão (cross-dissolve)</strong></td><td>Uma imagem desaparece enquanto a outra aparece</td><td>Passagem de tempo, clima nostálgico, finais. Com moderação</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="callout nerd"><strong>Curiosidade nerd: o primeiro “efeito especial” foi uma câmera travada</strong><p>Conta-se que em 1896, filmando uma praça em Paris, a câmera do ilusionista <strong>Georges Méliès</strong> travou por alguns instantes. Quando ele projetou o filme, um ônibus parecia se transformar num carro funerário, porque um veículo tinha ocupado o lugar do outro durante a pausa. Méliès percebeu que, ao parar e recomeçar a filmagem, podia fazer coisas aparecerem e desaparecerem. Esse “truque de parada” é, no fundo, um corte. A mesma ideia está nas transições de Reels em que a pessoa troca de roupa num estalar de dedos.</p></div>
+
+    <h3>J-cut e L-cut: os cortes que você sente, mas não vê</h3>
+    <p>Na vida real, quase sempre ouvimos algo antes de olhar para lá: alguém chama seu nome e só depois você vira a cabeça. O J-cut imita isso. O L-cut faz o contrário: você continua ouvindo alguém enquanto olha para outra coisa. Esses cortes deixam a edição fluida e são a base de entrevistas e documentários.</p>
+
+    <figure>
+      <svg viewBox="0 0 860 300" role="img" aria-label="Duas linhas do tempo. No J-cut, o áudio do plano B começa antes do vídeo do plano B, formando um J. No L-cut, o vídeo muda para o plano B mas o áudio do plano A continua por baixo, formando um L.">
+        <rect width="860" height="300" rx="12" fill="#faf8fd"/>
+        <g font-family="Poppins, sans-serif" font-weight="700">
+          <text x="30" y="40" font-size="17" fill="#16121d">J-cut</text>
+          <text x="450" y="40" font-size="17" fill="#16121d">L-cut</text>
+        </g>
+        <g font-family="Inter, sans-serif" font-size="12" fill="#6f6880">
+          <text x="30" y="88">vídeo</text><text x="30" y="138">áudio</text>
+          <text x="450" y="88">vídeo</text><text x="450" y="138">áudio</text>
+        </g>
+        <g stroke="#ffb020" stroke-width="3" stroke-dasharray="6 4">
+          <line x1="251" y1="54" x2="251" y2="160"/><line x1="191" y1="54" x2="191" y2="160"/>
+          <line x1="651" y1="54" x2="651" y2="160"/><line x1="731" y1="54" x2="731" y2="160"/>
+        </g>
+        <g font-family="Poppins, sans-serif" font-size="13" font-weight="700" text-anchor="middle">
+          <!-- J -->
+          <rect x="80" y="64" width="170" height="36" rx="6" fill="#8612d5"/><text x="165" y="87" fill="#fff">Vídeo A</text>
+          <rect x="252" y="64" width="150" height="36" rx="6" fill="#70cf97"/><text x="327" y="87" fill="#10251a">Vídeo B</text>
+          <rect x="80" y="114" width="110" height="36" rx="6" fill="#c9a6ee"/><text x="135" y="137" fill="#16121d">Áudio A</text>
+          <rect x="192" y="114" width="210" height="36" rx="6" fill="#bfe9d0"/><text x="297" y="137" fill="#10251a">Áudio B (entra antes)</text>
+          <!-- L -->
+          <rect x="500" y="64" width="150" height="36" rx="6" fill="#8612d5"/><text x="575" y="87" fill="#fff">Vídeo A</text>
+          <rect x="652" y="64" width="170" height="36" rx="6" fill="#70cf97"/><text x="737" y="87" fill="#10251a">Vídeo B (B-roll)</text>
+          <rect x="500" y="114" width="230" height="36" rx="6" fill="#c9a6ee"/><text x="615" y="137" fill="#16121d">Áudio A (continua)</text>
+          <rect x="732" y="114" width="90" height="36" rx="6" fill="#bfe9d0"/><text x="777" y="137" fill="#10251a">Áudio B</text>
+        </g>
+        
+        <path d="M191,170 L251,170" stroke="#16121d" stroke-width="2"/>
+        <path d="M651,170 L731,170" stroke="#16121d" stroke-width="2"/>
+        <g font-family="Inter, sans-serif" font-size="13.5" fill="#16121d">
+          <text x="80" y="200">O som do próximo plano chega primeiro.</text>
+          <text x="80" y="220">Ex.: ouvimos o sino da igreja e só depois</text>
+          <text x="80" y="240">vemos a fachada.</text>
+          <text x="500" y="200">A imagem muda, a voz continua.</text>
+          <text x="500" y="220">Ex.: a dona fala da receita e vemos as mãos</text>
+          <text x="500" y="240">dela fazendo a massa.</text>
+        </g>
+        <text x="430" y="282" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#6f6880">Na linha do tempo, o desenho dos clipes lembra as letras J e L, daí os nomes.</text>
+      </svg>
+      <figcaption>J-cut (o som chega antes) e L-cut (o som fica depois). No CapCut, desvincule ou separe o áudio do clipe para fazer isso; no DaVinci, use o modo de seleção com o vínculo desligado.</figcaption>
+    </figure>
+
+    <h3>Jump cut: de “erro” a linguagem</h3>
+    <p>Durante décadas, cortar dentro do mesmo plano era considerado erro, porque a pessoa “pula” na tela. Hoje é a marca registrada dos vídeos de fala na internet: corta-se cada pausa e cada tropeço, e o vídeo fica ágil. Para suavizar o pulo, alterne entre o plano normal e um <strong>zoom de 10% a 20%</strong> na edição a cada corte (se gravou em 4K, praticamente não há perda de qualidade num vídeo final em 1080p).</p>
+
+    <div class="callout nerd"><strong>Curiosidade nerd: o jump cut que virou manifesto</strong><p>O jump cut ficou famoso no cinema com <em>Acossado</em> (<em>À bout de souffle</em>, 1960), de Jean-Luc Godard, um dos marcos da Nouvelle Vague francesa. Numa cena de Jean Seberg no carro, Godard corta várias vezes dentro do mesmo plano, quebrando as regras de continuidade de propósito. O que era “erro” virou estilo, e sessenta anos depois virou o padrão dos vídeos de fala nas redes.</p></div>
+
+    <h3>Quando evitar transições</h3>
+    <p>Os editores de celular oferecem dezenas de transições: giros, cubos, brilhos, “glitches”. A tentação é usar todas. Resista. <strong>Transição chamativa chama atenção para a edição, não para o conteúdo</strong>. No cinema, a imensa maioria das mudanças de plano é feita com cortes secos. Use transições quando elas tiverem significado: fusão para passagem de tempo, um “whoosh” com movimento de câmera rápido (whip pan) para mudar de lugar, um fade para preto no final.</p>
+
+    <div class="compare">
+      <div class="bad"><h4>Evite</h4><ul>
+        <li>Uma transição diferente a cada corte</li>
+        <li>Fusão entre planos parecidos (vira “borrão”)</li>
+        <li>Deixar pausas, “ééé” e respirações longas</li>
+        <li>Cortar um plano no meio de uma palavra</li>
+        <li>Música alta brigando com a fala</li>
+      </ul></div>
+      <div class="good"><h4>Faça</h4><ul>
+        <li>Cortes secos na maior parte do vídeo</li>
+        <li>Match cuts e cortes na ação como “transições invisíveis”</li>
+        <li>Jump cuts com zoom alternado em vídeos de fala</li>
+        <li>J-cuts e L-cuts para suavizar entradas e saídas</li>
+        <li>Ducking: música abaixa quando alguém fala</li>
+      </ul></div>
+    </div>
+
+    <h2 id="ritmo"><span class="num">4</span>Ritmo: a música invisível da edição</h2>
+    <p>Ritmo é a sensação de velocidade de um vídeo, e ele vem principalmente da <strong>duração dos planos</strong>. Planos curtos, cortes rápidos: energia, urgência, diversão. Planos longos: calma, contemplação, emoção. Um vídeo bom <strong>varia</strong> o ritmo, como uma música que tem verso e refrão.</p>
+
+    <h3>Cortar na ação</h3>
+    <p>Se você corta no meio de um movimento (a pessoa começa a sentar no plano aberto e termina de sentar no close), o olho acompanha o movimento e “não vê” o corte. É a técnica mais importante para cortes invisíveis. Por isso, na gravação, peça para a pessoa repetir a ação em cada plano (lembra da sequência de 5 planos do <a href="04-linguagem.html">Módulo 04</a>?).</p>
+
+    <h3>Cortar na batida</h3>
+    <p>Em vídeos com música, cortar na batida dá uma sensação satisfatória de “encaixe”. Mas cortar em <strong>todas</strong> as batidas cansa. Alterne: corte nas batidas fortes, segure um plano por duas ou quatro batidas, acelere no refrão. No CapCut e em outros editores, existe a função de <strong>marcar batidas</strong> (manual ou automática) na faixa de música, que cria marquinhas na linha do tempo para guiar seus cortes.</p>
+
+    <h3>Edição de retenção: quebras de padrão</h3>
+    <p>Nas redes, o espectador decide a cada segundo se continua. A edição “de retenção” usa <strong>quebras de padrão</strong>: pequenas mudanças a cada poucos segundos que renovam o interesse. Exemplos:</p>
+    <ul>
+      <li>Mudar o enquadramento (zoom in, zoom out, outro ângulo).</li>
+      <li>Inserir B-roll, um print, um texto na tela ou um gráfico simples.</li>
+      <li>Um efeito sonoro pontual (um “pop” quando o texto aparece).</li>
+      <li>Mudança de cenário ou de luz.</li>
+      <li>Uma pergunta direta para a câmera.</li>
+    </ul>
+    <p>Uma referência comum é algo novo acontecendo a cada <strong>2 a 5 segundos</strong> em vídeos curtos. Mas atenção: isso não é lei. Um vídeo emocionante de casamento com cortes a cada 2 segundos fica estressante. O ritmo serve à emoção, lembra da regra de Murch?</p>
+
+    <div class="callout tip"><strong>Dica de ouro: o teste da tela do celular</strong><p>Assista ao seu vídeo no celular, em tela cheia, como um desconhecido. No primeiro momento em que você sentir vontade de rolar para o próximo, pare: é ali que tem um problema de ritmo. Corte, encurte ou adicione uma quebra de padrão naquele ponto.</p></div>
+
+    <div class="callout pratica"><strong>Na prática</strong><p>Pegue o vídeo de 15 segundos que você montou no exercício do Módulo 04. Faça duas versões: uma com cortes a cada 1 segundo, no ritmo de uma música animada, e outra com planos de 3 a 4 segundos e uma música calma. Mostre as duas para alguém e pergunte qual sensação cada uma passa. Você vai perceber que é o mesmo material contando histórias diferentes.</p></div>
+
+    <h2 id="legendas"><span class="num">5</span>Legendas: quem assiste sem som também é seu público</h2>
+    <p>Muita gente assiste a vídeos sem som: no ônibus, no trabalho, na fila do banco, na cama com alguém dormindo ao lado. Sem legenda, você perde essa pessoa. Além disso, legendas tornam o vídeo <strong>acessível</strong> a pessoas surdas ou com deficiência auditiva, e ajudam quem tem dificuldade com sotaques ou com áudio ruim.</p>
+
+    <h3>Legendas automáticas: use, mas revise</h3>
+    <p>CapCut, Instagram, TikTok, YouTube e outros oferecem geração automática de legendas a partir da fala. Elas economizam muito tempo, mas <strong>sempre erram</strong>: nomes próprios, gírias, nomes de cidades (“Ariquemes” pode virar qualquer coisa), números e termos técnicos. Revise palavra por palavra. Legenda errada passa descuido. Lembre também que, dependendo da versão e da plataforma, as legendas automáticas do CapCut podem estar limitadas no plano grátis; as dos próprios apps (Instagram, TikTok, YouTube) são alternativas sem custo.</p>
+
+    <h3>Regras de legibilidade</h3>
+    <ul>
+      <li><strong>Fonte sem serifa, grossa</strong> (como Poppins, Montserrat, Inter em peso semi-negrito ou negrito).</li>
+      <li><strong>Contraste:</strong> texto branco com contorno ou sombra escura, ou texto sobre uma caixa de fundo semitransparente.</li>
+      <li><strong>Tamanho:</strong> grande o suficiente para ler no celular sem esforço, mas sem cobrir o rosto.</li>
+      <li><strong>Poucas palavras por vez:</strong> de 1 a 3 linhas curtas; em vídeo vertical, blocos de 2 a 6 palavras funcionam bem.</li>
+      <li><strong>Posição:</strong> dentro da zona segura (veja o <a href="04-linguagem.html#vertical">Módulo 04</a>), geralmente um pouco abaixo do centro, longe da legenda do post e dos botões.</li>
+      <li><strong>Destaque com moderação:</strong> pintar uma palavra-chave de outra cor ajuda; pintar todas, atrapalha.</li>
+      <li><strong>Tempo de leitura:</strong> a legenda precisa ficar na tela tempo suficiente para ser lida. Se ela some antes de você terminar de ler, está rápida demais.</li>
+    </ul>
+
+    <div class="callout warn"><strong>Erro comum</strong><p>Legenda animada com cada palavra pulando, girando e mudando de cor. Pode parecer divertido, mas cansa e disputa atenção com o rosto. Escolha um estilo limpo e mantenha o mesmo em todos os vídeos: vira parte da identidade visual do perfil.</p></div>
+
+    <h2 id="som"><span class="num">6</span>Música e desenho de som</h2>
+    <p>O público perdoa imagem mais ou menos, mas não perdoa som ruim. E o som não é só a voz: é a música, os efeitos, o ambiente. Juntos, eles formam o <strong>desenho de som</strong> (sound design), responsável por boa parte da emoção do vídeo.</p>
+
+    <h3>As camadas do som</h3>
+    <div class="cards">
+      <div class="card"><div class="ic">🗣️</div><h4>Voz</h4><p>A camada mais importante. Precisa estar clara e sempre acima das outras. Limpe ruídos e equalize volumes entre os trechos.</p></div>
+      <div class="card"><div class="ic">🎵</div><h4>Música</h4><p>Define o clima. Escolha pela emoção, não só porque está em alta. Fica por baixo da voz.</p></div>
+      <div class="card"><div class="ic">💥</div><h4>Efeitos (SFX)</h4><p>Whoosh em transições, “pop” em textos, clique, notificação. Pontuam e dão acabamento.</p></div>
+      <div class="card"><div class="ic">🌳</div><h4>Ambiente</h4><p>Passarinhos, rua, conversa de fundo, cozinha. Deixa a cena “viva” e disfarça cortes no áudio.</p></div>
+    </div>
+
+    <h3>Ducking: a música que sabe a hora de baixar</h3>
+    <p><strong>Ducking</strong> é abaixar automaticamente (ou manualmente) o volume da música quando alguém fala, e subir de novo nas pausas. É como um garçom educado: some quando você está conversando e volta quando a mesa fica em silêncio. Uma referência prática: música <strong>bem abaixo</strong> da voz durante a fala (algo como 15 a 25 dB abaixo, ajuste no ouvido) e mais alta nos trechos sem fala.</p>
+
+    <figure>
+      <svg viewBox="0 0 860 250" role="img" aria-label="Duas trilhas de áudio. Na trilha de voz aparecem três blocos de fala. Na trilha de música, a linha de volume cai sempre que há fala e sobe nas pausas, ilustrando o ducking.">
+        <rect width="860" height="250" rx="12" fill="#faf8fd"/>
+        <g font-family="Inter, sans-serif" font-size="13" fill="#16121d" font-weight="600"><text x="24" y="68">Voz</text><text x="24" y="170">Música</text></g>
+        <rect x="90" y="40" width="740" height="50" rx="8" fill="#ffffff" stroke="#e8e2f0"/>
+        <rect x="90" y="120" width="740" height="90" rx="8" fill="#ffffff" stroke="#e8e2f0"/>
+        <g fill="#8612d5">
+          <rect x="190" y="46" width="170" height="38" rx="6"/><rect x="420" y="46" width="130" height="38" rx="6"/><rect x="620" y="46" width="120" height="38" rx="6"/>
+        </g>
+        <g font-family="Poppins, sans-serif" font-size="12" font-weight="700" fill="#fff" text-anchor="middle"><text x="275" y="70">fala</text><text x="485" y="70">fala</text><text x="680" y="70">fala</text></g>
+        <path d="M90,135 L175,135 L195,185 L355,185 L375,135 L405,135 L425,185 L545,185 L565,135 L605,135 L625,185 L735,185 L755,135 L830,135" fill="none" stroke="#2f9a5c" stroke-width="4" stroke-linejoin="round"/>
+        <path d="M90,135 L175,135 L195,185 L355,185 L375,135 L405,135 L425,185 L545,185 L565,135 L605,135 L625,185 L735,185 L755,135 L830,135 L830,210 L90,210 Z" fill="#70cf97" opacity="0.25"/>
+        <g font-family="Inter, sans-serif" font-size="12" fill="#2f9a5c"><text x="98" y="128">volume alto</text><text x="250" y="202">música baixa</text></g>
+        <text x="430" y="238" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#6f6880">A música “abre espaço” para a voz e volta a subir nas pausas.</text>
+      </svg>
+      <figcaption>Ducking: a linha verde é o volume da música. Muitos editores fazem isso automaticamente (no CapCut, procure por “redução de volume”/“ducking” nas opções de áudio; no DaVinci, use keyframes de volume ou a função de ducking no Fairlight).</figcaption>
+    </figure>
+
+    <h3>Música e direitos autorais</h3>
+    <p>Música tem dono. No Brasil, a Lei de Direitos Autorais (Lei nº 9.610/1998) protege obras musicais, e as plataformas têm sistemas automáticos que reconhecem músicas protegidas. Usar uma música famosa sem licença pode resultar em vídeo silenciado, bloqueado, monetização direcionada ao dono da música ou até penalidades na conta. Caminhos seguros:</p>
+    <ul>
+      <li><strong>Biblioteca de músicas dentro do próprio app</strong> (Instagram, TikTok): o uso dentro daquela plataforma é coberto pelos acordos dela. Atenção: <strong>contas comerciais</strong> costumam ter acesso a uma biblioteca mais restrita, pensada para uso comercial.</li>
+      <li><strong>Biblioteca de áudio do YouTube Studio</strong>: músicas e efeitos gratuitos para usar nos seus vídeos, respeitando a exigência de crédito de algumas faixas.</li>
+      <li><strong>Bancos de música livres de royalties</strong> confiáveis (gratuitos ou por assinatura). Leia sempre a licença.</li>
+      <li><strong>Música original</strong> de artistas locais, com autorização por escrito. Ótima parceria em cidade pequena!</li>
+    </ul>
+
+    <div class="callout warn"><strong>Erro comum</strong><p>Achar que “dar os créditos” na legenda libera o uso de qualquer música. Não libera. Crédito não é licença. E música exportada do CapCut para o YouTube ou para um cliente pode não ter a mesma permissão que tinha dentro do app; confira os termos da biblioteca antes de usar em trabalho comercial.</p></div>
+
+    <div class="callout nerd"><strong>Curiosidade nerd: o homem que dava nome aos passos</strong><p>Sons de passos, portas e roupas em filmes muitas vezes são gravados depois, em estúdio, por artistas que reproduzem cada som sincronizado com a imagem. Essa arte se chama <strong>foley</strong>, em homenagem a <strong>Jack Foley</strong>, que desenvolveu a técnica nos estúdios Universal no fim dos anos 1920, quando o cinema começou a ter som. Você pode fazer foley caseiro: grave o “crec” de uma torrada para o pão, o som de um saco plástico para fogo, ou amasse amido de milho dentro de um saquinho para imitar passos na neve.</p></div>
+
+    <h2 id="cor"><span class="num">7</span>Cor: correção primeiro, estilo depois</h2>
+    <p>Existem duas etapas diferentes no trabalho de cor, e confundi-las é o erro mais comum:</p>
+    <ul>
+      <li><strong>Correção de cor:</strong> deixar a imagem “certa” e natural. Branco é branco, pele parece pele, nada estourado ou escuro demais, e todos os planos combinam entre si.</li>
+      <li><strong>Tratamento de cor (color grading):</strong> dar um estilo, um clima. Tons quentes para nostalgia, frios para tecnologia, dessaturado para drama.</li>
+    </ul>
+    <p>A ordem importa: <strong>primeiro corrige, depois estiliza</strong>. Aplicar um filtro em cima de uma imagem azulada e escura só deixa o problema mais estiloso.</p>
+
+    <h3>Passo a passo da correção</h3>
+    <ol class="steps">
+      <li><strong>Exposição</strong>Ajuste o brilho geral até o assunto (principalmente o rosto) ficar bem exposto. Cuidado para não estourar as áreas claras (céu, janela, vestido de noiva).</li>
+      <li><strong>Contraste</strong>Dê um pouco de contraste para a imagem não ficar “lavada”. Ajuste realces (claros) e sombras separadamente se o app permitir.</li>
+      <li><strong>Balanço de branco (temperatura e matiz)</strong>Se a imagem está alaranjada (luz de lâmpada quente) ou azulada (sombra, dia nublado), corrija a temperatura até um objeto branco parecer branco. O matiz (tint) corrige o verde/magenta, comum em lâmpadas fluorescentes.</li>
+      <li><strong>Saturação</strong>Ajuste com delicadeza. Muitos apps têm “vibração”, que aumenta as cores fracas e protege as fortes, incluindo o tom de pele. Prefira vibração à saturação.</li>
+      <li><strong>Igualar os planos</strong>Coloque planos lado a lado e compare. O mesmo rosto não pode mudar de cor de um corte para o outro. Copie e cole os ajustes entre clipes parecidos.</li>
+      <li><strong>Estilo (se quiser)</strong>Só agora aplique um filtro, LUT ou ajuste criativo, com intensidade moderada.</li>
+    </ol>
+
+    <h3>Tom de pele: a régua de tudo</h3>
+    <p>O olho humano é extremamente sensível à cor da pele: aceitamos um céu um pouco esverdeado, mas notamos na hora uma pessoa com cara de doente. Por isso, os coloristas usam a pele como referência. No DaVinci Resolve, o <strong>vetorscópio</strong> (um gráfico circular que mostra as cores da imagem) tem uma linha chamada <strong>linha de tom de pele</strong>: peles saudáveis, de qualquer etnia, tendem a ficar próximas dessa linha, variando no brilho, não no matiz. É uma régua objetiva para não depender só do olho (que se cansa e se engana).</p>
+
+    <h3>LUTs: o que são e como usar</h3>
+    <p>LUT (do inglês <em>look-up table</em>, tabela de consulta) é um arquivo que transforma cores de entrada em cores de saída, como uma receita pronta. Existem dois tipos: <strong>LUTs técnicas</strong>, que convertem um perfil de cor (por exemplo, um modo “log” de câmera) para o padrão normal, e <strong>LUTs criativas</strong>, que dão um estilo. Use LUTs criativas <strong>depois</strong> da correção e com a intensidade reduzida (30% a 70% costuma ficar mais natural que 100%).</p>
+
+    <div class="callout nerd"><strong>Curiosidade nerd: o filme que pintou o Mississippi de sépia</strong><p><em>E Aí, Meu Irmão, Cadê Você?</em> (2000), dos irmãos Coen, é considerado o primeiro longa-metragem de Hollywood tratado digitalmente de ponta a ponta. O diretor de fotografia Roger Deakins filmou paisagens verdes do verão americano e, no computador, transformou tudo naquele visual amarelado e empoeirado de época. Hoje, qualquer pessoa com um computador e o DaVinci Resolve gratuito tem acesso a ferramentas daquele tipo, e muito mais. Aliás, o DaVinci nasceu nos anos 1980 como um sistema caríssimo de correção de cor para TV, antes de ser comprado pela Blackmagic Design em 2009 e ganhar uma versão gratuita.</p></div>
+
+    <div class="callout tip"><strong>Dica de ouro</strong><p>Corrija a cor com o brilho da tela do celular ou do monitor num nível médio e fixo (desligue o brilho automático e o “modo noturno”/filtro de luz azul). Esses recursos alteram a cor da tela e você acaba “corrigindo” um problema que não existe no vídeo.</p></div>
+
+    <h2 id="capcut"><span class="num">8</span>Tutorial: editando um Reel no CapCut do zero</h2>
+    <p>Vamos editar o Reel da padaria do <a href="05-roteiro.html#exemplo">Módulo 05</a> (ou qualquer material seu) no CapCut para celular. Os nomes dos botões podem mudar entre versões e idiomas, mas a lógica é a mesma em qualquer editor.</p>
+
+    <ol class="steps">
+      <li><strong>Prepare o terreno</strong>Selecione na galeria os melhores takes antes de abrir o app (favorite-os, por exemplo). Libere espaço no celular e coloque em modo avião para não ser interrompido.</li>
+      <li><strong>Crie o projeto e importe</strong>Toque em <em>Novo projeto</em>, selecione os clipes na ordem do roteiro e toque em <em>Adicionar</em>. Confira em <em>Proporção</em> (ou “Formato”) se está em <code>9:16</code>.</li>
+      <li><strong>Monte a fala primeiro (corte bruto)</strong>Coloque os trechos com a fala principal na linha do tempo. Use <em>Dividir</em> para cortar no início e no fim de cada frase e apague o que sobra. Não se preocupe com perfeição ainda.</li>
+      <li><strong>Cubra com B-roll</strong>Use <em>Sobreposição</em> (overlay) para colocar os planos de detalhe por cima da fala, em uma camada acima. Ajuste o tamanho para ocupar a tela inteira. Silencie o áudio dos B-rolls que não precisam de som.</li>
+      <li><strong>Corte fino</strong>Dê zoom na linha do tempo (gesto de pinça) e tire pausas, respirações e “ééé”. Comece o vídeo direto no gancho: o primeiro frame já deve ser interessante.</li>
+      <li><strong>Ajuste o enquadramento nos jump cuts</strong>Nos trechos de fala com cortes, alterne o tamanho do clipe (100% e uns 115%) com o gesto de pinça no visualizador. Isso disfarça os pulos.</li>
+      <li><strong>Música</strong>Toque em <em>Áudio</em> › <em>Sons</em> e escolha uma faixa da biblioteca (ou importe uma música licenciada). Use <em>Batidas</em> para marcar o ritmo e ajuste alguns cortes de B-roll nas marcações.</li>
+      <li><strong>Volume e ducking</strong>Selecione a música e baixe o volume (algo entre 10 e 30, testando no ouvido). Se a versão oferecer redução automática de volume ao detectar voz, ative; se não, divida a música e abaixe só os trechos com fala. Adicione fade in e fade out na música.</li>
+      <li><strong>Efeitos sonoros</strong>Em <em>Áudio</em> › <em>Efeitos sonoros</em>, coloque um “whoosh” em mudanças bruscas e um “pop” discreto quando um texto aparece. Pouco: 3 a 5 efeitos num Reel de 30 segundos.</li>
+      <li><strong>Legendas</strong>Em <em>Texto</em> › <em>Legendas automáticas</em> (o nome pode variar), gere as legendas no idioma português. Se o recurso estiver bloqueado no seu plano, escreva os textos manualmente ou use as legendas automáticas do próprio Instagram/TikTok na hora de postar. <strong>Revise cada palavra</strong>, escolha um estilo legível e posicione na zona segura.</li>
+      <li><strong>Texto do gancho e CTA</strong>Adicione o texto do gancho nos primeiros 2 segundos (grande, no terço superior) e o CTA no final (“Encomende pelo WhatsApp”).</li>
+      <li><strong>Cor</strong>Selecione um clipe › <em>Ajustar</em>: corrija brilho, contraste, temperatura e saturação. Use <em>Aplicar a todos</em> se os clipes foram gravados na mesma luz, e ajuste individualmente os que destoarem. Filtros só no final e com intensidade baixa.</li>
+      <li><strong>Revisão</strong>Assista ao vídeo inteiro em tela cheia, com e sem som. Confira: o gancho prende? Tem algum segundo sobrando? A legenda está certa e legível? Os textos estão longe da área dos botões?</li>
+      <li><strong>Exportar</strong>Toque na resolução no canto superior: escolha <code>1080p</code>, a <strong>mesma taxa de quadros da gravação</strong> (30 ou 60 fps) e taxa de bits recomendada ou mais alta. Confira se não há itens Pro no projeto. Exporte e salve uma cópia na pasta do projeto.</li>
+    </ol>
+
+    <div class="callout info"><strong>Importante</strong><p>Antes de postar, confira se o app da rede social está configurado para enviar na maior qualidade: no Instagram, procure nas configurações de “uso de dados e qualidade de mídia” a opção de enviar sempre na maior qualidade. Sem isso, o app pode comprimir demais o vídeo em conexões móveis.</p></div>
+
+    <h2 id="davinci"><span class="num">9</span>Mini tutorial: DaVinci Resolve grátis no computador</h2>
+    <p>O DaVinci Resolve assusta no começo porque parece uma nave espacial. O segredo é entender que ele é dividido em <strong>páginas</strong>, uma para cada etapa do fluxo, acessadas por ícones na parte de baixo da tela. Você não precisa dominar todas.</p>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>Página</th><th>Para que serve</th><th>Quando usar</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Media</strong></td><td>Importar e organizar arquivos</td><td>Início do projeto, para projetos grandes</td></tr>
+        <tr><td><strong>Cut</strong></td><td>Edição rápida, linha do tempo simplificada</td><td>Vídeos curtos e montagem bruta veloz</td></tr>
+        <tr><td><strong>Edit</strong></td><td>Edição completa tradicional, várias trilhas</td><td>Corte fino, títulos, transições: onde você vai passar mais tempo</td></tr>
+        <tr><td><strong>Fusion</strong></td><td>Efeitos visuais e animações por nós</td><td>Mais avançado; pode deixar para depois</td></tr>
+        <tr><td><strong>Color</strong></td><td>Correção e tratamento de cor por nós, com scopes</td><td>Etapa de cor: é o ponto forte do programa</td></tr>
+        <tr><td><strong>Fairlight</strong></td><td>Mixagem e tratamento de áudio</td><td>Equalizar voz, reduzir ruído, ajustar volumes</td></tr>
+        <tr><td><strong>Deliver</strong></td><td>Exportação (renderização)</td><td>Final: escolher formato e gerar o arquivo</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>Seu primeiro projeto em 8 passos</h3>
+    <ol class="steps">
+      <li><strong>Crie o projeto</strong>No Gerenciador de Projetos, clique em <em>Novo projeto</em>. Em <em>Configurações do projeto</em> (engrenagem no canto inferior direito), defina a resolução da timeline (<code>1080 × 1920</code> para vertical ou <code>1920 × 1080</code> para horizontal) e a taxa de quadros igual à gravação. Defina isso antes de importar.</li>
+      <li><strong>Importe</strong>Arraste os arquivos da pasta para o painel de mídia (Media Pool). Se o programa perguntar se quer mudar a taxa de quadros do projeto para a do clipe, pense antes de aceitar.</li>
+      <li><strong>Monte na página Cut ou Edit</strong>Arraste os clipes para a linha do tempo. Use <kbd>I</kbd> e <kbd>O</kbd> para marcar entrada e saída no visualizador antes de arrastar.</li>
+      <li><strong>Corte</strong>Posicione o cursor e use <kbd>Ctrl</kbd>+<kbd>B</kbd> para cortar no ponto. Selecione o pedaço indesejado e apague fechando o espaço (exclusão com fechamento de lacuna, o “ripple delete”).</li>
+      <li><strong>Áudio</strong>Na página Edit ou Fairlight, ajuste os volumes de cada clipe. Para a voz, a meta é picos entre <code>-12</code> e <code>-6 dB</code>, aproximadamente, sem tocar no vermelho. Para a música, bem abaixo.</li>
+      <li><strong>Cor</strong>Na página Color, abra os scopes (forma de onda e vetorscópio). Use as rodas de cor e os controles primários para corrigir exposição e balanço de branco. Crie nós separados para correção e estilo (<kbd>Alt</kbd>+<kbd>S</kbd> adiciona um nó em série).</li>
+      <li><strong>Títulos e legendas</strong>Na página Edit, use a biblioteca de efeitos (Effects) › <em>Títulos</em> para textos. O Resolve também permite trilhas de legenda (subtitles); versões recentes têm transcrição automática, mas parte das funções de IA é exclusiva da versão Studio.</li>
+      <li><strong>Exporte</strong>Na página Deliver, escolha um preset (como YouTube ou H.264), confira resolução, taxa de quadros e qualidade, clique em <em>Adicionar à fila de renderização</em> e depois em <em>Renderizar tudo</em>.</li>
+    </ol>
+
+    <div class="callout tip"><strong>Dica de ouro: vídeo de celular travando no DaVinci?</strong><p>Vídeos de celular costumam ser gravados em H.265/HEVC e com <strong>taxa de quadros variável</strong>, o que pode deixar a reprodução lenta e, às vezes, dessincronizar o áudio. Soluções: gere <strong>mídia otimizada</strong> ou <strong>proxies</strong> (clique com o botão direito nos clipes no Media Pool), reduza a resolução de reprodução da timeline e, se o problema for sincronia, converta os arquivos para taxa de quadros constante antes de editar ou ative a opção de taxa constante no app de câmera, se houver.</p></div>
+
+    <h3>Atalhos de teclado essenciais</h3>
+    <p>Atalhos economizam horas. Os da tabela abaixo são os padrões no Windows (no Mac, troque <kbd>Ctrl</kbd> por <kbd>Cmd</kbd>). Os dois programas permitem personalizar atalhos, então eles podem variar entre versões e configurações: no DaVinci, confira em <em>DaVinci Resolve › Keyboard Customization</em>; no CapCut para computador, no ícone de teclado ou no menu de atalhos.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Ação</th><th>DaVinci Resolve</th><th>CapCut (computador)</th></tr></thead>
+      <tbody>
+        <tr><td>Reproduzir / pausar</td><td><kbd>Espaço</kbd></td><td><kbd>Espaço</kbd></td></tr>
+        <tr><td>Voltar / parar / avançar (shuttle)</td><td><kbd>J</kbd> <kbd>K</kbd> <kbd>L</kbd> (aperte J ou L de novo para acelerar)</td><td>—</td></tr>
+        <tr><td>Marcar entrada / saída</td><td><kbd>I</kbd> / <kbd>O</kbd></td><td>—</td></tr>
+        <tr><td>Cortar no cursor</td><td><kbd>Ctrl</kbd>+<kbd>B</kbd></td><td><kbd>Ctrl</kbd>+<kbd>B</kbd></td></tr>
+        <tr><td>Ferramenta lâmina (blade)</td><td><kbd>B</kbd></td><td><kbd>B</kbd> (modo dividir)</td></tr>
+        <tr><td>Ferramenta de seleção</td><td><kbd>A</kbd></td><td><kbd>A</kbd> ou <kbd>V</kbd> (varia por versão)</td></tr>
+        <tr><td>Apagar tudo à esquerda / direita do cursor no clipe</td><td>—</td><td><kbd>Q</kbd> / <kbd>W</kbd></td></tr>
+        <tr><td>Apagar fechando o espaço (ripple delete)</td><td><kbd>Shift</kbd>+<kbd>Backspace</kbd> (ou <kbd>Delete</kbd>, conforme a configuração)</td><td><kbd>Delete</kbd> (a trilha principal fecha o espaço por padrão)</td></tr>
+        <tr><td>Desfazer</td><td><kbd>Ctrl</kbd>+<kbd>Z</kbd></td><td><kbd>Ctrl</kbd>+<kbd>Z</kbd></td></tr>
+        <tr><td>Ligar/desligar o “ímã” (snapping)</td><td><kbd>N</kbd></td><td>— (botão de ímã na barra da timeline)</td></tr>
+        <tr><td>Ajustar zoom para ver toda a timeline</td><td><kbd>Shift</kbd>+<kbd>Z</kbd></td><td>— (use o controle de zoom da timeline)</td></tr>
+        <tr><td>Pular para o corte anterior / seguinte</td><td><kbd>↑</kbd> / <kbd>↓</kbd></td><td>—</td></tr>
+        <tr><td>Adicionar transição padrão</td><td><kbd>Ctrl</kbd>+<kbd>T</kbd></td><td>—</td></tr>
+        <tr><td>Novo nó em série (página Color)</td><td><kbd>Alt</kbd>+<kbd>S</kbd></td><td>—</td></tr>
+      </tbody>
+    </table></div>
+    <p><small>Atalhos conferidos em listas de atalhos padrão em 2026; como podem mudar com atualizações, confirme no painel de atalhos do seu programa.</small></p>
+
+    <h2 id="exportar"><span class="num">10</span>Exportação e erros comuns</h2>
+    <p>Exportar errado pode estragar horas de trabalho: vídeo com faixas pretas, borrado, travando ou com áudio dessincronizado. A regra de ouro é: <strong>exporte no formato e na resolução da plataforma de destino, com a mesma taxa de quadros em que você gravou</strong>.</p>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>Destino</th><th>Proporção</th><th>Resolução</th><th>Duração (referência)</th><th>Taxa de bits de referência</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Instagram Reels</strong></td><td>9:16</td><td>1080 × 1920</td><td>Até 3 min é o formato mais indicado; o app vem liberando vídeos mais longos</td><td>~8–12 Mbps (o app recomprime)</td></tr>
+        <tr><td><strong>Instagram Stories</strong></td><td>9:16</td><td>1080 × 1920</td><td>Até 60 s por story (vídeos maiores são divididos)</td><td>~8 Mbps</td></tr>
+        <tr><td><strong>TikTok</strong></td><td>9:16</td><td>1080 × 1920</td><td>Vários minutos; o limite muda com frequência, confira no app</td><td>~8–12 Mbps</td></tr>
+        <tr><td><strong>YouTube Shorts</strong></td><td>9:16 (ou 1:1)</td><td>1080 × 1920</td><td>Até 3 min</td><td>~8–12 Mbps</td></tr>
+        <tr><td><strong>YouTube (horizontal)</strong></td><td>16:9</td><td>1920 × 1080 ou 3840 × 2160 (4K)</td><td>Longo</td><td>1080p: ~8 Mbps (30 fps) / ~12 Mbps (60 fps). 4K: ~35–45 Mbps (30 fps) / ~53–68 Mbps (60 fps)</td></tr>
+        <tr><td><strong>Status do WhatsApp</strong></td><td>9:16</td><td>1080 × 1920 (o app comprime bastante)</td><td>Curto (trechos de até cerca de 1 min)</td><td>—</td></tr>
+      </tbody>
+    </table></div>
+    <p>Configurações gerais para todos: contêiner <code>MP4</code>, codec de vídeo <code>H.264</code> (o mais compatível; H.265 gera arquivos menores, mas nem todo lugar aceita bem), áudio <code>AAC</code> a <code>48 kHz</code>, de 192 a 320 kbps. As taxas do YouTube seguem a <a href="https://support.google.com/youtube/answer/1722171" target="_blank" rel="noopener">recomendação oficial de codificação de upload</a>.</p>
+
+    <div class="callout nerd"><strong>Curiosidade nerd: por que exportar em 4K para o YouTube, mesmo gravando em 1080p?</strong><p>O YouTube costuma usar codecs mais eficientes e taxas de bits maiores para vídeos enviados em resoluções altas. Por isso, muitos criadores observam que um vídeo exportado em 4K (mesmo ampliado a partir de 1080p) fica mais nítido quando assistido em 1080p do que um enviado direto em 1080p. Não é regra oficial e o arquivo fica bem maior, mas é um teste interessante para quem tem internet boa.</p></div>
+
+    <h3>Erros comuns de edição (e como corrigir)</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Erro</th><th>Por que acontece</th><th>Como corrigir</th></tr></thead>
+      <tbody>
+        <tr><td>Começar com logotipo, saudação ou “oi gente”</td><td>Hábito da TV antiga</td><td>Primeiro frame já é o gancho; logo no final, se precisar</td></tr>
+        <tr><td>Vídeo “travando” ou com movimento estranho</td><td>Exportou em taxa de quadros diferente da gravação</td><td>Exporte na mesma fps da gravação (30 → 30, 60 → 60)</td></tr>
+        <tr><td>Faixas pretas em cima e embaixo</td><td>Projeto em 16:9 exportado para Reels</td><td>Defina a proporção 9:16 antes de começar a editar</td></tr>
+        <tr><td>Música mais alta que a voz</td><td>Volume ajustado no fone ou no alto-falante errado</td><td>Ducking e revisão em fone e em alto-falante do celular</td></tr>
+        <tr><td>Legenda com erros</td><td>Confiar 100% na legenda automática</td><td>Revisar palavra por palavra, principalmente nomes</td></tr>
+        <tr><td>Cores diferentes entre planos</td><td>Corrigir cada clipe sem comparar</td><td>Comparar lado a lado e copiar ajustes</td></tr>
+        <tr><td>Excesso de efeitos e transições</td><td>Vontade de “mostrar serviço”</td><td>Cortes secos; efeito só com motivo</td></tr>
+        <tr><td>Vídeo longo demais</td><td>Apego ao material gravado</td><td>Pergunte em cada trecho: “se eu tirar, alguém sente falta?”</td></tr>
+        <tr><td>Perder o projeto</td><td>Sem backup, celular cheio, app desinstalado</td><td>Regra 3-2-1 e cópia do arquivo final na pasta do projeto</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>Checklist antes de exportar</h3>
+    <ul class="checklist">
+      <li>O primeiro segundo já é interessante (sem logo, sem “oi gente”)</li>
+      <li>Nenhuma pausa morta, respiração longa ou “ééé” sobrando</li>
+      <li>Voz clara e sempre acima da música (ducking feito)</li>
+      <li>Legendas revisadas palavra por palavra, legíveis e na zona segura</li>
+      <li>Cores corrigidas e iguais entre os planos; pele natural</li>
+      <li>Nenhum item Pro escondido no projeto (se estiver no plano grátis)</li>
+      <li>Música licenciada para o uso (pessoal, comercial, plataforma certa)</li>
+      <li>Proporção, resolução e taxa de quadros corretas para o destino</li>
+      <li>Assisti no celular, em tela cheia, com som e sem som</li>
+      <li>Arquivo final salvo na pasta do projeto e com backup</li>
+    </ul>
+
+    <h3>Perguntas frequentes</h3>
+    <details><summary>O CapCut ainda vale a pena depois das mudanças nos planos?</summary><p>Para cortes, textos, músicas da biblioteca e exportação em 1080p, o plano grátis ainda atende bem a maioria dos Reels. O que mudou é que vários recursos extras (efeitos, modelos, IA, 4K e, conforme a versão, legendas automáticas) passaram a exigir assinatura. Se você sentir falta, teste alternativas como VN no celular ou DaVinci Resolve no computador antes de assinar.</p></details>
+    <details><summary>Meu computador é fraco. Consigo usar o DaVinci Resolve?</summary><p>Talvez, com paciência: use proxies ou mídia otimizada, timelines em 1080p e evite efeitos pesados. Se mesmo assim travar muito, edite no celular (CapCut, VN) ou use o CapCut para computador, que costuma ser mais leve. O mais importante é a decisão de edição, não o programa.</p></details>
+    <details><summary>Quanto tempo leva para editar um Reel de 30 segundos?</summary><p>No começo, de 1 a 3 horas é normal. Com prática, roteiro bem feito e material organizado, cai para 30 a 60 minutos. Para orçar serviços de edição, conte também o tempo de organizar, revisar e fazer ajustes pedidos pelo cliente.</p></details>
+    <details><summary>Devo gravar em 60 fps para ficar mais “liso”?</summary><p>Grave em 60 fps quando quiser câmera lenta (reduzindo para 30 ou 24 na edição) ou para esportes e movimentos rápidos. Para fala e conteúdo comum, 30 fps (ou 24, para um visual mais “cinema”) é suficiente e gera arquivos menores. O importante é exportar na mesma taxa da timeline.</p></details>
+    <details><summary>Posso usar música famosa se o vídeo tiver só alguns segundos dela?</summary><p>Não existe uma “regra dos segundos” que libere o uso. Mesmo trechos curtos podem ser identificados e gerar bloqueio ou reivindicação. Use a biblioteca de músicas da própria plataforma, bancos com licença clara ou música original autorizada.</p></details>
+
+    <div class="resumo"><h3>📌 Resumo do módulo</h3><ul>
+      <li>Edite em etapas: organizar e backup → corte bruto → corte fino → som → cor → legendas → revisão → exportação.</li>
+      <li>Ferramentas grátis bastam, mas os planos mudam: no CapCut, vários recursos foram para o Pro; DaVinci Resolve grátis exporta até 4K/60 fps.</li>
+      <li>Corte seco é o padrão; jump cut, J-cut, L-cut, match cut e corte na ação são as ferramentas finas. Transições só com motivo.</li>
+      <li>Ritmo vem da duração dos planos; varie, corte na ação e use quebras de padrão sem exagero.</li>
+      <li>Legendas revisadas, legíveis e na zona segura; muita gente assiste sem som.</li>
+      <li>Voz acima de tudo, música com ducking, efeitos com moderação e música sempre licenciada.</li>
+      <li>Cor: primeiro corrigir (exposição, contraste, balanço de branco, saturação, igualar planos), depois estilizar.</li>
+      <li>Exporte em MP4/H.264, na resolução da plataforma e com a mesma taxa de quadros da gravação.</li>
+    </ul></div>
+
+    <div class="callout pratica"><strong>Exercício do módulo</strong><p>Pegue o material gravado no exercício do Módulo 05 (ou o vídeo da sequência de 5 planos do Módulo 04) e edite um <strong>Reel de 20 a 30 segundos</strong> seguindo o passo a passo do CapCut: gancho no primeiro segundo, pelo menos um J-cut ou L-cut, um match cut ou corte na ação, música com ducking, 2 a 4 efeitos sonoros, legendas revisadas na zona segura, correção de cor igualando todos os planos e exportação em 1080 × 1920 na mesma taxa de quadros da gravação. Depois, assista no celular sem som e anote três coisas que você melhoraria. Bônus: refaça o mesmo vídeo no DaVinci Resolve e compare a experiência.</p></div>
+
+    <div class="quiz"><script type="application/json">[
+      {"q":"Qual é a ordem mais eficiente de trabalho na edição?","o":["Cor → efeitos → corte → som","Organizar → corte bruto → corte fino → som → cor → legendas → exportar","Legendas → música → corte bruto → exportar","Exportar → revisar → organizar"],"a":1,"e":"Trabalhar do grosso para o fino evita desperdiçar tempo ajustando cor ou efeitos em planos que talvez nem entrem no vídeo final."},
+      {"q":"O que é um L-cut?","o":["Um corte em formato de L na tela","A imagem muda para o próximo plano, mas o som do plano anterior continua","O som do próximo plano começa antes da imagem","Um corte com transição de fusão"],"a":1,"e":"No L-cut o áudio do plano A continua por baixo do vídeo do plano B. É muito usado para mostrar B-roll enquanto a pessoa continua falando. O contrário é o J-cut."},
+      {"q":"Por que é melhor usar cortes secos na maior parte do vídeo, em vez de transições chamativas?","o":["Porque transições são proibidas nas redes sociais","Porque transições chamativas chamam atenção para a edição e não para o conteúdo","Porque cortes secos deixam o arquivo menor","Porque o CapCut não tem transições grátis"],"a":1,"e":"O corte seco é o padrão do cinema e das redes. Transições devem ter significado, como uma fusão para indicar passagem de tempo."},
+      {"q":"O que significa “ducking” na edição de som?","o":["Aumentar o volume da música no refrão","Abaixar a música automaticamente quando alguém fala","Remover o ruído de fundo","Colocar efeitos de pato no vídeo"],"a":1,"e":"Ducking abaixa a música durante a fala e a sobe de novo nas pausas, garantindo que a voz fique sempre clara."},
+      {"q":"Qual a diferença entre correção de cor e tratamento (grading)?","o":["São a mesma coisa","Correção deixa a imagem natural e consistente; tratamento dá estilo e clima","Correção é feita no celular; tratamento só no computador","Tratamento é feito antes da correção"],"a":1,"e":"Primeiro se corrige (exposição, balanço de branco, igualar planos) e só depois se aplica um estilo, como uma LUT criativa."},
+      {"q":"Você gravou a 30 fps. Qual taxa de quadros deve escolher na exportação?","o":["60 fps, para ficar mais liso","24 fps, para parecer cinema","30 fps, a mesma da gravação","Tanto faz"],"a":2,"e":"Exportar na mesma taxa de quadros da gravação evita travamentos e movimentos estranhos. Mudar a fps sem planejamento cria problemas."},
+      {"q":"Sobre o CapCut em 2026, qual afirmação é mais correta?","o":["Todos os recursos são grátis e sempre serão","Desde 2025, vários recursos que eram grátis passaram para o plano Pro e as assinaturas ficaram mais caras","O CapCut só funciona no computador","O CapCut não exporta em 1080p no plano grátis"],"a":1,"e":"O plano grátis ainda permite editar e exportar em 1080p, mas efeitos, modelos, IA, 4K e, conforme a versão, legendas automáticas podem exigir assinatura. Confira sempre dentro do app."},
+      {"q":"Qual a configuração recomendada para um Reel?","o":["1920 × 1080, 16:9","1080 × 1920, 9:16, MP4 H.264","1080 × 1080, 1:1, sempre","3840 × 2160, 16:9"],"a":1,"e":"Reels, Stories, TikTok e Shorts usam formato vertical 9:16 em 1080 × 1920. MP4 com H.264 é o formato mais compatível."}
+    ]</script></div>
+  </article>
+</main>
+<script src="assets/guia.js"></script>
+</body>
+</html>

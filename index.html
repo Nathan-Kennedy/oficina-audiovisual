@@ -52,6 +52,10 @@ nav a:hover{opacity:1;color:var(--verde)}
 .btn-1{background:#fff;color:var(--roxo-esc)}
 .btn-2{border:2px solid rgba(255,255,255,.6);color:#fff}
 
+.hero .hero-sub{font-size:22px;font-weight:500;opacity:1;max-width:760px;margin-bottom:18px}
+.hero-pills{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 22px}
+.hero-pills span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25);padding:7px 14px;border-radius:999px;font-size:14.5px;font-weight:600}
+.hero p strong{color:#fff}
 /* stats */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:-56px;position:relative;z-index:2}
 .stat{background:var(--card);border-radius:18px;padding:26px 22px;box-shadow:0 12px 40px rgba(60,20,100,.10);text-align:center}
@@ -106,9 +110,16 @@ nav a:hover{opacity:1;color:var(--verde)}
 .redes a{display:inline-flex;align-items:center;gap:10px;background:#fff;padding:12px 20px;border-radius:12px;text-decoration:none;font-weight:600;color:var(--ink);box-shadow:0 4px 14px rgba(60,20,100,.08)}
 .redes svg{width:22px;height:22px}
 
+.equipe{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:26px}
+.membro{background:#fff;border-radius:20px;padding:28px;box-shadow:0 8px 24px rgba(60,20,100,.08)}
+.membro h3{font-size:24px;margin-bottom:2px}
+.membro .papel{display:inline-block;font-size:13px;font-weight:700;color:var(--roxo);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.membro p{color:var(--muted);font-size:16px}
+@media(max-width:760px){.equipe{grid-template-columns:1fr}}
 footer{background:#fff;padding:46px 0;text-align:center;font-size:14px;color:var(--muted)}
 footer img{margin:0 auto 16px;width:min(560px,90%)}
 </style>
+<link rel="stylesheet" href="assets/especial/especial.css">
 </head>
 <body>
 
@@ -116,9 +127,11 @@ footer img{margin:0 auto 16px;width:min(560px,90%)}
   <div class="wrap">
     <a href="#topo"><img src="assets/img/logo-oficina.png" alt="NK Oficina"></a>
     <ul>
+      <li><a href="#especial">Especial</a></li>
       <li><a href="#objetivo">Objetivo</a></li>
       <li><a href="#resultado">Resultado</a></li>
       <li><a href="#dicas">Orientações</a></li>
+      <li><a href="guia/index.html" style="color:#70cf97;opacity:1;font-weight:700">Guia completo</a></li>
       <li><a href="#sobre">Sobre</a></li>
     </ul>
   </div>
@@ -127,10 +140,13 @@ footer img{margin:0 auto 16px;width:min(560px,90%)}
 <header class="hero" id="topo">
   <div class="wrap">
     <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5 9-10"/></svg> Oficina realizada com sucesso · 12 de julho de 2024</span>
-    <h1>Como produzir com <span>pouco recurso</span> no audiovisual</h1>
-    <p>Uma oficina gratuita, presencial e online, que mostrou como criar vídeos de qualidade usando só o celular e aplicativos gratuitos, e como usar o Instagram e o YouTube para divulgar e gerar renda.</p>
+    <h1>Aprenda a produzir <span>o conteúdo que quiser</span>, do jeito certo</h1>
+    <p class="hero-sub">Vídeos para o Instagram, YouTube, TikTok, para o seu negócio ou para clientes: do roteiro à publicação, usando o celular que você já tem.</p>
+    <div class="hero-pills"><span>🎬 Gravar</span><span>✂️ Editar</span><span>🎨 Corrigir a cor</span><span>📈 Crescer nas redes</span><span>💰 Ganhar dinheiro</span></div>
+    <p>Tudo começou com a oficina gratuita <strong>Como produzir com pouco recurso no audiovisual</strong>, presencial e online, e virou um guia completo e gratuito com 14 módulos.</p>
     <div class="btns">
-      <a class="btn btn-1" href="#dicas">Ver as orientações</a>
+      <a class="btn" href="guia/index.html" style="background:#70cf97;color:#16121d">📚 Começar o guia gratuito</a>
+      <a class="btn btn-1" href="#especial">▶ Ver um vídeo sendo produzido</a>
       <a class="btn btn-2" href="#resultado">Como foi a oficina</a>
     </div>
   </div>
@@ -144,6 +160,63 @@ footer img{margin:0 auto 16px;width:min(560px,90%)}
     <div class="stat"><b>Híbrida</b><span>presencial + online</span></div>
   </div>
 </div>
+
+<section class="esp" id="especial">
+  <div class="wrap">
+    <span class="esp-badge">✨ Especial</span>
+    <h2>Veja um vídeo sendo produzido, do bruto à entrega</h2>
+    <p class="lead">Parece que o vídeo se monta sozinho, mas cada etapa abaixo é o trabalho real de um videomaker: roteiro, checklist de equipamento, gravação, montagem no ritmo da música, correção de cor, legendas, exportação, aprovação do cliente e publicação. O vídeo de 1 minuto foi produzido de verdade para este site.</p>
+    <div class="studio"></div>
+
+    <div class="yt" aria-label="Simulação de página de vídeo publicada">
+      <div class="yt-top"><div class="yt-logo"><i></i>NK Play</div><div class="yt-search">como fazer vídeo profissional com pouco recurso</div><span class="yt-sim">SIMULAÇÃO</span></div>
+      <div class="yt-body">
+        <div>
+          <div class="yt-player">
+            <video playsinline preload="none" src="assets/especial/final.mp4" poster="assets/especial/capa.jpg"></video>
+            <img class="yt-cover" src="assets/especial/capa.jpg" alt="Capa do vídeo: Do bruto à entrega">
+            <button class="yt-play" aria-label="Assistir ao vídeo"><span></span></button>
+          </div>
+          <h3 class="yt-title">Do bruto à entrega: como um vídeo profissional é feito (em 1 minuto)</h3>
+          <div class="yt-ch"><div class="yt-av"></div><div><b>NK Oficina</b><small>canal de demonstração</small></div><button class="yt-sub">Inscrever-se</button>
+            <div class="yt-acts"><span>👍 Gostei</span><span>↗ Compartilhar</span></div></div>
+          <div class="yt-desc"><b>Simulação · publicado agora</b>
+Como um videomaker transforma uma ideia em vídeo pronto? Em 1 minuto, você vê as etapas reais de uma produção audiovisual: roteiro, pré-produção, captação, edição e cor, e entrega ao cliente.
+
+<b>CAPÍTULOS</b>
+<a data-t="0">0:00</a> Abertura e roteiro
+<a data-t="13.6">0:13</a> Pré-produção e captação
+<a data-t="34.1">0:34</a> Edição e correção de cor
+<a data-t="46.8">0:46</a> Entrega e guia gratuito
+
+📚 Guia gratuito com 14 módulos: <a href="guia/index.html">nathan-kennedy.github.io/oficina-audiovisual/guia</a>
+🎬 Realização: Nathan Kennedy (@nathankennedyoficial) · Participação: Lucas Rikelmy (@lucasrikeh)
+🎞️ Imagens: Mixkit (licença gratuita) · 🎵 Música: “Motivating Mornings”, Ahjay Stelino (Mixkit)
+Projeto contemplado no Edital 001/2023 (Audiovisual) da Lei Paulo Gustavo, Ariquemes-RO.
+
+<a>#audiovisual</a> <a>#videomaker</a> <a>#edicaodevideo</a></div>
+          <div class="yt-why">
+            <div><b>🎯 Título</b>66 caracteres, cabe sem cortar. Tem a palavra-chave “vídeo profissional”, promete um resultado claro e o “(em 1 minuto)” gera curiosidade sem enganar. <a href="guia/11-titulos-capas.html">Módulo 11</a></div>
+            <div><b>🖼️ Capa</b>Rosto com expressão, só 4 palavras, contraste forte roxo/verde e leitura fácil mesmo pequena na tela do celular. <a href="guia/11-titulos-capas.html">Módulo 11</a></div>
+            <div><b>📝 Descrição</b>As duas primeiras linhas resumem o vídeo com palavras que as pessoas pesquisam. Depois vêm capítulos, links e créditos. <a href="guia/08-youtube.html">Módulo 8</a></div>
+            <div><b>⏱️ Capítulos</b>Começam em 0:00, têm pelo menos 10 segundos cada (regra da plataforma) e ajudam quem quer pular direto para uma etapa. <a href="guia/08-youtube.html">Módulo 8</a></div>
+            <div><b>©️ Créditos e licenças</b>Imagens e música de banco gratuito, com a fonte informada. Equipe creditada. <a href="guia/recursos.html">Recursos</a></div>
+            <div><b>#️⃣ Hashtags</b>Só três, relevantes para o tema. Hashtag demais parece spam e não ajuda. <a href="guia/07-instagram.html">Módulo 7</a></div>
+          </div>
+        </div>
+        <aside class="yt-side">
+          <h4>A seguir no guia</h4>
+          <a class="yt-rel" href="guia/01-camera.html"><div class="th" style="background:linear-gradient(135deg,#5a0b91,#8612d5)">📱<small>15 min</small></div><div><b>Câmera e configurações do celular</b><span>Guia · Módulo 1</span></div></a>
+          <a class="yt-rel" href="guia/06-edicao.html"><div class="th" style="background:linear-gradient(135deg,#1f6f45,#70cf97)">✂️<small>20 min</small></div><div><b>Edição: cortes, ritmo, cor e exportação</b><span>Guia · Módulo 6</span></div></a>
+          <a class="yt-rel" href="guia/11-titulos-capas.html"><div class="th" style="background:linear-gradient(135deg,#9a5b00,#ffb020)">🎯<small>20 min</small></div><div><b>Títulos, capas e posts que dão clique</b><span>Guia · Módulo 11</span></div></a>
+          <a class="yt-rel" href="guia/12-anuncios.html"><div class="th" style="background:linear-gradient(135deg,#16121d,#3b2a55)">📣<small>25 min</small></div><div><b>Anúncios e tráfego pago na prática</b><span>Guia · Módulo 12</span></div></a>
+          <a class="yt-rel" href="guia/13-ia-producao.html"><div class="th" style="background:linear-gradient(135deg,#2f7fe0,#8612d5)">🤖<small>25 min</small></div><div><b>IA como assistente de produção</b><span>Guia · Módulo 13</span></div></a>
+          <a class="yt-rel" href="guia/ferramentas.html"><div class="th" style="background:linear-gradient(135deg,#3d0763,#2f9a5c)">🧮<small>7 apps</small></div><div><b>Ferramentas interativas grátis</b><span>Guia · Extras</span></div></a>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="objetivo">
   <div class="wrap two">
@@ -250,14 +323,41 @@ footer img{margin:0 auto 16px;width:min(560px,90%)}
   </div>
 </section>
 
+<section style="padding:0 0 88px">
+  <div class="wrap">
+    <a href="guia/index.html" style="display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;text-decoration:none;background:linear-gradient(120deg,#5a0b91,#8612d5 60%,#3fa96b);color:#fff;border-radius:24px;padding:44px 48px">
+      <div>
+        <span class="kicker" style="color:#70cf97">Novo · 100% gratuito</span>
+        <h2 style="color:#fff">Guia completo de audiovisual com pouco recurso</h2>
+        <p style="opacity:.92;max-width:680px">14 módulos com tudo o que foi ensinado na oficina e muito mais: câmera, luz, áudio, roteiro, edição, Instagram, YouTube, títulos e capas, anúncios, IA como assistente e várias formas de ganhar dinheiro. Com quizzes, diagramas e ferramentas interativas.</p>
+      </div>
+      <span class="btn btn-1">Acessar o guia →</span>
+    </a>
+  </div>
+</section>
+
 <section class="sobre" id="sobre">
   <div class="wrap">
-    <span class="kicker">Quem ministrou</span>
-    <h2>Nathan Kennedy</h2>
-    <p class="lead">Designer e editor de vídeo de Ariquemes-RO. Trabalha com audiovisual desde 2020, fazendo casamentos, aniversários e conteúdo para comércios, clínicas e empresas do agro, boa parte junto à Fábrica Produções. Faz identidade visual e peças gráficas para marcas da região e hoje atua de forma independente.</p>
-    <div class="redes">
-      <a href="https://www.instagram.com/nathankennedyoficial/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="#c13584" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#c13584"/></svg>@nathankennedyoficial</a>
-      <a href="https://www.youtube.com/channel/UCKo4HNHzi6l_6XBJmuR7MHw" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4" fill="#ff0000"/><path d="M10 9l5 3-5 3z" fill="#fff"/></svg>YouTube</a>
+    <span class="kicker">Equipe</span>
+    <h2>Quem fez a oficina acontecer</h2>
+    <div class="equipe">
+      <div class="membro">
+        <h3>Nathan Kennedy</h3>
+        <span class="papel">Proponente, instrutor, designer e editor</span>
+        <p>Designer e editor de vídeo de Ariquemes-RO. Trabalha com audiovisual desde 2020, fazendo casamentos, aniversários e conteúdo para comércios, clínicas e empresas do agro, boa parte junto à Fábrica Produções. Criou a identidade visual da oficina, preparou o conteúdo e conduziu as aulas.</p>
+        <div class="redes">
+          <a href="https://www.instagram.com/nathankennedyoficial/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="#c13584" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#c13584"/></svg>@nathankennedyoficial</a>
+          <a href="https://www.youtube.com/channel/UCKo4HNHzi6l_6XBJmuR7MHw" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4" fill="#ff0000"/><path d="M10 9l5 3-5 3z" fill="#fff"/></svg>YouTube</a>
+        </div>
+      </div>
+      <div class="membro">
+        <h3>Lucas Rikelmy</h3>
+        <span class="papel">Fotógrafo e filmmaker</span>
+        <p>Fotógrafo e filmmaker, participou do projeto da oficina. Trabalha com filmagem e edição desde 2020, com passagens por produtoras e agências de marketing, cobertura de casamentos, aniversários e eventos, e trabalhos para marcas da região.</p>
+        <div class="redes">
+          <a href="https://www.instagram.com/lucasrikeh/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="#c13584" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#c13584"/></svg>@lucasrikeh</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -265,7 +365,8 @@ footer img{margin:0 auto 16px;width:min(560px,90%)}
 <footer>
   <img src="assets/img/selos.png" alt="Lei Paulo Gustavo, Ministério da Cultura, Governo Federal, FUNCET e Prefeitura de Ariquemes">
   <p>Este projeto foi contemplado no Edital 001/2023 (Audiovisual) da Lei Paulo Gustavo do município de Ariquemes.</p>
-  <p>© 2024–2026 Nathan Kennedy · NK Oficina</p>
+  <p>Realização: Nathan Kennedy · Fotografia e filmagem: <a href="https://www.instagram.com/lucasrikeh/" target="_blank" rel="noopener">Lucas Rikelmy (@lucasrikeh)</a></p>
+  <p>© 2024–2026 NK Oficina</p>
 </footer>
 
 <script>
@@ -278,5 +379,6 @@ document.querySelectorAll('.tab').forEach(function(t){
   });
 });
 </script>
+<script src="assets/especial/especial.js"></script>
 </body>
 </html>
